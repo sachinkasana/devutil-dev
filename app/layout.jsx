@@ -1,6 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
 import Analytics from '../components/Analytics';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 
 export const metadata = {
   metadataBase: new URL('https://devutil.dev'),
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
         </a>
         <Analytics />
         {children}
+        <VercelAnalytics />
       </body>
     </html>
   );
