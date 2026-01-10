@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Code, Copy, Check, RefreshCw, Home, Clock } from 'lucide-react';
+import { Code, Copy, Check, RefreshCw, Clock } from 'lucide-react';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 export default function TimestampConverter() {
   const [currentTime, setCurrentTime] = useState(null);
@@ -118,39 +120,15 @@ export default function TimestampConverter() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-slate-900">DevUtil</h1>
-                  <p className="text-xs text-slate-500">Timestamp Converter</p>
-                </div>
-              </a>
-            </div>
-            <a
-              href="/"
-              className="flex items-center space-x-2 text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Home className="w-5 h-5" />
-              <span className="hidden sm:inline">All Tools</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header subtitle="Timestamp Converter" />
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center space-x-3 mb-3">
             <RefreshCw className="w-8 h-8 text-teal-600" />
-            <h2 className="text-4xl font-bold text-slate-900">Timestamp Converter</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Timestamp Converter</h2>
           </div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Convert Unix timestamps to human-readable dates and vice versa.
@@ -174,6 +152,7 @@ export default function TimestampConverter() {
                   onClick={() => currentTimestamp !== null && copyToClipboard(currentTimestamp.toString(), 'current-ts')}
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
                   disabled={currentTimestamp === null}
+                  aria-label="Copy current timestamp"
                 >
                   {copied === 'current-ts' ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
                 </button>
@@ -189,6 +168,7 @@ export default function TimestampConverter() {
                   onClick={() => currentDate && copyToClipboard(currentDate.toISOString(), 'current-date')}
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
                   disabled={!currentDate}
+                  aria-label="Copy current date"
                 >
                   {copied === 'current-date' ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
                 </button>
@@ -250,7 +230,7 @@ export default function TimestampConverter() {
 
         {/* Error Display */}
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6" role="alert" aria-live="polite">
             <p className="text-red-700 text-sm">{error}</p>
           </div>
         )}
@@ -313,6 +293,7 @@ export default function TimestampConverter() {
                     <button
                       onClick={() => copyToClipboard(timestamp, 'result')}
                       className="px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      aria-label="Copy timestamp"
                     >
                       {copied === 'result' ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
                     </button>
@@ -337,6 +318,7 @@ export default function TimestampConverter() {
                   <button
                     onClick={() => copyToClipboard(value, key)}
                     className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
+                    aria-label={`Copy ${key} format`}
                   >
                     {copied === key ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </button>
@@ -382,19 +364,9 @@ export default function TimestampConverter() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
-          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

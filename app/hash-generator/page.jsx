@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Code, Copy, Check, Hash, Home, Upload } from 'lucide-react';
+import { Code, Copy, Check, Hash, Upload } from 'lucide-react';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 export default function HashGenerator() {
   const [input, setInput] = useState('');
@@ -239,39 +241,15 @@ export default function HashGenerator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-slate-900">DevUtil</h1>
-                  <p className="text-xs text-slate-500">Hash Generator</p>
-                </div>
-              </a>
-            </div>
-            <a
-              href="/"
-              className="flex items-center space-x-2 text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Home className="w-5 h-5" />
-              <span className="hidden sm:inline">All Tools</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header subtitle="Hash Generator" />
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center space-x-3 mb-3">
             <Hash className="w-8 h-8 text-orange-600" />
-            <h2 className="text-4xl font-bold text-slate-900">Hash Generator</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Hash Generator</h2>
           </div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text or files instantly.
@@ -317,7 +295,7 @@ export default function HashGenerator() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter text to hash..."
-            className="w-full h-32 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+            className="w-full h-32 sm:h-40 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
           />
         </div>
 
@@ -402,19 +380,9 @@ export default function HashGenerator() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
-          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

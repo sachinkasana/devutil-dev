@@ -11,3 +11,16 @@ body {
   color: #0f172a;
   background: #f8fafc;
 }
+
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-radius: 6px;
+}

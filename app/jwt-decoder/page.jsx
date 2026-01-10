@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Code, Copy, Check, Braces, Home, AlertCircle, Shield } from 'lucide-react';
+import { Code, Copy, Check, Braces, AlertCircle, Shield } from 'lucide-react';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 export default function JWTDecoder() {
   const [token, setToken] = useState('');
@@ -85,39 +87,15 @@ export default function JWTDecoder() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-slate-900">DevUtil</h1>
-                  <p className="text-xs text-slate-500">JWT Decoder</p>
-                </div>
-              </a>
-            </div>
-            <a
-              href="/"
-              className="flex items-center space-x-2 text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Home className="w-5 h-5" />
-              <span className="hidden sm:inline">All Tools</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header subtitle="JWT Decoder" />
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center space-x-3 mb-3">
             <Braces className="w-8 h-8 text-pink-600" />
-            <h2 className="text-4xl font-bold text-slate-900">JWT Decoder</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">JWT Decoder</h2>
           </div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Decode and inspect JSON Web Tokens (JWT). View header, payload, and signature information.
@@ -157,13 +135,13 @@ export default function JWTDecoder() {
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder="Paste your JWT token here..."
-            className="w-full h-32 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-pink-500 focus:border-pink-500 resize-none"
+            className="w-full h-32 sm:h-40 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-pink-500 focus:border-pink-500 resize-none"
           />
         </div>
 
         {/* Error Display */}
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 flex items-start space-x-3">
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 flex items-start space-x-3" role="alert" aria-live="polite">
             <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
             <div>
               <h4 className="font-semibold text-red-900">Error</h4>
@@ -376,19 +354,9 @@ export default function JWTDecoder() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
-          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

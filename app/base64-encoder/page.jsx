@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Code, Copy, Check, Lock, Home, Upload, Download } from 'lucide-react';
+import { Code, Copy, Check, Lock, Upload, Download } from 'lucide-react';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 export default function Base64EncoderDecoder() {
   const [input, setInput] = useState('');
@@ -99,39 +101,15 @@ export default function Base64EncoderDecoder() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-slate-900">DevUtil</h1>
-                  <p className="text-xs text-slate-500">Base64 Encoder/Decoder</p>
-                </div>
-              </a>
-            </div>
-            <a
-              href="/"
-              className="flex items-center space-x-2 text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Home className="w-5 h-5" />
-              <span className="hidden sm:inline">All Tools</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header subtitle="Base64 Encoder/Decoder" />
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center space-x-3 mb-3">
             <Lock className="w-8 h-8 text-green-600" />
-            <h2 className="text-4xl font-bold text-slate-900">Base64 Encoder & Decoder</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Base64 Encoder & Decoder</h2>
           </div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Encode and decode Base64 strings. Support for text and image files.
@@ -216,7 +194,7 @@ export default function Base64EncoderDecoder() {
 
         {/* Error Display */}
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6" role="alert" aria-live="polite">
             <p className="text-red-700 text-sm">{error}</p>
           </div>
         )}
@@ -239,7 +217,7 @@ export default function Base64EncoderDecoder() {
                   ? 'Enter text to encode...'
                   : 'Paste Base64 string to decode...'
               }
-              className="w-full h-96 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+              className="w-full h-64 sm:h-80 lg:h-96 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
             />
           </div>
 
@@ -278,7 +256,7 @@ export default function Base64EncoderDecoder() {
               </div>
             </div>
             {imagePreview ? (
-              <div className="w-full h-96 border border-slate-300 rounded-xl p-4 bg-slate-50 overflow-auto">
+              <div className="w-full h-64 sm:h-80 lg:h-96 border border-slate-300 rounded-xl p-4 bg-slate-50 overflow-auto">
                 <div className="flex items-center justify-center h-full">
                   <img src={imagePreview} alt="Preview" className="max-w-full max-h-full object-contain" />
                 </div>
@@ -288,7 +266,7 @@ export default function Base64EncoderDecoder() {
                 value={output}
                 readOnly
                 placeholder="Result will appear here..."
-                className="w-full h-96 p-4 bg-slate-50 border border-slate-300 rounded-xl font-mono text-sm resize-none"
+                className="w-full h-64 sm:h-80 lg:h-96 p-4 bg-slate-50 border border-slate-300 rounded-xl font-mono text-sm resize-none"
               />
             )}
           </div>
@@ -326,19 +304,9 @@ export default function Base64EncoderDecoder() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
-          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
