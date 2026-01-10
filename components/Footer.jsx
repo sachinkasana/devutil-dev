@@ -41,6 +41,7 @@ export default function Footer({ variant = 'compact', className = '' }) {
                 <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
                 <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="https://buymeacoffee.com/sachinkasana" className="hover:text-white transition-colors">Buy me a coffee</a></li>
                 <li><a href="https://github.com" className="hover:text-white transition-colors">GitHub</a></li>
               </ul>
             </div>
@@ -55,14 +56,15 @@ export default function Footer({ variant = 'compact', className = '' }) {
 
   return (
     <footer className={`bg-slate-900 text-slate-400 py-8 mt-16 ${className}`.trim()}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
-        <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
-          <a href="/" className="hover:text-white transition-colors">Home</a>
-          <a href="/about" className="hover:text-white transition-colors">About</a>
-          <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-          <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
+          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
+            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <a href="/about" className="hover:text-white transition-colors">About</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
+            <a href="https://buymeacoffee.com/sachinkasana" className="hover:text-white transition-colors">Buy me a coffee</a>
+          </div>
         <p className="text-xs text-slate-500 mt-4">Made with ❤️ by Sachin in India.</p>
       </div>
     </footer>
