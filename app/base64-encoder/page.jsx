@@ -124,6 +124,8 @@ export default function Base64EncoderDecoder() {
                 setMode('encode');
                 clearAll();
               }}
+              data-analytics-event="base64_mode"
+              data-analytics-label="encode"
               className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
                 mode === 'encode'
                   ? 'bg-green-600 text-white shadow-sm'
@@ -137,6 +139,8 @@ export default function Base64EncoderDecoder() {
                 setMode('decode');
                 clearAll();
               }}
+              data-analytics-event="base64_mode"
+              data-analytics-label="decode"
               className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
                 mode === 'decode'
                   ? 'bg-blue-600 text-white shadow-sm'
@@ -153,6 +157,8 @@ export default function Base64EncoderDecoder() {
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={handleProcess}
+              data-analytics-event="base64_process"
+              data-analytics-label={mode === 'encode' ? 'encode' : 'decode'}
               className={`flex items-center space-x-2 px-6 py-2.5 rounded-lg text-white transition-colors font-medium ${
                 mode === 'encode'
                   ? 'bg-green-600 hover:bg-green-700'
@@ -164,7 +170,11 @@ export default function Base64EncoderDecoder() {
             </button>
 
             {mode === 'encode' && (
-              <label className="flex items-center space-x-2 bg-purple-600 text-white px-6 py-2.5 rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer">
+              <label
+                className="flex items-center space-x-2 bg-purple-600 text-white px-6 py-2.5 rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer"
+                data-analytics-event="base64_upload"
+                data-analytics-label="open"
+              >
                 <Upload className="w-4 h-4" />
                 <span>Upload File</span>
                 <input
@@ -178,6 +188,8 @@ export default function Base64EncoderDecoder() {
 
             <button
               onClick={loadSample}
+              data-analytics-event="base64_sample"
+              data-analytics-label={mode === 'encode' ? 'encode' : 'decode'}
               className="flex items-center space-x-2 bg-slate-600 text-white px-6 py-2.5 rounded-lg hover:bg-slate-700 transition-colors font-medium"
             >
               <Code className="w-4 h-4" />
@@ -185,6 +197,7 @@ export default function Base64EncoderDecoder() {
             </button>
             <button
               onClick={clearAll}
+              data-analytics-event="base64_clear"
               className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
             >
               <span>Clear All</span>
@@ -230,6 +243,8 @@ export default function Base64EncoderDecoder() {
                   <>
                     <button
                       onClick={downloadOutput}
+                      data-analytics-event="base64_download"
+                      data-analytics-label={mode === 'encode' ? 'encoded' : 'decoded'}
                       className="flex items-center space-x-1 text-sm text-slate-600 hover:text-slate-900 transition-colors"
                     >
                       <Download className="w-4 h-4" />
@@ -237,6 +252,8 @@ export default function Base64EncoderDecoder() {
                     </button>
                     <button
                       onClick={copyToClipboard}
+                      data-analytics-event="base64_copy"
+                      data-analytics-label={mode === 'encode' ? 'encoded' : 'decoded'}
                       className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
                     >
                       {copied ? (

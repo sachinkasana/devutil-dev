@@ -111,6 +111,7 @@ export default function JWTDecoder() {
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={loadSample}
+              data-analytics-event="jwt_sample"
               className="flex items-center space-x-2 bg-pink-600 text-white px-6 py-2.5 rounded-lg hover:bg-pink-700 transition-colors font-medium"
             >
               <Code className="w-4 h-4" />
@@ -118,6 +119,7 @@ export default function JWTDecoder() {
             </button>
             <button
               onClick={clearAll}
+              data-analytics-event="jwt_clear"
               className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
             >
               <span>Clear All</span>
@@ -163,6 +165,8 @@ export default function JWTDecoder() {
                   </div>
                   <button
                     onClick={() => copyToClipboard(renderJSON(header), 'header')}
+                    data-analytics-event="jwt_copy"
+                    data-analytics-label="header"
                     className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     {copied === 'header' ? (
@@ -212,6 +216,8 @@ export default function JWTDecoder() {
                   </div>
                   <button
                     onClick={() => copyToClipboard(renderJSON(payload), 'payload')}
+                    data-analytics-event="jwt_copy"
+                    data-analytics-label="payload"
                     className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     {copied === 'payload' ? (
@@ -297,6 +303,8 @@ export default function JWTDecoder() {
               </div>
               <button
                 onClick={() => copyToClipboard(signature, 'signature')}
+                data-analytics-event="jwt_copy"
+                data-analytics-label="signature"
                 className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
               >
                 {copied === 'signature' ? (

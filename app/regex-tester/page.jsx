@@ -137,6 +137,7 @@ export default function RegexTester() {
             {pattern && (
               <button
                 onClick={copyPattern}
+                data-analytics-event="regex_copy_pattern"
                 className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
               >
                 {copied ? (
@@ -278,6 +279,8 @@ export default function RegexTester() {
               <button
                 key={i}
                 onClick={() => loadPattern(p)}
+                data-analytics-event="regex_load_pattern"
+                data-analytics-label={p.name}
                 className="text-left p-4 rounded-lg border border-slate-200 hover:border-red-300 hover:bg-red-50 transition-all group"
               >
                 <div className="font-medium text-slate-900 mb-1">{p.name}</div>

@@ -122,6 +122,7 @@ export default function UUIDGenerator() {
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={generateUUIDs}
+              data-analytics-event="uuid_generate"
               className="flex items-center space-x-2 bg-purple-600 text-white px-6 py-2.5 rounded-lg hover:bg-purple-700 transition-colors font-medium"
             >
               <RefreshCw className="w-4 h-4" />
@@ -131,6 +132,7 @@ export default function UUIDGenerator() {
               <>
                 <button
                   onClick={copyAll}
+                  data-analytics-event="uuid_copy_all"
                   className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                 >
                   {copiedIndex === 'all' ? (
@@ -147,6 +149,7 @@ export default function UUIDGenerator() {
                 </button>
                 <button
                   onClick={downloadUUIDs}
+                  data-analytics-event="uuid_download"
                   className="flex items-center space-x-2 bg-green-600 text-white px-6 py-2.5 rounded-lg hover:bg-green-700 transition-colors font-medium"
                 >
                   <Download className="w-4 h-4" />
@@ -154,6 +157,7 @@ export default function UUIDGenerator() {
                 </button>
                 <button
                   onClick={clearAll}
+                  data-analytics-event="uuid_clear"
                   className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -181,6 +185,7 @@ export default function UUIDGenerator() {
                   <code className="font-mono text-sm text-slate-900 flex-1">{uuid}</code>
                   <button
                     onClick={() => copyToClipboard(uuid, index)}
+                    data-analytics-event="uuid_copy_one"
                     className="ml-4 flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors opacity-0 group-hover:opacity-100"
                   >
                     {copiedIndex === index ? (

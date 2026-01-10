@@ -227,6 +227,8 @@ export default function JsonFormatterPage() {
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={() => formatJson(false)}
+              data-analytics-event="json_format"
+              data-analytics-label="pretty"
               className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               <AlignLeft className="w-4 h-4" />
@@ -234,6 +236,8 @@ export default function JsonFormatterPage() {
             </button>
             <button
               onClick={() => formatJson(true)}
+              data-analytics-event="json_format"
+              data-analytics-label="minify"
               className="flex items-center space-x-2 bg-slate-700 text-white px-6 py-2.5 rounded-lg hover:bg-slate-800 transition-colors font-medium"
             >
               <RefreshCw className="w-4 h-4" />
@@ -241,6 +245,7 @@ export default function JsonFormatterPage() {
             </button>
             <button
               onClick={repairJson}
+              data-analytics-event="json_repair"
               title="Attempts to fix common JSON issues like trailing commas, single quotes, comments, and JSONP wrappers."
               className="flex items-center space-x-2 bg-emerald-600 text-white px-6 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors font-medium"
             >
@@ -249,6 +254,7 @@ export default function JsonFormatterPage() {
             </button>
             <button
               onClick={() => setInput(sampleJson)}
+              data-analytics-event="json_sample"
               className="flex items-center space-x-2 bg-slate-600 text-white px-6 py-2.5 rounded-lg hover:bg-slate-700 transition-colors font-medium"
             >
               <Code className="w-4 h-4" />
@@ -256,6 +262,7 @@ export default function JsonFormatterPage() {
             </button>
             <button
               onClick={clearAll}
+              data-analytics-event="json_clear"
               className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
             >
               <span>Clear All</span>
@@ -264,6 +271,7 @@ export default function JsonFormatterPage() {
               <button
                 type="button"
                 onClick={() => setIsConvertMenuOpen((open) => !open)}
+                data-analytics-event="json_convert_menu"
                 aria-expanded={isConvertMenuOpen}
                 title="Convert the current JSON into another format."
                 className="flex items-center justify-between w-56 border-2 border-slate-300 text-slate-700 px-4 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
@@ -280,6 +288,8 @@ export default function JsonFormatterPage() {
                         setIsConvertMenuOpen(false);
                         convertJson('xml');
                       }}
+                      data-analytics-event="json_convert"
+                      data-analytics-label="xml"
                       className="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
                     >
                       JSON → XML
@@ -292,6 +302,8 @@ export default function JsonFormatterPage() {
                         setIsConvertMenuOpen(false);
                         convertJson('csv');
                       }}
+                      data-analytics-event="json_convert"
+                      data-analytics-label="csv"
                       className="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
                     >
                       JSON → CSV
@@ -304,6 +316,8 @@ export default function JsonFormatterPage() {
                         setIsConvertMenuOpen(false);
                         convertJson('yaml');
                       }}
+                      data-analytics-event="json_convert"
+                      data-analytics-label="yaml"
                       className="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
                     >
                       JSON → YAML
@@ -414,6 +428,8 @@ export default function JsonFormatterPage() {
                   <>
                     <button
                       onClick={downloadOutput}
+                      data-analytics-event="json_download"
+                      data-analytics-label={outputType}
                       className="flex items-center space-x-1 text-sm text-slate-600 hover:text-slate-900 transition-colors"
                     >
                       <Download className="w-4 h-4" />
@@ -421,6 +437,8 @@ export default function JsonFormatterPage() {
                     </button>
                     <button
                       onClick={copyToClipboard}
+                      data-analytics-event="json_copy"
+                      data-analytics-label={outputType}
                       className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
                     >
                       {copied ? (

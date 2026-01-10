@@ -150,6 +150,8 @@ export default function TimestampConverter() {
                 </code>
                 <button
                   onClick={() => currentTimestamp !== null && copyToClipboard(currentTimestamp.toString(), 'current-ts')}
+                  data-analytics-event="timestamp_copy"
+                  data-analytics-label="current-ts"
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
                   disabled={currentTimestamp === null}
                   aria-label="Copy current timestamp"
@@ -166,6 +168,8 @@ export default function TimestampConverter() {
                 </code>
                 <button
                   onClick={() => currentDate && copyToClipboard(currentDate.toISOString(), 'current-date')}
+                  data-analytics-event="timestamp_copy"
+                  data-analytics-label="current-date"
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
                   disabled={!currentDate}
                   aria-label="Copy current date"
@@ -185,6 +189,8 @@ export default function TimestampConverter() {
                 setMode('toHuman');
                 setHumanDate('');
               }}
+              data-analytics-event="timestamp_mode"
+              data-analytics-label="toHuman"
               className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
                 mode === 'toHuman'
                   ? 'bg-teal-600 text-white shadow-sm'
@@ -198,6 +204,8 @@ export default function TimestampConverter() {
                 setMode('toTimestamp');
                 setTimestamp('');
               }}
+              data-analytics-event="timestamp_mode"
+              data-analytics-label="toTimestamp"
               className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
                 mode === 'toTimestamp'
                   ? 'bg-blue-600 text-white shadow-sm'
@@ -214,6 +222,7 @@ export default function TimestampConverter() {
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={useCurrentTime}
+              data-analytics-event="timestamp_use_current"
               className="flex items-center space-x-2 bg-teal-600 text-white px-6 py-2.5 rounded-lg hover:bg-teal-700 transition-colors font-medium"
             >
               <RefreshCw className="w-4 h-4" />
@@ -221,6 +230,7 @@ export default function TimestampConverter() {
             </button>
             <button
               onClick={clearAll}
+              data-analytics-event="timestamp_clear"
               className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
             >
               <span>Clear All</span>
@@ -292,6 +302,8 @@ export default function TimestampConverter() {
                     />
                     <button
                       onClick={() => copyToClipboard(timestamp, 'result')}
+                      data-analytics-event="timestamp_copy"
+                      data-analytics-label="result"
                       className="px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                       aria-label="Copy timestamp"
                     >
@@ -317,6 +329,8 @@ export default function TimestampConverter() {
                   </div>
                   <button
                     onClick={() => copyToClipboard(value, key)}
+                    data-analytics-event="timestamp_copy"
+                    data-analytics-label={key}
                     className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
                     aria-label={`Copy ${key} format`}
                   >

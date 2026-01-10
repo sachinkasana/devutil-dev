@@ -137,6 +137,8 @@ export default function URLEncoder() {
                 setMode('encode');
                 clearAll();
               }}
+              data-analytics-event="url_mode"
+              data-analytics-label="encode"
               className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
                 mode === 'encode'
                   ? 'bg-indigo-600 text-white shadow-sm'
@@ -150,6 +152,8 @@ export default function URLEncoder() {
                 setMode('decode');
                 clearAll();
               }}
+              data-analytics-event="url_mode"
+              data-analytics-label="decode"
               className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
                 mode === 'decode'
                   ? 'bg-blue-600 text-white shadow-sm'
@@ -166,6 +170,8 @@ export default function URLEncoder() {
           <div className="flex flex-wrap items-center gap-4 mb-4">
             <button
               onClick={handleProcess}
+              data-analytics-event="url_process"
+              data-analytics-label={mode === 'encode' ? 'encode' : 'decode'}
               className={`flex items-center space-x-2 px-6 py-2.5 rounded-lg text-white transition-colors font-medium ${
                 mode === 'encode'
                   ? 'bg-indigo-600 hover:bg-indigo-700'
@@ -178,6 +184,8 @@ export default function URLEncoder() {
 
             <button
               onClick={loadSample}
+              data-analytics-event="url_sample"
+              data-analytics-label={mode === 'encode' ? 'encode' : 'decode'}
               className="flex items-center space-x-2 bg-slate-600 text-white px-6 py-2.5 rounded-lg hover:bg-slate-700 transition-colors font-medium"
             >
               <Code className="w-4 h-4" />
@@ -185,6 +193,7 @@ export default function URLEncoder() {
             </button>
             <button
               onClick={clearAll}
+              data-analytics-event="url_clear"
               className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
             >
               <span>Clear All</span>
@@ -259,6 +268,8 @@ export default function URLEncoder() {
                   <>
                     <button
                       onClick={downloadOutput}
+                      data-analytics-event="url_download"
+                      data-analytics-label={mode === 'encode' ? 'encoded' : 'decoded'}
                       className="flex items-center space-x-1 text-sm text-slate-600 hover:text-slate-900 transition-colors"
                     >
                       <Download className="w-4 h-4" />
@@ -266,6 +277,8 @@ export default function URLEncoder() {
                     </button>
                     <button
                       onClick={copyToClipboard}
+                      data-analytics-event="url_copy"
+                      data-analytics-label={mode === 'encode' ? 'encoded' : 'decoded'}
                       className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
                     >
                       {copied ? (

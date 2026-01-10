@@ -66,17 +66,19 @@ export default function Header({ subtitle = '', showGithub = false }) {
           </div>
           <div className="flex items-center space-x-3">
             <nav className="hidden sm:flex items-center space-x-4 text-sm text-slate-600">
-              <a href="/" className="hover:text-slate-900 transition-colors">Home</a>
-              <a href="/about" className="hover:text-slate-900 transition-colors">About</a>
-              <a href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</a>
-              <a href="/contact" className="hover:text-slate-900 transition-colors">Contact</a>
+              <a href="/" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="home">Home</a>
+              <a href="/about" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="about">About</a>
+              <a href="/privacy" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="privacy">Privacy</a>
+              <a href="/contact" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="contact">Contact</a>
             </nav>
             {showGithub && (
               <a
-                href="https://github.com"
+                href="https://github.com/sachinkasana/devutil-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="DevUtil GitHub"
+                data-analytics-event="nav_click"
+                data-analytics-label="github"
                 className="text-slate-600 hover:text-slate-900 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -90,6 +92,8 @@ export default function Header({ subtitle = '', showGithub = false }) {
               className="sm:hidden inline-flex items-center justify-center w-9 h-9 rounded-md border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-colors"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation"
+              data-analytics-event="nav_toggle"
+              data-analytics-label={isMenuOpen ? 'close' : 'open'}
               ref={toggleButtonRef}
             >
               {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -99,12 +103,12 @@ export default function Header({ subtitle = '', showGithub = false }) {
         {isMenuOpen && (
           <div ref={menuRef} className="sm:hidden mt-3 border-t border-slate-200 pt-3">
             <nav className="flex flex-col space-y-2 text-sm text-slate-700">
-              <a href="/" className="hover:text-slate-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</a>
-              <a href="/about" className="hover:text-slate-900 transition-colors" onClick={() => setIsMenuOpen(false)}>About</a>
-              <a href="/privacy" className="hover:text-slate-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Privacy</a>
-              <a href="/contact" className="hover:text-slate-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              <a href="/" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="home" onClick={() => setIsMenuOpen(false)}>Home</a>
+              <a href="/about" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="about" onClick={() => setIsMenuOpen(false)}>About</a>
+              <a href="/privacy" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="privacy" onClick={() => setIsMenuOpen(false)}>Privacy</a>
+              <a href="/contact" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
               {showGithub && (
-                <a href="https://github.com" className="hover:text-slate-900 transition-colors" onClick={() => setIsMenuOpen(false)}>GitHub</a>
+                <a href="https://github.com/sachinkasana/devutil-dev" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="github" onClick={() => setIsMenuOpen(false)}>GitHub</a>
               )}
             </nav>
           </div>

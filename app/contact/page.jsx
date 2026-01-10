@@ -15,16 +15,16 @@ export default function ContactPage() {
           <h2 className="text-lg font-semibold text-slate-900 mb-3">Personal Contact</h2>
           <ul className="space-y-2 text-slate-700">
             <li>
-              Email: <a href="mailto:sachinksana@gmail.com" className="text-blue-600 hover:text-blue-700">sachinksana@gmail.com</a>
+              Email: <a href="mailto:sachinksana@gmail.com" className="text-blue-600 hover:text-blue-700" data-analytics-event="contact_click" data-analytics-label="email">sachinksana@gmail.com</a>
             </li>
             <li>
-              X: <a href="https://x.com/sachinkasanag" className="text-blue-600 hover:text-blue-700">@sachinkasanag</a>
+              X: <a href="https://x.com/sachinkasanag" className="text-blue-600 hover:text-blue-700" data-analytics-event="contact_click" data-analytics-label="x">@sachinkasanag</a>
             </li>
             <li>
-              Instagram: <a href="https://www.instagram.com/sachinkasana3570" className="text-blue-600 hover:text-blue-700">@sachinkasana3570</a>
+              Instagram: <a href="https://www.instagram.com/sachinkasana3570" className="text-blue-600 hover:text-blue-700" data-analytics-event="contact_click" data-analytics-label="instagram">@sachinkasana3570</a>
             </li>
             <li>
-              LinkedIn: <a href="https://www.linkedin.com/in/sachin-kasana/" className="text-blue-600 hover:text-blue-700">sachin-kasana</a>
+              LinkedIn: <a href="https://www.linkedin.com/in/sachin-kasana/" className="text-blue-600 hover:text-blue-700" data-analytics-event="contact_click" data-analytics-label="linkedin">sachin-kasana</a>
             </li>
           </ul>
         </div>
@@ -37,6 +37,8 @@ export default function ContactPage() {
             href="https://buymeacoffee.com/sachinkasana"
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-event="support_click"
+            data-analytics-label="Buy me a coffee"
             className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-yellow-400 text-slate-900 font-medium hover:bg-yellow-300 transition-colors"
           >
             Buy me a coffee

@@ -127,6 +127,8 @@ export default function HomePage() {
               <a
                 key={tool.name}
                 href={tool.href}
+                data-analytics-event="tool_open"
+                data-analytics-label={tool.name}
                 className="group relative bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-300"
               >
                 {tool.popular && (

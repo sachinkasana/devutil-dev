@@ -265,12 +265,15 @@ export default function HashGenerator() {
               <input
                 type="file"
                 onChange={handleFileUpload}
+                data-analytics-event="hash_upload"
+                data-analytics-label="open"
                 className="hidden"
                 accept="text/*"
               />
             </label>
             <button
               onClick={loadSample}
+              data-analytics-event="hash_sample"
               className="flex items-center space-x-2 bg-slate-600 text-white px-6 py-2.5 rounded-lg hover:bg-slate-700 transition-colors font-medium"
             >
               <Code className="w-4 h-4" />
@@ -278,6 +281,7 @@ export default function HashGenerator() {
             </button>
             <button
               onClick={clearAll}
+              data-analytics-event="hash_clear"
               className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
             >
               <span>Clear All</span>
@@ -322,6 +326,8 @@ export default function HashGenerator() {
                 {hashes[type.key] && (
                   <button
                     onClick={() => copyToClipboard(hashes[type.key], type.key)}
+                    data-analytics-event="hash_copy"
+                    data-analytics-label={type.key}
                     className="ml-4 flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     {copied === type.key ? (
