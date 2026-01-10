@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DevUtil">
+  <defs>
+    <linearGradient id="du-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#du-grad)" />
+  <path
+    fill="#ffffff"
+    fill-rule="evenodd"
+    d="M20 14h14c9.941 0 18 8.059 18 18s-8.059 18-18 18H20V14Zm6 8v20h7.5c5.799 0 10.5-4.701 10.5-10.5S39.299 22 33.5 22H26Z"
+  />
+</svg>

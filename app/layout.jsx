@@ -23,6 +23,9 @@ export const metadata = {
     title: 'DevUtil',
     description: 'Essential developer tools and utilities for developers.'
   },
+  icons: {
+    icon: '/favicon.svg'
+  },
   robots: {
     index: true,
     follow: true
