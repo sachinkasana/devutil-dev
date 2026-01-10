@@ -1,6 +1,23 @@
 import React from 'react';
 import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock } from 'lucide-react';
 
+export const metadata = {
+  title: 'Developer Utilities',
+  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
+  alternates: {
+    canonical: '/'
+  },
+  openGraph: {
+    title: 'Developer Utilities',
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
+    url: '/'
+  },
+  twitter: {
+    title: 'Developer Utilities',
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.'
+  }
+};
+
 const tools = [
   {
     name: 'JSON Formatter',
