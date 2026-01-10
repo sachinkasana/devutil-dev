@@ -9,6 +9,9 @@ export const metadata = {
     template: '%s | DevUtil'
   },
   description: 'Essential developer tools and utilities for developers.',
+  verification: {
+    google: 'h1FX8R7sRO-6jVd0dATODfLF_ablZtF6f5BnxP1zxOc'
+  },
   openGraph: {
     type: 'website',
     siteName: 'DevUtil',
