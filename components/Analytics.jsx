@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const GA_ID = 'G-60HX9JGQBJ';
 
@@ -15,14 +15,11 @@ const trackEvent = (eventName, label) => {
 
 export default function Analytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (typeof window === 'undefined' || !window.gtag) return;
-    const query = searchParams?.toString();
-    const url = query ? `${pathname}?${query}` : pathname;
-    window.gtag('config', GA_ID, { page_path: url });
-  }, [pathname, searchParams]);
+    window.gtag('config', GA_ID, { page_path: pathname });
+  }, [pathname]);
 
   useEffect(() => {
     const handleClick = (event) => {
