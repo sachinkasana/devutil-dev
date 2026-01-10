@@ -1,0 +1,344 @@
+'use client';
+
+import React, { useState } from 'react';
+import { Code, Copy, Check, Lock, Home, Upload, Download } from 'lucide-react';
+
+export default function Base64EncoderDecoder() {
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('');
+  const [mode, setMode] = useState('encode');
+  const [copied, setCopied] = useState(false);
+  const [error, setError] = useState('');
+  const [imagePreview, setImagePreview] = useState('');
+
+  const encode = () => {
+    setError('');
+    setImagePreview('');
+    try {
+      const encoded = btoa(unescape(encodeURIComponent(input)));
+      setOutput(encoded);
+    } catch (e) {
+      setError(`Encoding error: ${e.message}`);
+      setOutput('');
+    }
+  };
+
+  const decode = () => {
+    setError('');
+    setImagePreview('');
+    try {
+      const decoded = decodeURIComponent(escape(atob(input)));
+      setOutput(decoded);
+
+      // Check if it's an image
+      if (input.startsWith('iVBOR') || input.startsWith('/9j/') || input.startsWith('R0lGOD')) {
+        setImagePreview(`data:image/png;base64,${input}`);
+      }
+    } catch (e) {
+      setError(`Decoding error: ${e.message}`);
+      setOutput('');
+    }
+  };
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const result = event.target?.result;
+      if (typeof result === 'string') {
+        const base64 = result.split(',')[1];
+        setInput(base64);
+        setImagePreview(result);
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const copyToClipboard = async () => {
+    if (output) {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  const downloadOutput = () => {
+    const blob = new Blob([output], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = mode === 'encode' ? 'encoded.txt' : 'decoded.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const loadSample = () => {
+    if (mode === 'encode') {
+      setInput('Hello, World! This is a sample text to encode.');
+    } else {
+      setInput('SGVsbG8sIFdvcmxkISBUaGlzIGlzIGEgc2FtcGxlIHRleHQgdG8gZW5jb2RlLg==');
+    }
+  };
+
+  const clearAll = () => {
+    setInput('');
+    setOutput('');
+    setError('');
+    setImagePreview('');
+  };
+
+  const handleProcess = () => {
+    if (mode === 'encode') {
+      encode();
+    } else {
+      decode();
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      {/* Header */}
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Code className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-slate-900">DevUtil</h1>
+                  <p className="text-xs text-slate-500">Base64 Encoder/Decoder</p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="/"
+              className="flex items-center space-x-2 text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              <Home className="w-5 h-5" />
+              <span className="hidden sm:inline">All Tools</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Title & Description */}
+        <div className="mb-8 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-3">
+            <Lock className="w-8 h-8 text-green-600" />
+            <h2 className="text-4xl font-bold text-slate-900">Base64 Encoder & Decoder</h2>
+          </div>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Encode and decode Base64 strings. Support for text and image files.
+          </p>
+        </div>
+
+        {/* Mode Toggle */}
+        <div className="flex justify-center mb-6">
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-2 inline-flex">
+            <button
+              onClick={() => {
+                setMode('encode');
+                clearAll();
+              }}
+              className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
+                mode === 'encode'
+                  ? 'bg-green-600 text-white shadow-sm'
+                  : 'text-slate-700 hover:bg-slate-50'
+              }`}
+            >
+              Encode
+            </button>
+            <button
+              onClick={() => {
+                setMode('decode');
+                clearAll();
+              }}
+              className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
+                mode === 'decode'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-slate-700 hover:bg-slate-50'
+              }`}
+            >
+              Decode
+            </button>
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
+          <div className="flex flex-wrap items-center gap-4">
+            <button
+              onClick={handleProcess}
+              className={`flex items-center space-x-2 px-6 py-2.5 rounded-lg text-white transition-colors font-medium ${
+                mode === 'encode'
+                  ? 'bg-green-600 hover:bg-green-700'
+                  : 'bg-blue-600 hover:bg-blue-700'
+              }`}
+            >
+              <Lock className="w-4 h-4" />
+              <span>{mode === 'encode' ? 'Encode' : 'Decode'}</span>
+            </button>
+
+            {mode === 'encode' && (
+              <label className="flex items-center space-x-2 bg-purple-600 text-white px-6 py-2.5 rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer">
+                <Upload className="w-4 h-4" />
+                <span>Upload File</span>
+                <input
+                  type="file"
+                  onChange={handleFileUpload}
+                  className="hidden"
+                  accept="image/*,text/*"
+                />
+              </label>
+            )}
+
+            <button
+              onClick={loadSample}
+              className="flex items-center space-x-2 bg-slate-600 text-white px-6 py-2.5 rounded-lg hover:bg-slate-700 transition-colors font-medium"
+            >
+              <Code className="w-4 h-4" />
+              <span>Load Sample</span>
+            </button>
+            <button
+              onClick={clearAll}
+              className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
+            >
+              <span>Clear All</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Error Display */}
+        {error && (
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+            <p className="text-red-700 text-sm">{error}</p>
+          </div>
+        )}
+
+        {/* Input/Output Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Input */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-slate-900">
+                {mode === 'encode' ? 'Text to Encode' : 'Base64 to Decode'}
+              </h3>
+              <span className="text-sm text-slate-500">{input.length} characters</span>
+            </div>
+            <textarea
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder={
+                mode === 'encode'
+                  ? 'Enter text to encode...'
+                  : 'Paste Base64 string to decode...'
+              }
+              className="w-full h-96 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+            />
+          </div>
+
+          {/* Output */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-slate-900">Output</h3>
+              <div className="flex items-center space-x-2">
+                {output && (
+                  <>
+                    <button
+                      onClick={downloadOutput}
+                      className="flex items-center space-x-1 text-sm text-slate-600 hover:text-slate-900 transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>Download</span>
+                    </button>
+                    <button
+                      onClick={copyToClipboard}
+                      className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
+                    >
+                      {copied ? (
+                        <>
+                          <Check className="w-4 h-4" />
+                          <span>Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-4 h-4" />
+                          <span>Copy</span>
+                        </>
+                      )}
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+            {imagePreview ? (
+              <div className="w-full h-96 border border-slate-300 rounded-xl p-4 bg-slate-50 overflow-auto">
+                <div className="flex items-center justify-center h-full">
+                  <img src={imagePreview} alt="Preview" className="max-w-full max-h-full object-contain" />
+                </div>
+              </div>
+            ) : (
+              <textarea
+                value={output}
+                readOnly
+                placeholder="Result will appear here..."
+                className="w-full h-96 p-4 bg-slate-50 border border-slate-300 rounded-xl font-mono text-sm resize-none"
+              />
+            )}
+          </div>
+        </div>
+
+        {/* Info Section */}
+        <div className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">About Base64 Encoding</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold text-slate-900 mb-3">What is Base64?</h4>
+              <p className="text-slate-600 mb-4">
+                Base64 is a binary-to-text encoding scheme that represents binary data in ASCII string format.
+                It's commonly used to encode data that needs to be stored and transferred over media designed to deal with text.
+              </p>
+              <h4 className="text-xl font-semibold text-slate-900 mb-3">Common Uses</h4>
+              <ul className="space-y-2 text-slate-600">
+                <li>✅ Embedding images in HTML/CSS</li>
+                <li>✅ Sending binary data over email</li>
+                <li>✅ Storing complex data in databases</li>
+                <li>✅ Data URLs in web applications</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold text-slate-900 mb-3">Features</h4>
+              <ul className="space-y-2 text-slate-600">
+                <li>✅ Encode text to Base64</li>
+                <li>✅ Decode Base64 to text</li>
+                <li>✅ Support for UTF-8 characters</li>
+                <li>✅ Image file encoding</li>
+                <li>✅ Image preview for decoded data</li>
+                <li>✅ Copy to clipboard</li>
+                <li>✅ Download results</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-slate-400 py-8 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
+          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
+            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
