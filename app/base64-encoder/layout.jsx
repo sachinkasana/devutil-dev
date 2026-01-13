@@ -1,7 +1,9 @@
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Free Base64 Encoder Online - Fast & Private | DevUtil',
+  title: {
+    absolute: 'Free Base64 Encoder Online - Fast & Private | DevUtil'
+  },
   description: 'Free Base64 encoder/decoder with client-side privacy, no signup, and instant results to encode text, JSON, or files online for developers. Fast in-browser tool.',
   keywords: [
     'base64 encoder',
@@ -17,17 +19,17 @@ export const metadata = {
     'base64 file'
   ],
   alternates: {
-    canonical: '/base64-encoder'
+    canonical: 'https://www.devutil.dev/base64-encoder'
   },
   openGraph: {
     title: 'Free Base64 Encoder Online - Fast & Private | DevUtil',
     description: 'Free Base64 encoder/decoder with client-side privacy, no signup, and instant results to encode text, JSON, or files online for developers. Fast in-browser tool.',
-    url: '/base64-encoder',
+    url: 'https://www.devutil.dev/base64-encoder',
     type: 'website',
     siteName: 'DevUtil',
     images: [
       {
-        url: '/og.png',
+        url: 'https://www.devutil.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Base64 Encoder Online - Fast & Private | DevUtil',
     description: 'Free Base64 encoder/decoder with client-side privacy, no signup, and instant results to encode text, JSON, or files online for developers. Fast in-browser tool.',
-    images: ['/og.png']
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -48,7 +50,7 @@ const jsonLd = {
   name: 'Base64 Encoder',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
-  url: 'https://devutil.dev/base64-encoder',
+  url: 'https://www.devutil.dev/base64-encoder',
   description: 'Free Base64 encoder and decoder with client-side privacy and instant results.',
   offers: {
     '@type': 'Offer',

@@ -1,7 +1,9 @@
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Free Timestamp Converter Online - Fast & Private | DevUtil',
+  title: {
+    absolute: 'Free Timestamp Converter Online - Fast & Private | DevUtil'
+  },
   description: 'Free timestamp converter with client-side privacy, no signup, and instant results to convert Unix time online for logs, APIs, and debugging. In-browser tool.',
   keywords: [
     'timestamp converter',
@@ -17,17 +19,17 @@ export const metadata = {
     'time converter'
   ],
   alternates: {
-    canonical: '/timestamp-converter'
+    canonical: 'https://www.devutil.dev/timestamp-converter'
   },
   openGraph: {
     title: 'Free Timestamp Converter Online - Fast & Private | DevUtil',
     description: 'Free timestamp converter with client-side privacy, no signup, and instant results to convert Unix time online for logs, APIs, and debugging. In-browser tool.',
-    url: '/timestamp-converter',
+    url: 'https://www.devutil.dev/timestamp-converter',
     type: 'website',
     siteName: 'DevUtil',
     images: [
       {
-        url: '/og.png',
+        url: 'https://www.devutil.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Timestamp Converter Online - Fast & Private | DevUtil',
     description: 'Free timestamp converter with client-side privacy, no signup, and instant results to convert Unix time online for logs, APIs, and debugging. In-browser tool.',
-    images: ['/og.png']
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -48,7 +50,7 @@ const jsonLd = {
   name: 'Timestamp Converter',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
-  url: 'https://devutil.dev/timestamp-converter',
+  url: 'https://www.devutil.dev/timestamp-converter',
   description: 'Free timestamp converter with client-side privacy and instant results.',
   offers: {
     '@type': 'Offer',

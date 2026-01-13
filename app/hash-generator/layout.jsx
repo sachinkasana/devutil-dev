@@ -1,7 +1,9 @@
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Free Hash Generator Online - Fast & Private | DevUtil',
+  title: {
+    absolute: 'Free Hash Generator Online - Fast & Private | DevUtil'
+  },
   description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy, no signup, and instant results for checksums and files. Fast in-browser tool.',
   keywords: [
     'hash generator',
@@ -17,17 +19,17 @@ export const metadata = {
     'generate hash'
   ],
   alternates: {
-    canonical: '/hash-generator'
+    canonical: 'https://www.devutil.dev/hash-generator'
   },
   openGraph: {
     title: 'Free Hash Generator Online - Fast & Private | DevUtil',
     description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy, no signup, and instant results for checksums and files. Fast in-browser tool.',
-    url: '/hash-generator',
+    url: 'https://www.devutil.dev/hash-generator',
     type: 'website',
     siteName: 'DevUtil',
     images: [
       {
-        url: '/og.png',
+        url: 'https://www.devutil.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Hash Generator Online - Fast & Private | DevUtil',
     description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy, no signup, and instant results for checksums and files. Fast in-browser tool.',
-    images: ['/og.png']
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -48,7 +50,7 @@ const jsonLd = {
   name: 'Hash Generator',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
-  url: 'https://devutil.dev/hash-generator',
+  url: 'https://www.devutil.dev/hash-generator',
   description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy and instant results.',
   offers: {
     '@type': 'Offer',

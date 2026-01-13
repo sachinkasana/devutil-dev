@@ -1,7 +1,9 @@
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Free UUID Generator Online - Fast & Private | DevUtil',
+  title: {
+    absolute: 'Free UUID Generator Online - Fast & Private | DevUtil'
+  },
   description: 'Free UUID v4 generator with client-side privacy, no signup, and instant results to create unique IDs online for APIs, databases, and tests. Fast in-browser tool',
   keywords: [
     'uuid generator',
@@ -17,17 +19,17 @@ export const metadata = {
     'create uuid'
   ],
   alternates: {
-    canonical: '/uuid-generator'
+    canonical: 'https://www.devutil.dev/uuid-generator'
   },
   openGraph: {
     title: 'Free UUID Generator Online - Fast & Private | DevUtil',
     description: 'Free UUID v4 generator with client-side privacy, no signup, and instant results to create unique IDs online for APIs, databases, and tests. Fast in-browser tool',
-    url: '/uuid-generator',
+    url: 'https://www.devutil.dev/uuid-generator',
     type: 'website',
     siteName: 'DevUtil',
     images: [
       {
-        url: '/og.png',
+        url: 'https://www.devutil.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free UUID Generator Online - Fast & Private | DevUtil',
     description: 'Free UUID v4 generator with client-side privacy, no signup, and instant results to create unique IDs online for APIs, databases, and tests. Fast in-browser tool',
-    images: ['/og.png']
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -48,7 +50,7 @@ const jsonLd = {
   name: 'UUID Generator',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
-  url: 'https://devutil.dev/uuid-generator',
+  url: 'https://www.devutil.dev/uuid-generator',
   description: 'Free UUID v4 generator with client-side privacy and instant results.',
   offers: {
     '@type': 'Offer',

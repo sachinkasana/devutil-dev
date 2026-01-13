@@ -1,7 +1,9 @@
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Free URL Encoder Online - Fast & Private | DevUtil',
+  title: {
+    absolute: 'Free URL Encoder Online - Fast & Private | DevUtil'
+  },
   description: 'Free URL encoder/decoder with client-side privacy, no signup, and instant results to encode query strings online fast for developers and APIs. In-browser tool.',
   keywords: [
     'url encoder',
@@ -17,17 +19,17 @@ export const metadata = {
     'encodeuricomponent'
   ],
   alternates: {
-    canonical: '/url-encoder'
+    canonical: 'https://www.devutil.dev/url-encoder'
   },
   openGraph: {
     title: 'Free URL Encoder Online - Fast & Private | DevUtil',
     description: 'Free URL encoder/decoder with client-side privacy, no signup, and instant results to encode query strings online fast for developers and APIs. In-browser tool.',
-    url: '/url-encoder',
+    url: 'https://www.devutil.dev/url-encoder',
     type: 'website',
     siteName: 'DevUtil',
     images: [
       {
-        url: '/og.png',
+        url: 'https://www.devutil.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free URL Encoder Online - Fast & Private | DevUtil',
     description: 'Free URL encoder/decoder with client-side privacy, no signup, and instant results to encode query strings online fast for developers and APIs. In-browser tool.',
-    images: ['/og.png']
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -48,7 +50,7 @@ const jsonLd = {
   name: 'URL Encoder',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
-  url: 'https://devutil.dev/url-encoder',
+  url: 'https://www.devutil.dev/url-encoder',
   description: 'Free URL encoder and decoder with client-side privacy and instant results.',
   offers: {
     '@type': 'Offer',

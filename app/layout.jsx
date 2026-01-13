@@ -3,7 +3,7 @@ import Script from 'next/script';
 import Analytics from '../components/Analytics';
 
 export const metadata = {
-  metadataBase: new URL('https://devutil.dev'),
+  metadataBase: new URL('https://www.devutil.dev'),
   title: {
     default: 'DevUtil',
     template: '%s | DevUtil'

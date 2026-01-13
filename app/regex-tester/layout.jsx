@@ -1,7 +1,9 @@
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Free Regex Tester Online - Fast & Private | DevUtil',
+  title: {
+    absolute: 'Free Regex Tester Online - Fast & Private | DevUtil'
+  },
   description: 'Free regex tester with client-side privacy, no signup, and instant matches to debug patterns online with live results for developers. Fast in-browser tool.',
   keywords: [
     'regex tester',
@@ -17,17 +19,17 @@ export const metadata = {
     'regex builder'
   ],
   alternates: {
-    canonical: '/regex-tester'
+    canonical: 'https://www.devutil.dev/regex-tester'
   },
   openGraph: {
     title: 'Free Regex Tester Online - Fast & Private | DevUtil',
     description: 'Free regex tester with client-side privacy, no signup, and instant matches to debug patterns online with live results for developers. Fast in-browser tool.',
-    url: '/regex-tester',
+    url: 'https://www.devutil.dev/regex-tester',
     type: 'website',
     siteName: 'DevUtil',
     images: [
       {
-        url: '/og.png',
+        url: 'https://www.devutil.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Regex Tester Online - Fast & Private | DevUtil',
     description: 'Free regex tester with client-side privacy, no signup, and instant matches to debug patterns online with live results for developers. Fast in-browser tool.',
-    images: ['/og.png']
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -48,7 +50,7 @@ const jsonLd = {
   name: 'Regex Tester',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
-  url: 'https://devutil.dev/regex-tester',
+  url: 'https://www.devutil.dev/regex-tester',
   description: 'Free regex tester with client-side privacy and instant match results.',
   offers: {
     '@type': 'Offer',
