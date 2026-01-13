@@ -92,15 +92,15 @@ export default function JWTDecoder() {
       {/* Main Content */}
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
-            <Braces className="w-8 h-8 text-pink-600" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">JWT Decoder</h2>
+        <div className="mb-6 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <Braces className="w-7 h-7 text-pink-600" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">JWT Decoder</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Decode and inspect JSON Web Tokens (JWT). View header, payload, and signature information.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+            Decode JWTs instantly in your browser with private, client-side processing.
           </p>
-          <div className="mt-4 inline-flex items-center space-x-2 bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-2 text-sm text-yellow-800">
+          <div className="mt-3 inline-flex items-center space-x-2 bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-2 text-sm text-yellow-800">
             <Shield className="w-4 h-4" />
             <span>This tool only decodes tokens. It does not verify signatures.</span>
           </div>
@@ -326,42 +326,95 @@ export default function JWTDecoder() {
           </div>
         )}
 
-        {/* Info Section */}
-        <div className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">About JWT Tokens</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">What is JWT?</h4>
-              <p className="text-slate-600 mb-4">
-                JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object.
-                JWTs are commonly used for authentication and information exchange.
+        {/* Supporting Content */}
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Decode JSON Web Tokens instantly with a free, online JWT decoder that runs entirely in your browser.
+                Inspect the header and payload, read claims, and understand token structure without sending data to a
+                server.
               </p>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">JWT Structure</h4>
-              <ul className="space-y-2 text-slate-600">
-                <li><strong className="text-red-600">Header:</strong> Algorithm and token type</li>
-                <li><strong className="text-purple-600">Payload:</strong> Claims and data</li>
-                <li><strong className="text-blue-600">Signature:</strong> Verification signature</li>
-              </ul>
+              <p>
+                Developers use JWTs for authentication and authorization, and decoding them quickly is essential when
+                debugging login flows or API access. This tool keeps everything client-side for privacy, so sensitive
+                tokens never leave your device and results appear instantly with no registration.
+              </p>
+              <p>
+                Use it to sanity-check claims, compare token contents across environments, or understand which
+                algorithm and key ID a service is using. It is a fast way to validate token shape before you move on to
+                server-side signature verification.
+              </p>
             </div>
-            <div>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">Common Claims</h4>
-              <ul className="space-y-2 text-slate-600 text-sm">
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">iss</code> - Issuer of the token</li>
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">sub</code> - Subject (user ID)</li>
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">aud</code> - Audience</li>
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">exp</code> - Expiration time</li>
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">nbf</code> - Not before time</li>
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">iat</code> - Issued at time</li>
-                <li><code className="bg-slate-100 px-1.5 py-0.5 rounded">jti</code> - JWT ID</li>
-              </ul>
-              <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <p className="text-sm text-yellow-800">
-                  <strong>Security Note:</strong> This tool only decodes tokens. Always verify signatures on the server side.
-                </p>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Decode header and payload with readable JSON output.</li>
+              <li>View base64url segments and signature structure.</li>
+              <li>Copy decoded JSON or raw segments instantly.</li>
+              <li>Runs fully in-browser for private inspection.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <p className="text-slate-600 mb-3">
+              Decoding lets you quickly understand token contents before verifying signatures in your backend.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Paste a JWT into the input field.</li>
+              <li>Review the decoded header and payload sections.</li>
+              <li>Copy JSON or individual segments as needed.</li>
+              <li>Verify signatures separately in your backend.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <p className="text-slate-600 mb-3">
+              JWT inspection helps validate claims and troubleshoot auth issues without extra tooling.
+            </p>
+            <ul className="list-disc list-inside text-slate-600 space-y-2">
+              <li>Debugging authentication and authorization flows.</li>
+              <li>Inspecting claims like exp, iat, and aud.</li>
+              <li>Validating token structure during API testing.</li>
+              <li>Reviewing issued tokens in staging environments.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <div className="space-y-4 text-slate-600">
+              <div>
+                <h4 className="font-semibold text-slate-900">Does this verify JWT signatures?</h4>
+                <p>No. It only decodes tokens. Always verify signatures on the server to ensure authenticity.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Is my token sent anywhere?</h4>
+                <p>No. Decoding happens locally in your browser. The token never leaves your device.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Why do I see base64url?</h4>
+                <p>JWT segments are base64url-encoded for safe transport in headers. That makes them URL-safe.</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/json-formatter" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">JSON Formatter</h4>
+              <p className="text-slate-600 text-sm">Beautify decoded JWT payloads for readability.</p>
+            </a>
+            <a href="/base64-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h4>
+              <p className="text-slate-600 text-sm">Encode or decode JWT segments manually.</p>
+            </a>
+            <a href="/hash-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Hash Generator</h4>
+              <p className="text-slate-600 text-sm">Generate digests when verifying token inputs.</p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />

@@ -119,13 +119,13 @@ export default function URLEncoder() {
       {/* Main Content */}
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
-            <Link2 className="w-8 h-8 text-indigo-600" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">URL Encoder & Decoder</h2>
+        <div className="mb-6 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <Link2 className="w-7 h-7 text-indigo-600" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">URL Encoder & Decoder</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Encode and decode URL components with support for full URLs and query parameters.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+            Encode or decode URLs instantly with fast, private in-browser processing.
           </p>
         </div>
 
@@ -359,48 +359,95 @@ export default function URLEncoder() {
           </div>
         )}
 
-        {/* Info Section */}
-        <div className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">About URL Encoding</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">What is URL Encoding?</h4>
-              <p className="text-slate-600 mb-4">
-                URL encoding converts characters into a format that can be transmitted over the Internet.
-                Special characters are replaced with a "%" followed by two hexadecimal digits.
+        {/* Supporting Content */}
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Encode or decode URLs instantly with a free, online URL encoder that runs entirely in your browser.
+                Safely transform query parameters, path segments, and full URLs so requests remain valid and readable.
               </p>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">Common Use Cases</h4>
-              <ul className="space-y-2 text-slate-600">
-                <li>✅ Encoding query parameters in URLs</li>
-                <li>✅ Passing data in URL strings</li>
-                <li>✅ API request parameters</li>
-                <li>✅ Form data submission</li>
-              </ul>
+              <p>
+                Developers rely on URL encoding to prevent malformed requests, fix copy-paste issues, and prepare data
+                for API calls. This tool processes everything client-side, so your URLs stay private and you get
+                immediate results without registration. Switch between encoding modes and inspect URL parts to debug
+                faster.
+              </p>
+              <p>
+                Use this encoder when you are building query strings, sharing links, or troubleshooting redirect flows.
+                Having both encode and decode in one place makes it easy to spot mistakes in parameters before
+                shipping.
+              </p>
             </div>
-            <div>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">Encoding Types</h4>
-              <ul className="space-y-3 text-slate-600">
-                <li>
-                  <strong className="text-indigo-600">encodeURIComponent:</strong> Encodes all special characters.
-                  Use for query parameters and path segments.
-                </li>
-                <li>
-                  <strong className="text-blue-600">encodeURI:</strong> Encodes most characters but preserves URL structure.
-                  Use for full URLs.
-                </li>
-              </ul>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Common Encodings</h4>
-              <ul className="space-y-2 text-slate-600 font-mono text-sm">
-                <li>space → %20</li>
-                <li>! → %21</li>
-                <li># → %23</li>
-                <li>$ → %24</li>
-                <li>& → %26</li>
-                <li>@ → %40</li>
-              </ul>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Encode or decode full URLs and individual parameters.</li>
+              <li>Inspect protocol, host, path, and query pieces instantly.</li>
+              <li>Copy results with one click for rapid testing.</li>
+              <li>Runs fully in-browser for speed and privacy.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <p className="text-slate-600 mb-3">
+              Use URL encoding whenever a parameter contains spaces, punctuation, or non-ASCII characters.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Select Encode or Decode based on your input.</li>
+              <li>Paste a full URL or a single parameter value.</li>
+              <li>Click Convert to view the encoded or decoded result.</li>
+              <li>Copy the output or inspect the URL breakdown.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <p className="text-slate-600 mb-3">
+              Encoded URLs reduce errors when parameters are built dynamically in apps or services.
+            </p>
+            <ul className="list-disc list-inside text-slate-600 space-y-2">
+              <li>Encoding query strings for API requests.</li>
+              <li>Decoding URLs copied from logs or emails.</li>
+              <li>Sanitizing user input for safe redirects.</li>
+              <li>Building clean, shareable links with parameters.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <div className="space-y-4 text-slate-600">
+              <div>
+                <h4 className="font-semibold text-slate-900">What is the difference between encodeURI and encodeURIComponent?</h4>
+                <p>encodeURIComponent is for individual parameters, while encodeURI keeps URL structure intact. Use the latter for full URLs.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Is my URL sent to a server?</h4>
+                <p>No. Encoding and decoding happen locally in your browser. Your URLs remain private.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Why does a space become %20?</h4>
+                <p>Special characters are represented by percent-encoded hex values in URLs. This ensures safe transmission over HTTP.</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/base64-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h4>
+              <p className="text-slate-600 text-sm">Encode payloads before adding them to URLs.</p>
+            </a>
+            <a href="/json-formatter" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">JSON Formatter</h4>
+              <p className="text-slate-600 text-sm">Format JSON before embedding in query parameters.</p>
+            </a>
+            <a href="/regex-tester" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Regex Tester</h4>
+              <p className="text-slate-600 text-sm">Validate encoded URLs with custom patterns.</p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />

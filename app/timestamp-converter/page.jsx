@@ -125,13 +125,13 @@ export default function TimestampConverter() {
       {/* Main Content */}
       <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
-            <RefreshCw className="w-8 h-8 text-teal-600" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Timestamp Converter</h2>
+        <div className="mb-6 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <RefreshCw className="w-7 h-7 text-teal-600" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Timestamp Converter</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Convert Unix timestamps to human-readable dates and vice versa.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+            Convert timestamps instantly with fast, private in-browser processing.
           </p>
         </div>
 
@@ -342,42 +342,95 @@ export default function TimestampConverter() {
           </div>
         )}
 
-        {/* Info Section */}
-        <div className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">About Unix Timestamps</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">What is a Unix Timestamp?</h4>
-              <p className="text-slate-600 mb-4">
-                A Unix timestamp is the number of seconds that have elapsed since the Unix epoch (January 1, 1970, 00:00:00 UTC).
-                It's a simple way to represent time as a single number.
+        {/* Supporting Content */}
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Convert Unix timestamps to human-readable dates and back with a free, online timestamp converter that
+                runs entirely in your browser. Handle seconds, milliseconds, and ISO strings without sending data to a
+                server.
               </p>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">Formats</h4>
-              <ul className="space-y-2 text-slate-600">
-                <li>✅ <strong>Seconds:</strong> 10 digits (e.g., 1704067200)</li>
-                <li>✅ <strong>Milliseconds:</strong> 13 digits (e.g., 1704067200000)</li>
-                <li>✅ <strong>ISO 8601:</strong> 2024-01-01T00:00:00Z</li>
-              </ul>
+              <p>
+                Developers use timestamps to debug logs, validate API responses, and schedule jobs. This tool keeps
+                everything client-side for privacy, so your data never leaves the browser and results appear instantly
+                with no registration. Convert, copy, and compare formats in seconds.
+              </p>
+              <p>
+                It is especially handy when you need to translate milliseconds from JavaScript or compare UTC and local
+                time in distributed systems. Keep the converter open while you trace incidents or validate time-based
+                logic during QA.
+              </p>
             </div>
-            <div>
-              <h4 className="text-xl font-semibold text-slate-900 mb-3">Common Uses</h4>
-              <ul className="space-y-2 text-slate-600">
-                <li>✅ Database date storage</li>
-                <li>✅ API timestamps</li>
-                <li>✅ Log file timestamps</li>
-                <li>✅ Session expiration</li>
-                <li>✅ File modification times</li>
-                <li>✅ Event scheduling</li>
-              </ul>
-              <div className="mt-4 p-3 bg-teal-50 border border-teal-200 rounded-lg">
-                <p className="text-sm text-teal-800">
-                  <strong>Tip:</strong> Most programming languages work with Unix timestamps in seconds,
-                  but JavaScript uses milliseconds.
-                </p>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Convert between seconds, milliseconds, and ISO 8601.</li>
+              <li>View the current time in multiple formats.</li>
+              <li>Copy converted values with a single click.</li>
+              <li>Local processing keeps timestamps private.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <p className="text-slate-600 mb-3">
+              Enter a timestamp once and get multiple formats instantly for debugging and documentation.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Enter a Unix timestamp or a human-readable date.</li>
+              <li>Select whether the value is in seconds or milliseconds.</li>
+              <li>Convert to see ISO, UTC, and local formats instantly.</li>
+              <li>Copy the output values for logs or API requests.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <p className="text-slate-600 mb-3">
+              Timestamp conversion is useful when reconciling logs, metrics, and user-reported issues.
+            </p>
+            <ul className="list-disc list-inside text-slate-600 space-y-2">
+              <li>Debugging API responses and log timestamps.</li>
+              <li>Converting milliseconds from JavaScript Date objects.</li>
+              <li>Scheduling jobs with epoch-based time values.</li>
+              <li>Validating token expiration or cache TTLs.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <div className="space-y-4 text-slate-600">
+              <div>
+                <h4 className="font-semibold text-slate-900">Seconds or milliseconds?</h4>
+                <p>Most systems use seconds, while JavaScript uses milliseconds by default. Choose the correct unit before converting.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Is any data sent to a server?</h4>
+                <p>No. Conversions run locally in your browser. Your time values stay private.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Why are UTC and local times different?</h4>
+                <p>UTC is timezone-agnostic; local time reflects your system timezone. The offset changes with daylight saving time.</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/uuid-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">UUID Generator</h4>
+              <p className="text-slate-600 text-sm">Generate IDs while correlating time-based events.</p>
+            </a>
+            <a href="/hash-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Hash Generator</h4>
+              <p className="text-slate-600 text-sm">Hash timestamps for checksums or cache keys.</p>
+            </a>
+            <a href="/json-formatter" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">JSON Formatter</h4>
+              <p className="text-slate-600 text-sm">Inspect API responses with timestamp fields.</p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />

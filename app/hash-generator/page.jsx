@@ -246,13 +246,13 @@ export default function HashGenerator() {
       {/* Main Content */}
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
-            <Hash className="w-8 h-8 text-orange-600" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Hash Generator</h2>
+        <div className="mb-6 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <Hash className="w-7 h-7 text-orange-600" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Hash Generator</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text or files instantly.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+            Generate hashes instantly for text or files with private, in-browser processing.
           </p>
         </div>
 
@@ -386,6 +386,96 @@ export default function HashGenerator() {
             </div>
           </div>
         </div>
+
+        {/* Supporting Content */}
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Generate cryptographic hashes instantly with a free, online hash generator that runs in your browser.
+                Create MD5, SHA-1, SHA-256, or SHA-512 digests from text or files to verify integrity, compare payloads,
+                or build consistent identifiers without sending data anywhere.
+              </p>
+              <p>
+                Developers rely on hashes for checksums, cache keys, and signature inputs. This tool keeps everything
+                client-side, so your inputs stay private and results appear instantly with no registration. Use it for
+                quick validation during debugging, or generate hashes for documentation and test fixtures.
+              </p>
+              <p>
+                Hashing is also useful when you need deterministic fingerprints for comparisons across environments.
+                Generate multiple algorithms at once to verify consistency and choose the right digest for your
+                security or caching needs.
+              </p>
+            </div>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Hash text or uploaded files using common algorithms.</li>
+              <li>Compare outputs across MD5, SHA-1, SHA-256, and SHA-512.</li>
+              <li>Copy or download results with a single click.</li>
+              <li>Local processing keeps sensitive data on your device.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <p className="text-slate-600 mb-3">
+              Hashes are deterministic, so the same input always yields the same output. Use that to compare values.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Paste text or upload a file to hash.</li>
+              <li>Select the hash algorithms you need.</li>
+              <li>Review the generated digests instantly.</li>
+              <li>Copy or download the results for your workflow.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <p className="text-slate-600 mb-3">
+              Quick hashing is helpful when validating transfers, comparing builds, or confirming payload integrity.
+            </p>
+            <ul className="list-disc list-inside text-slate-600 space-y-2">
+              <li>Verifying file integrity across environments.</li>
+              <li>Creating cache keys or content fingerprints.</li>
+              <li>Checking API payload consistency during debugging.</li>
+              <li>Generating test data for security or QA checks.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <div className="space-y-4 text-slate-600">
+              <div>
+                <h4 className="font-semibold text-slate-900">Are hashes reversible?</h4>
+                <p>No. Hashes are one-way digests and cannot be decoded back to the original input. Use encryption if you need reversibility.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Which algorithm should I use?</h4>
+                <p>Use SHA-256 or SHA-512 for modern security needs; MD5 and SHA-1 are legacy. For checksums, choose the algorithm your system expects.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Is my data uploaded?</h4>
+                <p>No. Hashing happens locally in your browser for privacy. Your text and files stay on your device.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/base64-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h4>
+              <p className="text-slate-600 text-sm">Encode data before hashing or transport.</p>
+            </a>
+            <a href="/uuid-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">UUID Generator</h4>
+              <p className="text-slate-600 text-sm">Create unique IDs to hash or store alongside checksums.</p>
+            </a>
+            <a href="/jwt-decoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">JWT Decoder</h4>
+              <p className="text-slate-600 text-sm">Inspect JWTs before verifying signatures.</p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />

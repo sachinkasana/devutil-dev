@@ -71,13 +71,13 @@ export default function UUIDGenerator() {
       {/* Main Content */}
       <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
-            <Key className="w-8 h-8 text-purple-600" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">UUID Generator</h2>
+        <div className="mb-6 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <Key className="w-7 h-7 text-purple-600" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">UUID Generator</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Generate universally unique identifiers (UUIDs) version 4 instantly. Perfect for databases, APIs, and unique keys.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+            Generate UUID v4 values instantly in your browser with fast, private processing.
           </p>
         </div>
 
@@ -284,6 +284,96 @@ export default function UUIDGenerator() {
             </div>
           </div>
         </div>
+
+        {/* Supporting Content */}
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Generate UUID v4 values instantly with a free, online UUID generator that runs entirely in your
+                browser. Create one or hundreds of universally unique identifiers for databases, APIs, test fixtures,
+                and client-side keys without sending data to a server.
+              </p>
+              <p>
+                UUIDs help developers avoid collisions when creating records across distributed systems. This tool
+                delivers fast, client-side generation so IDs stay private and results appear immediately with no
+                registration. Adjust casing, toggle hyphens, and copy in a single click to keep your workflow moving.
+              </p>
+              <p>
+                When you need repeatable, consistent IDs for sample data or load testing, bulk generation saves time.
+                You can also generate UUIDs for front-end keys without waiting on backend endpoints or exposing
+                internal services.
+              </p>
+            </div>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Generate UUID v4 in batches up to 100 at a time.</li>
+              <li>Switch between uppercase and lowercase output.</li>
+              <li>Include or remove hyphens for compact IDs.</li>
+              <li>Copy or download UUID lists instantly.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <p className="text-slate-600 mb-3">
+              Generate IDs on demand and paste them directly into your schema, seed scripts, or API payloads.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Choose how many UUIDs you want to generate.</li>
+              <li>Toggle uppercase or hyphen options if needed.</li>
+              <li>Click Generate to refresh the list instantly.</li>
+              <li>Copy or download the IDs for your project.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <p className="text-slate-600 mb-3">
+              UUIDs are a safe default when you need uniqueness across systems or environments.
+            </p>
+            <ul className="list-disc list-inside text-slate-600 space-y-2">
+              <li>Creating primary keys for database records.</li>
+              <li>Generating unique IDs for API requests or jobs.</li>
+              <li>Seeding test data and fixtures quickly.</li>
+              <li>Creating client-side keys for UI components.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <div className="space-y-4 text-slate-600">
+              <div>
+                <h4 className="font-semibold text-slate-900">Which UUID version is this?</h4>
+                <p>It generates UUID v4 values based on random data. This is the most common version for general use.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Are UUIDs guaranteed to be unique?</h4>
+                <p>They are statistically unique; collisions are extremely unlikely. For most applications, v4 is safe.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Is any data stored or sent?</h4>
+                <p>No. IDs are generated locally in your browser. Nothing is transmitted or stored.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/hash-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Hash Generator</h4>
+              <p className="text-slate-600 text-sm">Create hashes to fingerprint generated IDs.</p>
+            </a>
+            <a href="/regex-tester" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Regex Tester</h4>
+              <p className="text-slate-600 text-sm">Validate UUID formats with quick regex checks.</p>
+            </a>
+            <a href="/timestamp-converter" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">Timestamp Converter</h4>
+              <p className="text-slate-600 text-sm">Convert times when correlating IDs and logs.</p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />

@@ -120,13 +120,13 @@ export default function RegexTester() {
       {/* Main Content */}
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Title & Description */}
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
-            <Search className="w-8 h-8 text-red-600" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Regex Tester</h2>
+        <div className="mb-6 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <Search className="w-7 h-7 text-red-600" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Regex Tester</h1>
           </div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Test and debug regular expressions with real-time matching and highlighting.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+            Test and debug regex patterns instantly with private, in-browser matching.
           </p>
         </div>
 
@@ -331,6 +331,97 @@ export default function RegexTester() {
             </div>
           </div>
         </div>
+
+        {/* Supporting Content */}
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Test and debug regular expressions instantly with a free, online regex tester that runs entirely in
+                your browser. See real-time matches, highlights, and capture groups as you iterate on patterns without
+                leaving your editor.
+              </p>
+              <p>
+                Developers use regex to validate inputs, parse logs, and transform text, but small mistakes can be
+                painful to track down. This tool keeps everything client-side for privacy and speed, so your test data
+                never leaves the browser and results appear instantly with no registration. Iterate quickly until your
+                pattern is solid.
+              </p>
+              <p>
+                Whether you are building validators, scrapers, or data pipelines, a visual tester shortens the feedback
+                loop. Tune your expression until the exact substrings are highlighted, then copy the final pattern into
+                your codebase with confidence.
+              </p>
+            </div>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Live match highlighting with capture groups.</li>
+              <li>Toggle common flags to test global or case-insensitive matches.</li>
+              <li>Copy the final regex pattern in one click.</li>
+              <li>Fast, private in-browser processing for sensitive text.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <p className="text-slate-600 mb-3">
+              Build patterns iteratively and confirm matches before adding them to production code.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Enter your regex pattern and select the flags.</li>
+              <li>Paste sample text to test against the pattern.</li>
+              <li>Review matches and captured groups in real time.</li>
+              <li>Copy the final regex when it behaves correctly.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <p className="text-slate-600 mb-3">
+              Regex shines when you need flexible text validation or extraction across large datasets.
+            </p>
+            <ul className="list-disc list-inside text-slate-600 space-y-2">
+              <li>Validating emails, UUIDs, or custom identifiers.</li>
+              <li>Parsing server logs or error messages quickly.</li>
+              <li>Extracting query parameters from URLs.</li>
+              <li>Cleaning up CSV or multiline text data.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <div className="space-y-4 text-slate-600">
+              <div>
+                <h4 className="font-semibold text-slate-900">Which regex flavor is supported?</h4>
+                <p>The tester uses JavaScript RegExp syntax, matching what you use in the browser. That keeps results consistent with frontend code.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Is my test data private?</h4>
+                <p>Yes. All matching happens locally in your browser. Nothing is transmitted or stored.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900">Can I test flags like global or multiline?</h4>
+                <p>Yes. Toggle the common flags to match your runtime behavior. The output updates instantly.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/url-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">URL Encoder</h4>
+              <p className="text-slate-600 text-sm">Encode matched URL fragments safely.</p>
+            </a>
+            <a href="/uuid-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">UUID Generator</h4>
+              <p className="text-slate-600 text-sm">Generate UUIDs to validate with your regex.</p>
+            </a>
+            <a href="/json-formatter" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
+              <h4 className="font-semibold text-slate-900 mb-2">JSON Formatter</h4>
+              <p className="text-slate-600 text-sm">Clean JSON strings before pattern matching.</p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />
