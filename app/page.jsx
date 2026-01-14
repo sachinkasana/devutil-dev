@@ -4,18 +4,18 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Free Developer Utilities & Tools',
+  title: 'Free Developer Tools & Utilities Online - DevUtil',
   description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'Free Developer Utilities & Tools',
+    title: 'Free Developer Tools & Utilities Online - DevUtil',
     description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
     url: '/'
   },
   twitter: {
-    title: 'Free Developer Utilities & Tools',
+    title: 'Free Developer Tools & Utilities Online - DevUtil',
     description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.'
   }
 };
@@ -170,6 +170,47 @@ export default function HomePage() {
           })}
         </div>
       </section>
+
+        {/* Hub Content */}
+        <section className="bg-white border-t border-slate-200 py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-600 space-y-5">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-900">
+              Free Developer Tools & Utilities Online
+            </h2>
+            <p>
+              DevUtil is a fast toolkit for everyday developer tasks. Each tool runs in your browser, so data stays on
+              your device. You can format JSON, encode Base64, generate UUIDs, and test regex patterns without
+              installing anything. The tools load fast and work well on mobile.
+            </p>
+            <p>
+              Use DevUtil as a lightweight hub for common workflows. Format a JSON response, then jump to the URL
+              encoder to clean up query strings. Decode a JWT and open the JSON formatter to inspect the payload. These
+              links keep your flow moving and reduce copy-paste errors.
+            </p>
+            <p>
+              The toolkit focuses on simple, single-purpose utilities. Each page has clear actions, practical defaults,
+              and instant results. If you need a quick formatter, converter, or validator, pick a tool below and get
+              started in seconds.
+            </p>
+            <p className="text-center">
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/json-formatter">JSON Formatter</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/base64-encoder">Base64 Encoder</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/uuid-generator">UUID Generator</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/hash-generator">Hash Generator</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/regex-tester">Regex Tester</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/url-encoder">URL Encoder</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/jwt-decoder">JWT Decoder</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/timestamp-converter">Timestamp Converter</a>
+            </p>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="bg-white border-t border-slate-200 py-16">

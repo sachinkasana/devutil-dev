@@ -467,22 +467,69 @@ export default function JsonFormatterPage() {
         </div>
 
         {/* Supporting Content */}
-        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-10">
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">Free JSON Validator Tool</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">What is a JSON Formatter?</h2>
             <div className="text-slate-600 space-y-4">
               <p>
-                Format, validate, and repair JSON in seconds. This free formatter runs in your browser.
-                Paste raw API responses, load a sample, or convert JSON to CSV, XML, or YAML. Your data never leaves
-                your device.
+                A JSON formatter takes raw JSON and makes it easy to read. It adds spacing, line breaks, and
+                indentation. This is also called a JSON beautifier or pretty printer. The data stays the same.
               </p>
               <p>
-                Clean JSON helps with debugging, code reviews, and configs. This tool keeps everything client-side and
-                shows results fast. Use it to spot syntax errors, sort keys for diffs, or make a quick minified version.
+                A JSON formatter is helpful when you get a compact API response. You can scan keys, check nesting, and
+                spot missing commas. It also makes diffs smaller and clearer during reviews.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">What is JSON?</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                JSON stands for JavaScript Object Notation. It is a lightweight format for data exchange. It uses
+                objects, arrays, strings, numbers, booleans, and null. Most APIs use JSON because it is simple and
+                readable.
               </p>
               <p>
-                Consistent formatting makes changes easy to track. The formatter keeps the data structure intact.
-                Share the cleaned output or paste it into tests and fixtures.
+                JSON is strict about syntax. Keys must be in double quotes. Trailing commas are not allowed. A single
+                mistake can break a response. A JSON validator helps you catch these issues fast.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Why Format JSON?</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Formatting JSON makes it easier to scan. You can read nested objects without getting lost. It also
+                makes errors easier to spot. A clean layout helps you compare changes in a pull request.
+              </p>
+              <p>
+                Formatting is also useful when you share data. Clean JSON is easier for teammates to review. It is
+                faster to paste into tests, mocks, and fixtures.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">How to Format JSON Online</h2>
+            <p className="text-slate-600 mb-3">
+              Use this free JSON formatter to format JSON online in seconds. It runs fully in your browser.
+            </p>
+            <ol className="list-decimal list-inside text-slate-600 space-y-2">
+              <li>Paste or load your JSON payload in the input panel.</li>
+              <li>Choose Format, Minify, or Repair to clean the JSON.</li>
+              <li>Optionally sort keys or convert to CSV, XML, or YAML.</li>
+              <li>Copy or download the output when you are done.</li>
+            </ol>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">JSON Validator - Check JSON Syntax</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                A JSON validator checks syntax rules. It catches missing quotes, extra commas, and broken brackets.
+                This tool highlights the error line and column to speed up fixes.
+              </p>
+              <p>
+                Use the Repair button to fix common issues. It can handle trailing commas, comments, and JSONP
+                wrappers. If repair fails, the error panel shows where the JSON broke.
               </p>
             </div>
           </div>
@@ -493,31 +540,137 @@ export default function JsonFormatterPage() {
               <li>Auto-repair common issues like trailing commas and JSONP.</li>
               <li>Sort keys for stable diffs and predictable output ordering.</li>
               <li>Convert JSON to CSV, XML, or YAML and download instantly.</li>
+              <li>Run 100% client-side so data never leaves your device.</li>
             </ul>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">How to Format JSON Online</h2>
-            <p className="text-slate-600 mb-3">
-              Format in place, then copy the result into your editor or API client.
-            </p>
-            <ol className="list-decimal list-inside text-slate-600 space-y-2">
-              <li>Paste or load your JSON payload in the input panel.</li>
-              <li>Choose Format, Minify, or Repair to clean the JSON.</li>
-              <li>Optionally sort keys or convert to CSV, XML, or YAML.</li>
-              <li>Copy or download the output when you are done.</li>
-            </ol>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Format JSON vs Minify JSON</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Formatting adds whitespace so people can read the data. Minifying removes whitespace to reduce size.
+                Both keep the same values. Use format for debugging and reviews. Use minify for production payloads.
+              </p>
+              <p>
+                You can switch between pretty and compact output at any time. This makes it easy to compare readability
+                and file size without switching tools.
+              </p>
+            </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h2>
-            <p className="text-slate-600 mb-3">
-              JSON shows up everywhere, so a reliable formatter speeds up debugging and teamwork.
-            </p>
-            <ul className="list-disc list-inside text-slate-600 space-y-2">
-              <li>Cleaning up API responses for debugging in dev tools.</li>
-              <li>Normalizing JSON configs before committing to Git.</li>
-              <li>Minifying payloads to compare response sizes quickly.</li>
-              <li>Converting JSON data to CSV for quick analysis.</li>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Common JSON Formatting Errors</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                The most common error is a trailing comma. JSON does not allow commas after the last item in an array
+                or object. Another common issue is single quotes around keys or strings. JSON needs double quotes.
+              </p>
+              <p>
+                Missing braces or brackets are also frequent. A JSON validator can show where the structure breaks.
+                Use the error preview to jump to the exact line and column.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Common JSON Errors and How to Fix Them</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                If you see "Unexpected token", check the character before the error. It is often an extra comma or a
+                missing quote. If you see "Unexpected end of JSON input", the data is cut off. Make sure the payload is
+                complete.
+              </p>
+              <p>
+                If a value looks like true or false but is quoted, it becomes a string. Remove the quotes if you want a
+                boolean. If numbers are quoted, convert them back to numbers for correct types.
+              </p>
+              <p>
+                For large payloads, format first and then scan sections. Sorting keys can help you compare objects. Use
+                minify only when you are done editing.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">JSON Formatter Best Practices</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                Stick to consistent indentation. Two spaces is common and easy to scan. Avoid tabs in JSON output so it
+                looks the same in every editor. Keep keys in a stable order if you want clean diffs.
+              </p>
+              <p>
+                Format JSON before you commit it to version control. This avoids noisy changes later. For API responses,
+                format only the part you need and remove sensitive data before sharing.
+              </p>
+            </div>
+            <ul className="mt-4 space-y-2 text-slate-600">
+              <li>Use two or four spaces and keep it consistent.</li>
+              <li>Remove trailing commas and comments before shipping.</li>
+              <li>Validate JSON after edits to catch syntax issues early.</li>
+              <li>Minify only for final payloads or performance checks.</li>
             </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">JSON vs XML vs YAML</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                JSON is compact and strict. It is ideal for APIs and data transfer. XML is more verbose and uses tags.
+                It can include attributes but is harder to read. YAML is very readable and often used for configs.
+              </p>
+              <p>
+                If you need a config file that humans edit, YAML can be nice. If you need fast parsing and strict
+                structure, JSON is a better choice. This tool lets you convert between JSON, XML, and YAML quickly.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Examples: Format, Minify, Repair</h2>
+            <div className="text-slate-600 space-y-5">
+              <div>
+                <h3 className="font-semibold text-slate-900">Example: Format API Response</h3>
+                <p>Paste a compact response and format it for easy review.</p>
+                <pre className="mt-3 rounded-lg bg-slate-50 p-4 text-xs overflow-auto">
+                  <code>{`{\"user\":{\"id\":12,\"name\":\"Ava\",\"roles\":[\"admin\",\"editor\"]},\"active\":true}`}</code>
+                </pre>
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">Example: Minify JSON for Production</h3>
+                <p>Minify JSON to reduce size before you ship.</p>
+                <pre className="mt-3 rounded-lg bg-slate-50 p-4 text-xs overflow-auto">
+                  <code>{`{\n  \"theme\": \"dark\",\n  \"flags\": {\n    \"beta\": false,\n    \"logging\": true\n  }\n}`}</code>
+                </pre>
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">Example: Repair Invalid JSON</h3>
+                <p>Repair handles trailing commas and other common issues.</p>
+                <pre className="mt-3 rounded-lg bg-slate-50 p-4 text-xs overflow-auto">
+                  <code>{`{\n  \"name\": \"DevUtil\",\n  \"features\": [\"format\", \"minify\",],\n}`}</code>
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Keyboard Shortcuts</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                You can use standard editor shortcuts inside the input and output panels. Use copy and paste to move
+                data quickly. Use search in your browser to find keys in large JSON outputs.
+              </p>
+              <ul className="space-y-2">
+                <li>Copy: Ctrl+C (Windows/Linux) or Cmd+C (Mac)</li>
+                <li>Paste: Ctrl+V (Windows/Linux) or Cmd+V (Mac)</li>
+                <li>Find: Ctrl+F (Windows/Linux) or Cmd+F (Mac)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Why Use Our JSON Formatter?</h2>
+            <div className="text-slate-600 space-y-4">
+              <p>
+                This JSON formatting tool is fast and private. It runs in your browser, so nothing is uploaded. You
+                get instant results with no login and no tracking of your data.
+              </p>
+              <p>
+                The formatter is simple and focused. It covers the core workflow: format, validate, repair, and export.
+                It also supports JSON to CSV, XML, and YAML conversions for quick sharing.
+              </p>
+            </div>
           </div>
           <div>
             <h2 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h2>
@@ -527,8 +680,16 @@ export default function JsonFormatterPage() {
                 <p>No. Formatting happens in your browser. Your data stays on your device.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Can it fix invalid JSON?</h3>
-                <p>Yes. Repair handles common issues like trailing commas, comments, and JSONP wrappers.</p>
+                <h3 className="font-semibold text-slate-900">What is the difference between a JSON formatter and validator?</h3>
+                <p>A formatter changes layout. A validator checks syntax rules and flags errors.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">Can I format JSON without uploading data?</h3>
+                <p>Yes. This tool works offline once loaded, and it never sends JSON to a server.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">How do I fix JSON syntax errors?</h3>
+                <p>Use Repair for common issues, or read the line and column in the error panel.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900">Does it support large files?</h3>
