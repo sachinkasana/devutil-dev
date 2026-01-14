@@ -4,18 +4,18 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Developer Utilities',
+  title: 'Free Developer Utilities & Tools',
   description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'Developer Utilities',
+    title: 'Free Developer Utilities & Tools',
     description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
     url: '/'
   },
   twitter: {
-    title: 'Developer Utilities',
+    title: 'Free Developer Utilities & Tools',
     description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.'
   }
 };
@@ -91,12 +91,12 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="space-y-6">
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
-              Essential Developer
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
+              Free Developer
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 Utilities & Tools
               </span>
-            </h2>
+            </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Fast, free, and privacy-focused tools for developers.
               All processing happens in your browser—no data leaves your device.
@@ -120,6 +120,14 @@ export default function HomePage() {
 
       {/* Tools Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+            Explore the Toolbox
+          </h2>
+          <p className="mt-2 text-slate-600">
+            Pick a utility to get started in seconds.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {tools.map((tool) => {
             const Icon = tool.icon;
@@ -166,15 +174,15 @@ export default function HomePage() {
         {/* Features Section */}
         <section className="bg-white border-t border-slate-200 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-12">
               Why Choose DevUtil?
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center space-y-3">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
                   <Lock className="w-8 h-8 text-blue-600" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900">Privacy First</h4>
+                <h3 className="text-xl font-bold text-slate-900">Privacy First</h3>
                 <p className="text-slate-600">
                   All processing happens locally in your browser. Your data never touches our servers.
                 </p>
@@ -183,7 +191,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
                   <RefreshCw className="w-8 h-8 text-green-600" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900">Lightning Fast</h4>
+                <h3 className="text-xl font-bold text-slate-900">Lightning Fast</h3>
                 <p className="text-slate-600">
                   Instant results with no server roundtrips. Tools load and process data in milliseconds.
                 </p>
@@ -192,7 +200,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
                   <Code className="w-8 h-8 text-purple-600" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900">Always Free</h4>
+                <h3 className="text-xl font-bold text-slate-900">Always Free</h3>
                 <p className="text-slate-600">
                   No subscriptions, no hidden fees, no account required. Use all tools completely free.
                 </p>

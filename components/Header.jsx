@@ -57,7 +57,7 @@ export default function Header({ subtitle = '', showGithub = false }) {
                 <Code className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-slate-900">DevUtil</h1>
+                <span className="text-lg font-bold text-slate-900">DevUtil</span>
                 {subtitle && (
                   <p className="text-[11px] text-slate-500">{subtitle}</p>
                 )}
