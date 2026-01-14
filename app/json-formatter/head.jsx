@@ -18,6 +18,76 @@ export default function Head() {
       ratingCount: '1820'
     }
   };
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is my JSON uploaded anywhere?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. Formatting happens in your browser. Your data stays on your device.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the difference between a JSON formatter and validator?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A formatter changes layout. A validator checks syntax rules and flags errors.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I format JSON without uploading data?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. This tool works offline once loaded, and it never sends JSON to a server.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I fix JSON syntax errors?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Use Repair for common issues, or read the line and column in the error panel.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Does it support large files?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'It runs locally, so speed depends on your browser and device. Large files can take longer.'
+        }
+      }
+    ]
+  };
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.devutil.dev/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Developer Tools',
+        item: 'https://www.devutil.dev/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'JSON Formatter',
+        item: 'https://www.devutil.dev/json-formatter'
+      }
+    ]
+  };
 
   return (
     <>
@@ -49,6 +119,14 @@ export default function Head() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
     </>
   );
