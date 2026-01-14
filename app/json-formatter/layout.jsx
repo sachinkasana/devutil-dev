@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free JSON Formatter Online - Fast & Private | DevUtil'
+    absolute: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil'
   },
-  description: 'Free JSON formatter to validate, beautify, and repair JSON client-side with privacy, no signup, and instant results for API payloads and configs online.',
+  description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
   keywords: [
     'json formatter',
     'json beautifier',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/json-formatter'
   },
   openGraph: {
-    title: 'Free JSON Formatter Online - Fast & Private | DevUtil',
-    description: 'Free JSON formatter to validate, beautify, and repair JSON client-side with privacy, no signup, and instant results for API payloads and configs online.',
+    title: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil',
+    description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
     url: 'https://www.devutil.dev/json-formatter',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free JSON Formatter Online - Fast & Private | DevUtil',
-    description: 'Free JSON formatter to validate, beautify, and repair JSON client-side with privacy, no signup, and instant results for API payloads and configs online.',
+    title: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil',
+    description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/json-formatter',
-  description: 'Free JSON formatter to validate, beautify, and repair JSON client-side with privacy and instant results.',
+  description: 'Free online JSON formatter and validator to beautify, minify, and repair JSON with client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

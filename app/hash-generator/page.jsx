@@ -249,7 +249,7 @@ export default function HashGenerator() {
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-2">
             <Hash className="w-7 h-7 text-orange-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Hash Generator</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Free Hash Generator</h1>
           </div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             Generate hashes instantly for text or files with private, in-browser processing.

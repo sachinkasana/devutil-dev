@@ -109,7 +109,7 @@ export default function Base64EncoderDecoder() {
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-2">
             <Lock className="w-7 h-7 text-green-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Base64 Encoder & Decoder</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Free Base64 Encoder & Decoder Online</h1>
           </div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             Encode or decode Base64 instantly with fast, private in-browser processing.

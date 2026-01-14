@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free Timestamp Converter Online - Fast & Private | DevUtil'
+    absolute: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil'
   },
-  description: 'Free timestamp converter with client-side privacy, no signup, and instant results to convert Unix time online for logs, APIs, and debugging. In-browser tool.',
+  description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
   keywords: [
     'timestamp converter',
     'unix timestamp',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/timestamp-converter'
   },
   openGraph: {
-    title: 'Free Timestamp Converter Online - Fast & Private | DevUtil',
-    description: 'Free timestamp converter with client-side privacy, no signup, and instant results to convert Unix time online for logs, APIs, and debugging. In-browser tool.',
+    title: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil',
+    description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
     url: 'https://www.devutil.dev/timestamp-converter',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Timestamp Converter Online - Fast & Private | DevUtil',
-    description: 'Free timestamp converter with client-side privacy, no signup, and instant results to convert Unix time online for logs, APIs, and debugging. In-browser tool.',
+    title: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil',
+    description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/timestamp-converter',
-  description: 'Free timestamp converter with client-side privacy and instant results.',
+  description: 'Free Unix timestamp converter with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

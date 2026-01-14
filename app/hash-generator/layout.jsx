@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free Hash Generator Online - Fast & Private | DevUtil'
+    absolute: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool | DevUtil'
   },
-  description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy, no signup, and instant results for checksums and files. Fast in-browser tool.',
+  description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing.',
   keywords: [
     'hash generator',
     'md5 hash',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/hash-generator'
   },
   openGraph: {
-    title: 'Free Hash Generator Online - Fast & Private | DevUtil',
-    description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy, no signup, and instant results for checksums and files. Fast in-browser tool.',
+    title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool | DevUtil',
+    description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing.',
     url: 'https://www.devutil.dev/hash-generator',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Hash Generator Online - Fast & Private | DevUtil',
-    description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy, no signup, and instant results for checksums and files. Fast in-browser tool.',
+    title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool | DevUtil',
+    description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/hash-generator',
-  description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with client-side privacy and instant results.',
+  description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512 with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

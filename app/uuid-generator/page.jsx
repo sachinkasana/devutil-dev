@@ -74,7 +74,7 @@ export default function UUIDGenerator() {
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-2">
             <Key className="w-7 h-7 text-purple-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">UUID Generator</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">UUID Generator v4</h1>
           </div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             Generate UUID v4 values instantly in your browser with fast, private processing.

@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free UUID Generator Online - Fast & Private | DevUtil'
+    absolute: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil'
   },
-  description: 'Free UUID v4 generator with client-side privacy, no signup, and instant results to create unique IDs online for APIs, databases, and tests. Fast in-browser tool',
+  description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
   keywords: [
     'uuid generator',
     'uuid v4',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/uuid-generator'
   },
   openGraph: {
-    title: 'Free UUID Generator Online - Fast & Private | DevUtil',
-    description: 'Free UUID v4 generator with client-side privacy, no signup, and instant results to create unique IDs online for APIs, databases, and tests. Fast in-browser tool',
+    title: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil',
+    description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
     url: 'https://www.devutil.dev/uuid-generator',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free UUID Generator Online - Fast & Private | DevUtil',
-    description: 'Free UUID v4 generator with client-side privacy, no signup, and instant results to create unique IDs online for APIs, databases, and tests. Fast in-browser tool',
+    title: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil',
+    description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/uuid-generator',
-  description: 'Free UUID v4 generator with client-side privacy and instant results.',
+  description: 'Free UUID v4 generator with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

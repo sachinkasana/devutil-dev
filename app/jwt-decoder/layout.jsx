@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free JWT Decoder Online - Fast & Private | DevUtil'
+    absolute: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil'
   },
-  description: 'Free JWT decoder with client-side privacy, no signup, and instant results to inspect headers and claims online for developers and APIs. Fast in-browser tool.',
+  description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
   keywords: [
     'jwt decoder',
     'decode jwt',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/jwt-decoder'
   },
   openGraph: {
-    title: 'Free JWT Decoder Online - Fast & Private | DevUtil',
-    description: 'Free JWT decoder with client-side privacy, no signup, and instant results to inspect headers and claims online for developers and APIs. Fast in-browser tool.',
+    title: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil',
+    description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
     url: 'https://www.devutil.dev/jwt-decoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free JWT Decoder Online - Fast & Private | DevUtil',
-    description: 'Free JWT decoder with client-side privacy, no signup, and instant results to inspect headers and claims online for developers and APIs. Fast in-browser tool.',
+    title: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil',
+    description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/jwt-decoder',
-  description: 'Free JWT decoder with client-side privacy and instant results.',
+  description: 'Free JWT decoder with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

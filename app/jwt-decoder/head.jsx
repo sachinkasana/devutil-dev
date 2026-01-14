@@ -5,8 +5,8 @@ export default function Head() {
     name: 'JWT Decoder',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Web Browser',
-    url: 'https://devutil.dev/jwt-decoder',
-    description: 'Free JWT decoder with client-side privacy and instant results.',
+    url: 'https://www.devutil.dev/jwt-decoder',
+    description: 'Free JWT decoder with fast client-side processing.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -21,31 +21,31 @@ export default function Head() {
 
   return (
     <>
-      <title>Free JWT Decoder Online - Fast & Private | DevUtil</title>
+      <title>JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil</title>
       <meta
         name="description"
-        content="Free JWT decoder with client-side privacy, no signup, and instant results to inspect headers and claims online for developers and APIs. Fast in-browser tool."
+        content="Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads."
       />
       <meta
         name="keywords"
         content="jwt decoder,decode jwt,jwt parser,json web token decoder,jwt claims,jwt payload,jwt header,token decoder,base64url jwt,jwt tool,inspect jwt"
       />
-      <link rel="canonical" href="https://devutil.dev/jwt-decoder" />
-      <meta property="og:title" content="Free JWT Decoder Online - Fast & Private | DevUtil" />
+      <link rel="canonical" href="https://www.devutil.dev/jwt-decoder" />
+      <meta property="og:title" content="JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil" />
       <meta
         property="og:description"
-        content="Free JWT decoder with client-side privacy, no signup, and instant results to inspect headers and claims online for developers and APIs. Fast in-browser tool."
+        content="Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads."
       />
-      <meta property="og:image" content="https://devutil.dev/og.png" />
-      <meta property="og:url" content="https://devutil.dev/jwt-decoder" />
+      <meta property="og:image" content="https://www.devutil.dev/og.png" />
+      <meta property="og:url" content="https://www.devutil.dev/jwt-decoder" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Free JWT Decoder Online - Fast & Private | DevUtil" />
+      <meta name="twitter:title" content="JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil" />
       <meta
         name="twitter:description"
-        content="Free JWT decoder with client-side privacy, no signup, and instant results to inspect headers and claims online for developers and APIs. Fast in-browser tool."
+        content="Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads."
       />
-      <meta name="twitter:image" content="https://devutil.dev/og.png" />
+      <meta name="twitter:image" content="https://www.devutil.dev/og.png" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

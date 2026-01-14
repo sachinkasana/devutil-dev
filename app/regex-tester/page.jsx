@@ -123,7 +123,7 @@ export default function RegexTester() {
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-2">
             <Search className="w-7 h-7 text-red-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Regex Tester</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Regex Tester Online</h1>
           </div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             Test and debug regex patterns instantly with private, in-browser matching.

@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free Regex Tester Online - Fast & Private | DevUtil'
+    absolute: 'Regex Tester Online - Test Regular Expressions Live | DevUtil'
   },
-  description: 'Free regex tester with client-side privacy, no signup, and instant matches to debug patterns online with live results for developers. Fast in-browser tool.',
+  description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
   keywords: [
     'regex tester',
     'regex test',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/regex-tester'
   },
   openGraph: {
-    title: 'Free Regex Tester Online - Fast & Private | DevUtil',
-    description: 'Free regex tester with client-side privacy, no signup, and instant matches to debug patterns online with live results for developers. Fast in-browser tool.',
+    title: 'Regex Tester Online - Test Regular Expressions Live | DevUtil',
+    description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
     url: 'https://www.devutil.dev/regex-tester',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Regex Tester Online - Fast & Private | DevUtil',
-    description: 'Free regex tester with client-side privacy, no signup, and instant matches to debug patterns online with live results for developers. Fast in-browser tool.',
+    title: 'Regex Tester Online - Test Regular Expressions Live | DevUtil',
+    description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/regex-tester',
-  description: 'Free regex tester with client-side privacy and instant match results.',
+  description: 'Free regex tester with live matches and fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

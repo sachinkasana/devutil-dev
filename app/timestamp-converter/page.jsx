@@ -128,7 +128,7 @@ export default function TimestampConverter() {
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-2">
             <RefreshCw className="w-7 h-7 text-teal-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Timestamp Converter</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Unix Timestamp Converter</h1>
           </div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             Convert timestamps instantly with fast, private in-browser processing.

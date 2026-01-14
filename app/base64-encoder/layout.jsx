@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free Base64 Encoder Online - Fast & Private | DevUtil'
+    absolute: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil'
   },
-  description: 'Free Base64 encoder/decoder with client-side privacy, no signup, and instant results to encode text, JSON, or files online for developers. Fast in-browser tool.',
+  description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
   keywords: [
     'base64 encoder',
     'base64 decoder',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/base64-encoder'
   },
   openGraph: {
-    title: 'Free Base64 Encoder Online - Fast & Private | DevUtil',
-    description: 'Free Base64 encoder/decoder with client-side privacy, no signup, and instant results to encode text, JSON, or files online for developers. Fast in-browser tool.',
+    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil',
+    description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
     url: 'https://www.devutil.dev/base64-encoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Base64 Encoder Online - Fast & Private | DevUtil',
-    description: 'Free Base64 encoder/decoder with client-side privacy, no signup, and instant results to encode text, JSON, or files online for developers. Fast in-browser tool.',
+    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil',
+    description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/base64-encoder',
-  description: 'Free Base64 encoder and decoder with client-side privacy and instant results.',
+  description: 'Free online Base64 encoder and decoder with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

@@ -215,7 +215,7 @@ export default function JsonFormatterPage() {
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-2">
             <FileJson className="w-7 h-7 text-blue-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">JSON Formatter</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Free Online JSON Formatter & Validator</h1>
           </div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             Format, validate, and repair JSON instantly in your browser with fast, private processing.
@@ -469,7 +469,7 @@ export default function JsonFormatterPage() {
         {/* Supporting Content */}
         <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Free JSON Validator Tool</h2>
             <div className="text-slate-600 space-y-4">
               <p>
                 Format, validate, and repair JSON in seconds. This free formatter runs in your browser.
@@ -485,6 +485,9 @@ export default function JsonFormatterPage() {
                 Share the cleaned output or paste it into tests and fixtures.
               </p>
             </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">JSON Beautifier Features</h2>
             <ul className="mt-4 space-y-2 text-slate-600">
               <li>Pretty-print or minify JSON with custom indentation.</li>
               <li>Auto-repair common issues like trailing commas and JSONP.</li>
@@ -493,7 +496,7 @@ export default function JsonFormatterPage() {
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">How to Format JSON Online</h2>
             <p className="text-slate-600 mb-3">
               Format in place, then copy the result into your editor or API client.
             </p>
@@ -505,7 +508,7 @@ export default function JsonFormatterPage() {
             </ol>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h2>
             <p className="text-slate-600 mb-3">
               JSON shows up everywhere, so a reliable formatter speeds up debugging and teamwork.
             </p>
@@ -517,18 +520,18 @@ export default function JsonFormatterPage() {
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h2>
             <div className="space-y-4 text-slate-600">
               <div>
-                <h4 className="font-semibold text-slate-900">Is my JSON uploaded anywhere?</h4>
+                <h3 className="font-semibold text-slate-900">Is my JSON uploaded anywhere?</h3>
                 <p>No. Formatting happens in your browser. Your data stays on your device.</p>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900">Can it fix invalid JSON?</h4>
+                <h3 className="font-semibold text-slate-900">Can it fix invalid JSON?</h3>
                 <p>Yes. Repair handles common issues like trailing commas, comments, and JSONP wrappers.</p>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900">Does it support large files?</h4>
+                <h3 className="font-semibold text-slate-900">Does it support large files?</h3>
                 <p>It runs locally, so speed depends on your browser and device. Large files can take longer.</p>
               </div>
             </div>
@@ -537,18 +540,18 @@ export default function JsonFormatterPage() {
 
         {/* Related Tools */}
         <section className="mt-12">
-          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <a href="/base64-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h4 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h4>
+              <h3 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h3>
               <p className="text-slate-600 text-sm">Encode or decode JSON payloads safely for transport.</p>
             </a>
             <a href="/url-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h4 className="font-semibold text-slate-900 mb-2">URL Encoder</h4>
+              <h3 className="font-semibold text-slate-900 mb-2">URL Encoder</h3>
               <p className="text-slate-600 text-sm">Escape JSON query parameters for API requests.</p>
             </a>
             <a href="/jwt-decoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h4 className="font-semibold text-slate-900 mb-2">JWT Decoder</h4>
+              <h3 className="font-semibold text-slate-900 mb-2">JWT Decoder</h3>
               <p className="text-slate-600 text-sm">Inspect JWT header and payload JSON instantly.</p>
             </a>
           </div>

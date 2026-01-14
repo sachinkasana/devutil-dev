@@ -24,7 +24,10 @@ export const metadata = {
     description: 'Essential developer tools and utilities for developers.'
   },
   icons: {
-    icon: '/favicon.svg'
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ]
   },
   robots: {
     index: true,

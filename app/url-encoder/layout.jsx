@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free URL Encoder Online - Fast & Private | DevUtil'
+    absolute: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil'
   },
-  description: 'Free URL encoder/decoder with client-side privacy, no signup, and instant results to encode query strings online fast for developers and APIs. In-browser tool.',
+  description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
   keywords: [
     'url encoder',
     'url decoder',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/url-encoder'
   },
   openGraph: {
-    title: 'Free URL Encoder Online - Fast & Private | DevUtil',
-    description: 'Free URL encoder/decoder with client-side privacy, no signup, and instant results to encode query strings online fast for developers and APIs. In-browser tool.',
+    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil',
+    description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
     url: 'https://www.devutil.dev/url-encoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free URL Encoder Online - Fast & Private | DevUtil',
-    description: 'Free URL encoder/decoder with client-side privacy, no signup, and instant results to encode query strings online fast for developers and APIs. In-browser tool.',
+    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil',
+    description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -51,7 +51,7 @@ const jsonLd = {
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/url-encoder',
-  description: 'Free URL encoder and decoder with client-side privacy and instant results.',
+  description: 'Free URL encoder and decoder with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',
