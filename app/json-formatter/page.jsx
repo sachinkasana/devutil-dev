@@ -472,21 +472,17 @@ export default function JsonFormatterPage() {
             <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
             <div className="text-slate-600 space-y-4">
               <p>
-                Format, validate, and repair JSON in seconds with a fast, free JSON formatter that runs entirely in
-                your browser. Paste raw API responses, load a sample payload, or convert JSON to CSV, XML, or YAML
-                without sending data to a server.
+                Format, validate, and repair JSON in seconds. This free formatter runs in your browser.
+                Paste raw API responses, load a sample, or convert JSON to CSV, XML, or YAML. Your data never leaves
+                your device.
               </p>
               <p>
-                Developers rely on clean JSON for debugging, code reviews, and readable configuration files. This tool
-                keeps everything client-side, so sensitive payloads never leave your device and results appear instantly
-                with no registration. Use it to spot syntax errors, normalize key ordering for diffs, or generate a
-                quick minified version for performance checks.
+                Clean JSON helps with debugging, code reviews, and configs. This tool keeps everything client-side and
+                shows results fast. Use it to spot syntax errors, sort keys for diffs, or make a quick minified version.
               </p>
               <p>
-                When you are working across environments, consistent formatting helps you track changes and compare
-                responses. The formatter makes JSON easier to scan by humans while preserving the exact data structure
-                for machines, so you can share cleaned output with teammates or paste it directly into tests and
-                fixtures.
+                Consistent formatting makes changes easy to track. The formatter keeps the data structure intact.
+                Share the cleaned output or paste it into tests and fixtures.
               </p>
             </div>
             <ul className="mt-4 space-y-2 text-slate-600">
@@ -499,7 +495,7 @@ export default function JsonFormatterPage() {
           <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
             <p className="text-slate-600 mb-3">
-              Keep your JSON clean by formatting it in-place, then copy the result into your editor or API client.
+              Format in place, then copy the result into your editor or API client.
             </p>
             <ol className="list-decimal list-inside text-slate-600 space-y-2">
               <li>Paste or load your JSON payload in the input panel.</li>
@@ -511,8 +507,7 @@ export default function JsonFormatterPage() {
           <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
             <p className="text-slate-600 mb-3">
-              JSON shows up everywhere in modern stacks, so having a reliable formatter speeds up both debugging and
-              collaboration across teams.
+              JSON shows up everywhere, so a reliable formatter speeds up debugging and teamwork.
             </p>
             <ul className="list-disc list-inside text-slate-600 space-y-2">
               <li>Cleaning up API responses for debugging in dev tools.</li>
@@ -526,15 +521,15 @@ export default function JsonFormatterPage() {
             <div className="space-y-4 text-slate-600">
               <div>
                 <h4 className="font-semibold text-slate-900">Is my JSON uploaded anywhere?</h4>
-                <p>No. Formatting happens entirely in your browser, so data never leaves your device. You can safely work with sensitive payloads.</p>
+                <p>No. Formatting happens in your browser. Your data stays on your device.</p>
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900">Can it fix invalid JSON?</h4>
-                <p>Yes. The repair option handles common issues like trailing commas, comments, and JSONP wrappers. It is a quick way to recover malformed data.</p>
+                <p>Yes. Repair handles common issues like trailing commas, comments, and JSONP wrappers.</p>
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900">Does it support large files?</h4>
-                <p>It processes locally, so performance depends on your browser and device memory. Large files may take longer to format.</p>
+                <p>It runs locally, so speed depends on your browser and device. Large files can take longer.</p>
               </div>
             </div>
           </div>
