@@ -1,17 +1,17 @@
 import React from 'react';
-import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock, ShieldCheck, FileText } from 'lucide-react';
+import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock, ShieldCheck, FileText, QrCode, Palette } from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
   title: 'Free Developer Tools & Utilities Online - DevUtil',
-  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, password generator, and lorem ipsum.',
+  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, and lorem ipsum.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, password generator, and lorem ipsum.',
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, and lorem ipsum.',
     url: '/',
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, password generator, and lorem ipsum.',
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, and lorem ipsum.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -95,6 +95,21 @@ const tools = [
     icon: RefreshCw,
     href: '/timestamp-converter',
     color: 'bg-teal-500'
+  },
+  {
+    name: 'QR Code Generator',
+    description: 'Create QR codes for URLs, WiFi, and vCards',
+    icon: QrCode,
+    href: '/qr-code-generator',
+    color: 'bg-amber-500',
+    popular: true
+  },
+  {
+    name: 'Color Picker',
+    description: 'Pick colors and convert HEX, RGB, HSL',
+    icon: Palette,
+    href: '/color-picker',
+    color: 'bg-cyan-500'
   },
   {
     name: 'Lorem Ipsum Generator',
@@ -236,6 +251,10 @@ export default function HomePage() {
               <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/password-generator">Password Generator</a>
               {' · '}
               <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/lorem-ipsum-generator">Lorem Ipsum Generator</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/qr-code-generator">QR Code Generator</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/color-picker">Color Picker</a>
             </p>
           </div>
         </section>

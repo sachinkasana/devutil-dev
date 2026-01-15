@@ -35,6 +35,8 @@ export default function Footer({ variant = 'compact', className = '' }) {
                 <li><a href="/timestamp-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="timestamp-converter">Timestamp Converter</a></li>
                 <li><a href="/password-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="password-generator">Password Generator</a></li>
                 <li><a href="/lorem-ipsum-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="lorem-ipsum-generator">Lorem Ipsum Generator</a></li>
+                <li><a href="/qr-code-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="qr-code-generator">QR Code Generator</a></li>
+                <li><a href="/color-picker" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="color-picker">Color Picker</a></li>
               </ul>
             </div>
             <div>
