@@ -16,12 +16,21 @@ export const metadata = {
     type: 'website',
     siteName: 'DevUtil',
     title: 'DevUtil',
-    description: 'Essential developer tools and utilities for developers.'
+    description: 'Essential developer tools and utilities for developers.',
+    images: [
+      {
+        url: 'https://www.devutil.dev/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'DevUtil'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DevUtil',
-    description: 'Essential developer tools and utilities for developers.'
+    description: 'Essential developer tools and utilities for developers.',
+    images: ['https://www.devutil.dev/og.png']
   },
   icons: {
     icon: [

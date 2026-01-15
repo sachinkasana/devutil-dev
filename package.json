@@ -19,6 +19,8 @@
     "yaml": "^2.5.0"
   },
   "devDependencies": {
+    "@types/node": "25.0.8",
+    "@types/react": "19.2.8",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.39.2",
     "eslint-config-next": "16.1.1",

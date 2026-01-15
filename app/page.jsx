@@ -1,22 +1,31 @@
 import React from 'react';
-import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock } from 'lucide-react';
+import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock, ShieldCheck, FileText } from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
   title: 'Free Developer Tools & Utilities Online - DevUtil',
-  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
+  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, password generator, and lorem ipsum.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.',
-    url: '/'
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, password generator, and lorem ipsum.',
+    url: '/',
+    images: [
+      {
+        url: 'https://www.devutil.dev/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'DevUtil'
+      }
+    ]
   },
   twitter: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, and timestamps.'
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, password generator, and lorem ipsum.',
+    images: ['https://www.devutil.dev/og.png']
   }
 };
 
@@ -53,6 +62,13 @@ const tools = [
     color: 'bg-orange-500'
   },
   {
+    name: 'Password Generator',
+    description: 'Create strong, secure passwords instantly',
+    icon: ShieldCheck,
+    href: '/password-generator',
+    color: 'bg-emerald-500'
+  },
+  {
     name: 'Regex Tester',
     description: 'Test and debug regular expressions live',
     icon: Search,
@@ -79,6 +95,13 @@ const tools = [
     icon: RefreshCw,
     href: '/timestamp-converter',
     color: 'bg-teal-500'
+  },
+  {
+    name: 'Lorem Ipsum Generator',
+    description: 'Generate placeholder text for designs',
+    icon: FileText,
+    href: '/lorem-ipsum-generator',
+    color: 'bg-slate-500'
   }
 ];
 
@@ -180,7 +203,8 @@ export default function HomePage() {
             <p>
               DevUtil is a fast toolkit for everyday developer tasks. Each tool runs in your browser, so data stays on
               your device. You can format JSON, encode Base64, generate UUIDs, and test regex patterns without
-              installing anything. The tools load fast and work well on mobile.
+              installing anything. You can also generate secure passwords or fast placeholder text for mockups. The
+              tools load fast and work well on mobile.
             </p>
             <p>
               Use DevUtil as a lightweight hub for common workflows. Format a JSON response, then jump to the URL
@@ -208,6 +232,10 @@ export default function HomePage() {
               <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/jwt-decoder">JWT Decoder</a>
               {' · '}
               <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/timestamp-converter">Timestamp Converter</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/password-generator">Password Generator</a>
+              {' · '}
+              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/lorem-ipsum-generator">Lorem Ipsum Generator</a>
             </p>
           </div>
         </section>
