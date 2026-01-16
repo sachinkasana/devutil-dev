@@ -164,6 +164,7 @@ export default function ColorPickerTool() {
             type="color"
             value={hex}
             onChange={(event) => updateFromHex(event.target.value)}
+            data-analytics-event="color_pick"
             className="h-14 w-full rounded-lg border border-slate-300"
           />
         </div>
@@ -174,11 +175,14 @@ export default function ColorPickerTool() {
             <input
               value={hex}
               onChange={(event) => updateFromHex(event.target.value)}
+              data-analytics-event="color_hex_input"
               className="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
             <button
               type="button"
               onClick={() => handleCopy(hex)}
+              data-analytics-event="color_copy"
+              data-analytics-label="hex"
               className="px-3 py-2 border border-slate-300 rounded-lg text-sm font-semibold text-slate-700 hover:border-slate-400"
             >
               Copy
@@ -198,6 +202,8 @@ export default function ColorPickerTool() {
                 max={255}
                 value={rgb[channel]}
                 onChange={(event) => updateFromRgb({ ...rgb, [channel]: Number(event.target.value) })}
+                data-analytics-event="color_rgb_input"
+                data-analytics-label={channel}
                 className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             ))}
@@ -205,6 +211,8 @@ export default function ColorPickerTool() {
           <button
             type="button"
             onClick={() => handleCopy(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}
+            data-analytics-event="color_copy"
+            data-analytics-label="rgb"
             className="text-sm font-semibold text-blue-600 hover:text-blue-700"
           >
             Copy RGB
@@ -220,6 +228,8 @@ export default function ColorPickerTool() {
               max={360}
               value={hsl.h}
               onChange={(event) => updateFromHsl({ ...hsl, h: Number(event.target.value) })}
+              data-analytics-event="color_hsl_input"
+              data-analytics-label="h"
               className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
             <input
@@ -228,6 +238,8 @@ export default function ColorPickerTool() {
               max={100}
               value={hsl.s}
               onChange={(event) => updateFromHsl({ ...hsl, s: Number(event.target.value) })}
+              data-analytics-event="color_hsl_input"
+              data-analytics-label="s"
               className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
             <input
@@ -236,12 +248,16 @@ export default function ColorPickerTool() {
               max={100}
               value={hsl.l}
               onChange={(event) => updateFromHsl({ ...hsl, l: Number(event.target.value) })}
+              data-analytics-event="color_hsl_input"
+              data-analytics-label="l"
               className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <button
             type="button"
             onClick={() => handleCopy(`hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`)}
+            data-analytics-event="color_copy"
+            data-analytics-label="hsl"
             className="text-sm font-semibold text-blue-600 hover:text-blue-700"
           >
             Copy HSL
@@ -263,6 +279,8 @@ export default function ColorPickerTool() {
               key={value}
               type="button"
               onClick={() => updateFromHex(value)}
+              data-analytics-event="color_palette_pick"
+              data-analytics-label={value}
               className="flex flex-col items-center gap-2"
             >
               <span className="w-full h-12 rounded-lg border border-slate-200" style={{ backgroundColor: value }} />

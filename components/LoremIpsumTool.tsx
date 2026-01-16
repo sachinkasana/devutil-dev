@@ -104,6 +104,7 @@ export default function LoremIpsumTool() {
             <select
               value={type}
               onChange={(e) => setType(e.target.value as any)}
+              data-analytics-event="lorem_type"
               className="w-full px-4 py-2 border rounded-lg"
             >
               <option value="paragraphs">Paragraphs</option>
@@ -123,6 +124,7 @@ export default function LoremIpsumTool() {
               max="100"
               value={count}
               onChange={(e) => setCount(Math.max(1, Math.min(100, Number(e.target.value))))}
+              data-analytics-event="lorem_count"
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -134,6 +136,7 @@ export default function LoremIpsumTool() {
                 type="checkbox"
                 checked={startWithLorem}
                 onChange={(e) => setStartWithLorem(e.target.checked)}
+                data-analytics-event="lorem_start_with"
                 className="w-5 h-5 rounded border-gray-300"
               />
               <span className="text-sm">Start with "Lorem ipsum"</span>
@@ -144,6 +147,7 @@ export default function LoremIpsumTool() {
         {/* Generate Button */}
         <button
           onClick={generate}
+          data-analytics-event="lorem_generate"
           className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
         >
           Generate Lorem Ipsum
@@ -158,6 +162,7 @@ export default function LoremIpsumTool() {
               </label>
               <button
                 onClick={copyToClipboard}
+                data-analytics-event="lorem_copy"
                 className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-sm"
               >
                 {copied ? 'Copied!' : 'Copy to Clipboard'}
@@ -181,6 +186,8 @@ export default function LoremIpsumTool() {
                 setStartWithLorem(true)
                 setTimeout(generate, 0)
               }}
+              data-analytics-event="lorem_quick"
+              data-analytics-label="3_paragraphs"
               className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm"
             >
               3 Paragraphs
@@ -192,6 +199,8 @@ export default function LoremIpsumTool() {
                 setStartWithLorem(true)
                 setTimeout(generate, 0)
               }}
+              data-analytics-event="lorem_quick"
+              data-analytics-label="5_paragraphs"
               className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm"
             >
               5 Paragraphs
@@ -203,6 +212,8 @@ export default function LoremIpsumTool() {
                 setStartWithLorem(true)
                 setTimeout(generate, 0)
               }}
+              data-analytics-event="lorem_quick"
+              data-analytics-label="50_words"
               className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm"
             >
               50 Words
@@ -214,6 +225,8 @@ export default function LoremIpsumTool() {
                 setStartWithLorem(true)
                 setTimeout(generate, 0)
               }}
+              data-analytics-event="lorem_quick"
+              data-analytics-label="10_sentences"
               className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm"
             >
               10 Sentences

@@ -83,6 +83,7 @@ export default function PasswordGeneratorTool() {
             <button
               onClick={copyToClipboard}
               disabled={!password}
+              data-analytics-event="password_copy"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition"
             >
               {copied ? 'Copied!' : 'Copy'}
@@ -111,6 +112,7 @@ export default function PasswordGeneratorTool() {
             max="64"
             value={length}
             onChange={(e) => setLength(Number(e.target.value))}
+            data-analytics-event="password_length"
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -130,6 +132,7 @@ export default function PasswordGeneratorTool() {
               type="checkbox"
               checked={includeUppercase}
               onChange={(e) => setIncludeUppercase(e.target.checked)}
+              data-analytics-event="password_uppercase"
               className="w-5 h-5 rounded border-gray-300"
             />
             <span className="text-sm">Uppercase Letters (A-Z)</span>
@@ -140,6 +143,7 @@ export default function PasswordGeneratorTool() {
               type="checkbox"
               checked={includeLowercase}
               onChange={(e) => setIncludeLowercase(e.target.checked)}
+              data-analytics-event="password_lowercase"
               className="w-5 h-5 rounded border-gray-300"
             />
             <span className="text-sm">Lowercase Letters (a-z)</span>
@@ -150,6 +154,7 @@ export default function PasswordGeneratorTool() {
               type="checkbox"
               checked={includeNumbers}
               onChange={(e) => setIncludeNumbers(e.target.checked)}
+              data-analytics-event="password_numbers"
               className="w-5 h-5 rounded border-gray-300"
             />
             <span className="text-sm">Numbers (0-9)</span>
@@ -160,6 +165,7 @@ export default function PasswordGeneratorTool() {
               type="checkbox"
               checked={includeSymbols}
               onChange={(e) => setIncludeSymbols(e.target.checked)}
+              data-analytics-event="password_symbols"
               className="w-5 h-5 rounded border-gray-300"
             />
             <span className="text-sm">Symbols (!@#$%^&*)</span>
@@ -169,6 +175,7 @@ export default function PasswordGeneratorTool() {
         {/* Generate Button */}
         <button
           onClick={generatePassword}
+          data-analytics-event="password_generate"
           className="w-full py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition text-lg"
         >
           Generate Password

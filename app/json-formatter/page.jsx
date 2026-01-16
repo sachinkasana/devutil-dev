@@ -334,6 +334,7 @@ export default function JsonFormatterPage() {
                 type="checkbox"
                 checked={sortKeys}
                 onChange={(e) => setSortKeys(e.target.checked)}
+                data-analytics-event="json_sort_keys"
                 className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
               />
               <span title="Sorts object keys alphabetically before formatting.">Sort keys</span>
@@ -343,6 +344,7 @@ export default function JsonFormatterPage() {
               <select
                 value={indent}
                 onChange={(e) => setIndent(parseInt(e.target.value, 10))}
+                data-analytics-event="json_indent"
                 className="border border-slate-300 rounded-md px-2 py-1"
               >
                 <option value={2}>2 spaces</option>
@@ -355,6 +357,7 @@ export default function JsonFormatterPage() {
                 value={outputFormat}
                 onChange={(e) => setOutputFormat(e.target.value)}
                 title="Choose pretty formatting or compact output."
+                data-analytics-event="json_output_format"
                 className="border border-slate-300 rounded-md px-2 py-1"
               >
                 <option value="pretty">Pretty</option>

@@ -1,5 +1,6 @@
 import './globals.css';
 import Script from 'next/script';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import Analytics from '../components/Analytics';
 
 export const metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
           Skip to content
         </a>
         <Analytics />
+        <VercelAnalytics />
         {children}
       </body>
     </html>

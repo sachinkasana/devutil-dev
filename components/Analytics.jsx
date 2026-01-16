@@ -31,8 +31,27 @@ export default function Analytics() {
         trackEvent(eventName, label);
       }
     };
+    const handleChange = (event) => {
+      const target = event.target?.closest?.('[data-analytics-event]');
+      if (!target) return;
+      if (!['INPUT', 'SELECT', 'TEXTAREA'].includes(target.tagName)) return;
+      const eventName = target.getAttribute('data-analytics-event');
+      if (!eventName) return;
+      let label = target.getAttribute('data-analytics-label');
+      if (!label && target.type === 'checkbox') {
+        label = target.checked ? 'on' : 'off';
+      }
+      if (!label && typeof target.value === 'string') {
+        label = target.value;
+      }
+      trackEvent(eventName, label);
+    };
     document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
+    document.addEventListener('change', handleChange);
+    return () => {
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('change', handleChange);
+    };
   }, []);
 
   return null;

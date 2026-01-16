@@ -111,6 +111,8 @@ export default function QrCodeGeneratorTool() {
           <button
             type="button"
             onClick={() => setMode('text')}
+            data-analytics-event="qr_mode"
+            data-analytics-label="text"
             className={`px-4 py-2 rounded-lg text-sm font-semibold border transition-colors ${mode === 'text' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-300 text-slate-700 hover:border-slate-400'}`}
           >
             URL / Text
@@ -118,6 +120,8 @@ export default function QrCodeGeneratorTool() {
           <button
             type="button"
             onClick={() => setMode('wifi')}
+            data-analytics-event="qr_mode"
+            data-analytics-label="wifi"
             className={`px-4 py-2 rounded-lg text-sm font-semibold border transition-colors ${mode === 'wifi' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-300 text-slate-700 hover:border-slate-400'}`}
           >
             WiFi
@@ -125,6 +129,8 @@ export default function QrCodeGeneratorTool() {
           <button
             type="button"
             onClick={() => setMode('vcard')}
+            data-analytics-event="qr_mode"
+            data-analytics-label="vcard"
             className={`px-4 py-2 rounded-lg text-sm font-semibold border transition-colors ${mode === 'vcard' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-300 text-slate-700 hover:border-slate-400'}`}
           >
             vCard
@@ -137,6 +143,7 @@ export default function QrCodeGeneratorTool() {
             <textarea
               value={textValue}
               onChange={(event) => setTextValue(event.target.value)}
+              data-analytics-event="qr_text_input"
               placeholder="Paste a link, message, or any text."
               className="w-full min-h-[140px] border border-slate-300 rounded-xl p-4 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
@@ -150,6 +157,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={ssid}
                 onChange={(event) => setSsid(event.target.value)}
+                data-analytics-event="qr_wifi_ssid"
                 placeholder="Cafe WiFi"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
@@ -159,6 +167,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={wifiPassword}
                 onChange={(event) => setWifiPassword(event.target.value)}
+                data-analytics-event="qr_wifi_password"
                 placeholder="Optional"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
@@ -168,6 +177,7 @@ export default function QrCodeGeneratorTool() {
               <select
                 value={wifiEncryption}
                 onChange={(event) => setWifiEncryption(event.target.value)}
+                data-analytics-event="qr_wifi_encryption"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="WPA">WPA/WPA2</option>
@@ -180,6 +190,7 @@ export default function QrCodeGeneratorTool() {
                 type="checkbox"
                 checked={wifiHidden}
                 onChange={(event) => setWifiHidden(event.target.checked)}
+                data-analytics-event="qr_wifi_hidden"
                 className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
               />
               Hidden network
@@ -194,6 +205,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={firstName}
                 onChange={(event) => setFirstName(event.target.value)}
+                data-analytics-event="qr_vcard_first_name"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -202,6 +214,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={lastName}
                 onChange={(event) => setLastName(event.target.value)}
+                data-analytics-event="qr_vcard_last_name"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -210,6 +223,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={org}
                 onChange={(event) => setOrg(event.target.value)}
+                data-analytics-event="qr_vcard_org"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -218,6 +232,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
+                data-analytics-event="qr_vcard_title"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -226,6 +241,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={phone}
                 onChange={(event) => setPhone(event.target.value)}
+                data-analytics-event="qr_vcard_phone"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -234,6 +250,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
+                data-analytics-event="qr_vcard_email"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -242,6 +259,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
+                data-analytics-event="qr_vcard_url"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -250,6 +268,7 @@ export default function QrCodeGeneratorTool() {
               <input
                 value={address}
                 onChange={(event) => setAddress(event.target.value)}
+                data-analytics-event="qr_vcard_address"
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -265,6 +284,7 @@ export default function QrCodeGeneratorTool() {
               max={512}
               value={size}
               onChange={(event) => setSize(Number(event.target.value))}
+              data-analytics-event="qr_size"
               className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -276,6 +296,7 @@ export default function QrCodeGeneratorTool() {
               max={10}
               value={margin}
               onChange={(event) => setMargin(Number(event.target.value))}
+              data-analytics-event="qr_margin"
               className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -284,6 +305,7 @@ export default function QrCodeGeneratorTool() {
             <select
               value={errorCorrection}
               onChange={(event) => setErrorCorrection(event.target.value)}
+              data-analytics-event="qr_error_correction"
               className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
               <option value="L">Low</option>
@@ -301,6 +323,7 @@ export default function QrCodeGeneratorTool() {
               type="color"
               value={darkColor}
               onChange={(event) => setDarkColor(event.target.value)}
+              data-analytics-event="qr_color_dark"
               className="w-full h-11 border border-slate-300 rounded-lg"
             />
           </div>
@@ -310,6 +333,7 @@ export default function QrCodeGeneratorTool() {
               type="color"
               value={lightColor}
               onChange={(event) => setLightColor(event.target.value)}
+              data-analytics-event="qr_color_light"
               className="w-full h-11 border border-slate-300 rounded-lg"
             />
           </div>
@@ -334,6 +358,7 @@ export default function QrCodeGeneratorTool() {
           <button
             type="button"
             onClick={handleDownload}
+            data-analytics-event="qr_download"
             className="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
           >
             Download PNG
@@ -341,6 +366,7 @@ export default function QrCodeGeneratorTool() {
           <button
             type="button"
             onClick={handleCopyPayload}
+            data-analytics-event="qr_copy_data"
             className="px-4 py-2 rounded-full border border-slate-300 text-slate-700 text-sm font-semibold hover:border-slate-400 transition-colors"
           >
             {copied ? 'Copied!' : 'Copy data'}
