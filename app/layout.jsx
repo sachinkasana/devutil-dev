@@ -1,6 +1,6 @@
 import './globals.css';
 import Script from 'next/script';
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 import Analytics from '../components/Analytics';
 
 export const metadata = {
