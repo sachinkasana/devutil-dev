@@ -104,16 +104,18 @@ export default function Base64EncoderDecoder() {
       <Header subtitle="Base64 Encoder/Decoder" />
 
       {/* Main Content */}
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-8">
         {/* Title & Description */}
-        <div className="mb-6 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-2">
-            <Lock className="w-7 h-7 text-green-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Free Base64 Encoder & Decoder Online</h1>
+        <div className="mb-4 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Lock className="w-6 h-6 text-green-600" />
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
+              Free Base64 Encoder &amp; Decoder Online
+              <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
+                Encode or decode Base64 instantly with fast, private in-browser processing.
+              </span>
+            </h1>
           </div>
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-            Encode or decode Base64 instantly with fast, private in-browser processing.
-          </p>
         </div>
 
         {/* Mode Toggle */}

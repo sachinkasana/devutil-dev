@@ -100,7 +100,7 @@ export default function LoremIpsumGeneratorPage() {
       />
 
       <Header subtitle="Lorem Ipsum Generator" />
-      <main id="main-content" className="container mx-auto px-4 py-8">
+      <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-8">
         <nav aria-label="Breadcrumb" className="mb-4">
           <ol className="flex gap-2 text-sm text-gray-600">
             <li><a href="/" className="hover:underline">Home</a></li>
@@ -109,11 +109,12 @@ export default function LoremIpsumGeneratorPage() {
           </ol>
         </nav>
 
-        <h1 className="text-4xl font-bold mb-4">Free Lorem Ipsum Generator</h1>
-        <p className="text-lg text-gray-700 mb-8">
-          Generate Lorem Ipsum placeholder text instantly for your designs, mockups, and prototypes. 
-          Choose paragraphs, words, or sentences. Fast, free, and easy to use.
-        </p>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6">
+          Free Lorem Ipsum Generator
+          <span className="ml-2 text-sm sm:text-base font-normal text-gray-700">
+            Generate placeholder text instantly. Choose paragraphs, words, or sentences for designs and prototypes.
+          </span>
+        </h1>
 
         {/* LOREM IPSUM TOOL COMPONENT */}
         <LoremIpsumTool />

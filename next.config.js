@@ -4,6 +4,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/text-compare',
+        destination: '/diff-checker',
+        permanent: true
+      },
+      {
         source: '/:path*',
         has: [
           {

@@ -118,16 +118,18 @@ export default function RegexTester() {
       <Header subtitle="Regex Tester" />
 
       {/* Main Content */}
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-8">
         {/* Title & Description */}
-        <div className="mb-6 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-2">
-            <Search className="w-7 h-7 text-red-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Regex Tester Online</h1>
+        <div className="mb-4 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Search className="w-6 h-6 text-red-600" />
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
+              Regex Tester Online
+              <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
+                Test and debug regex patterns instantly with private, in-browser matching.
+              </span>
+            </h1>
           </div>
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-            Test and debug regex patterns instantly with private, in-browser matching.
-          </p>
         </div>
 
         {/* Regex Pattern Input */}

@@ -152,13 +152,15 @@ export default function QrCodeGeneratorPage() {
       />
 
       <Header subtitle="QR Code Generator" />
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="mb-8 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Free QR Code Generator Online</h1>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-            Create QR codes for links, WiFi, vCards, or any text. Customize size, colors, and error correction. All QR
-            codes are generated in your browser for fast, private results.
-          </p>
+      <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-10">
+        <div className="mb-6 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
+            Free QR Code Generator Online
+            <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
+              Create QR codes for links, WiFi, vCards, or any text. Customize size, colors, and error correction for
+              fast, private results.
+            </span>
+          </h1>
         </div>
 
         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">

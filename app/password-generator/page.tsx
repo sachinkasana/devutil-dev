@@ -102,7 +102,7 @@ export default function PasswordGeneratorPage() {
       />
 
       <Header subtitle="Password Generator" />
-      <main id="main-content" className="container mx-auto px-4 py-8">
+      <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-8">
         <nav aria-label="Breadcrumb" className="mb-4">
           <ol className="flex gap-2 text-sm text-gray-600">
             <li><a href="/" className="hover:underline">Home</a></li>
@@ -111,11 +111,13 @@ export default function PasswordGeneratorPage() {
           </ol>
         </nav>
 
-        <h1 className="text-4xl font-bold mb-4">Free Online Password Generator</h1>
-        <p className="text-lg text-gray-700 mb-8">
-          Generate strong, secure random passwords instantly. Customize length and character types. 
-          All passwords are created in your browser - nothing is stored or sent to any server.
-        </p>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6">
+          Free Online Password Generator
+          <span className="ml-2 text-sm sm:text-base font-normal text-gray-700">
+            Generate strong, secure passwords instantly with customizable length and character types. All passwords are
+            created in your browser.
+          </span>
+        </h1>
 
         {/* PASSWORD GENERATOR TOOL COMPONENT */}
         <PasswordGeneratorTool />

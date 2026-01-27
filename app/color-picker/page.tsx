@@ -151,13 +151,14 @@ export default function ColorPickerPage() {
       />
 
       <Header subtitle="Color Picker" />
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="mb-8 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Color Picker & Converter</h1>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-            Pick colors visually, convert HEX to RGB or HSL, and build instant palettes. Copy color codes for design
-            systems, CSS, or UI mockups.
-          </p>
+      <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-10">
+        <div className="mb-6 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
+            Color Picker &amp; Converter
+            <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
+              Pick colors visually, convert HEX to RGB or HSL, and build palettes with quick copy.
+            </span>
+          </h1>
         </div>
 
         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">

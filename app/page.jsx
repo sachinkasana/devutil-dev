@@ -1,17 +1,17 @@
 import React from 'react';
-import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock, ShieldCheck, FileText, QrCode, Palette } from 'lucide-react';
+import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock, ShieldCheck, FileText, QrCode, Palette, FileDiff } from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
   title: 'Free Developer Tools & Utilities Online - DevUtil',
-  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, and lorem ipsum.',
+  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, and lorem ipsum.',
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
     url: '/',
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, and lorem ipsum.',
+    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
     images: ['https://www.devutil.dev/og.png']
   }
 };
@@ -44,6 +44,14 @@ const tools = [
     icon: Lock,
     href: '/base64-encoder',
     color: 'bg-green-500',
+    popular: true
+  },
+  {
+    name: 'Diff Checker',
+    description: 'Compare text differences with highlighted changes',
+    icon: FileDiff,
+    href: '/diff-checker',
+    color: 'bg-sky-500',
     popular: true
   },
   {
@@ -127,42 +135,42 @@ export default function HomePage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <div className="space-y-6">
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
+        <section className="w-full px-3 sm:px-4 lg:px-6 py-10 text-center">
+          <div className="space-y-4">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900">
               Free Developer
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                Utilities & Tools
+              <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Utilities &amp; Tools
               </span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Fast, free, and privacy-focused tools for developers.
-              All processing happens in your browser—no data leaves your device.
+            <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+              Fast, free, and privacy-focused tools for developers. All processing happens in your browser—no data
+              leaves your device.
             </p>
-            <div className="flex items-center justify-center space-x-4 text-sm text-slate-500">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span>100% Client-Side</span>
-              </div>
-              <div className="flex items-center space-x-2">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-500">
+              <span className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                100% Client-Side
+              </span>
+              <span className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1">
                 <Lock className="w-4 h-4" />
-                <span>Privacy First</span>
-              </div>
-              <div className="flex items-center space-x-2">
+                Privacy First
+              </span>
+              <span className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1">
                 <RefreshCw className="w-4 h-4" />
-                <span>Always Free</span>
-              </div>
+                Always Free
+              </span>
             </div>
           </div>
         </section>
 
       {/* Tools Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="mb-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+      <section className="w-full px-3 sm:px-4 lg:px-6 pb-16">
+        <div className="mb-6 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
             Explore the Toolbox
           </h2>
-          <p className="mt-2 text-slate-600">
+          <p className="mt-1 text-sm sm:text-base text-slate-600">
             Pick a utility to get started in seconds.
           </p>
         </div>
@@ -261,7 +269,7 @@ export default function HomePage() {
 
         {/* Features Section */}
         <section className="bg-white border-t border-slate-200 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-3 sm:px-4 lg:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-12">
               Why Choose DevUtil?
             </h2>
