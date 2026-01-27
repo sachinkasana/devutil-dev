@@ -53,6 +53,11 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-60HX9JGQBJ"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="7453b902-2ae1-47aa-bf70-4dc72f7af441"
+          strategy="afterInteractive"
+        />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
