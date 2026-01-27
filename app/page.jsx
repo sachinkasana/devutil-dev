@@ -23,6 +23,7 @@ export const metadata = {
     ]
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Free Developer Tools & Utilities Online - DevUtil',
     description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
