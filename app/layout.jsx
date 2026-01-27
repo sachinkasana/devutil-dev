@@ -20,7 +20,7 @@ export const metadata = {
     description: 'Essential developer tools and utilities for developers.',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/devutil-home.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -31,7 +31,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'DevUtil',
     description: 'Essential developer tools and utilities for developers.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/devutil-home.png']
   },
   icons: {
     icon: [

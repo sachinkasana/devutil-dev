@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/uuid-generator.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil',
     description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/uuid-generator.png']
   }
 };
 

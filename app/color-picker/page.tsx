@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer';
 import ColorPickerTool from '../../components/ColorPickerTool';
 
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/color-picker.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Color Picker & Converter - HEX, RGB, HSL Online Tool | DevUtil',
     description: 'Pick colors visually and convert HEX to RGB or HSL. Generate palettes, copy color codes, and explore tints and shades.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/color-picker.png']
   },
   robots: {
     index: true,
@@ -53,7 +54,7 @@ const jsonLdSchema = {
   name: 'Color Picker',
   applicationCategory: 'DesignApplication',
   operatingSystem: 'Any',
-  image: 'https://www.devutil.dev/og.png',
+  image: 'https://www.devutil.dev/images/color-picker.png',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -363,6 +364,8 @@ export default function ColorPickerPage() {
           </div>
         </section>
       </main>
+      <RelatedTools current="color-picker" />
+
       <Footer />
     </div>
   );

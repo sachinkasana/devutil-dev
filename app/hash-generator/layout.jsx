@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/hash-generator.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool | DevUtil',
     description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/hash-generator.png']
   }
 };
 

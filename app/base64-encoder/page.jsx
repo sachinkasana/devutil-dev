@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Code, Copy, Check, Lock, Upload, Download } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function Base64EncoderDecoder() {
   const [input, setInput] = useState('');
@@ -415,6 +416,7 @@ export default function Base64EncoderDecoder() {
           </div>
         </section>
       </main>
+      <RelatedTools current="base64-encoder" />
 
       <Footer />
     </div>

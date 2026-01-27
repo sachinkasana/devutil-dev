@@ -15,17 +15,17 @@ export const metadata = {
     url: '/',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/devutil-home.png',
         width: 1200,
         height: 630,
-        alt: 'DevUtil'
+        alt: 'DevUtil home page'
       }
     ]
   },
   twitter: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
     description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };
 

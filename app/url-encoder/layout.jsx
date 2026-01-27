@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/url-encoder.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil',
     description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/url-encoder.png']
   }
 };
 

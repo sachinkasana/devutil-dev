@@ -22,6 +22,7 @@ import { bracketMatching, foldGutter, foldKeymap, indentOnInput, syntaxHighlight
 import { json as jsonLanguage } from '@codemirror/lang-json';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 const ACCEPTED_EXTENSIONS = ['.txt', '.json', '.xml', '.js', '.css', '.html', '.md'];
@@ -1252,51 +1253,6 @@ export default function DiffCheckerPage() {
               </div>
             </div>
           </section>
-
-          <details className="group bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
-            <summary className="flex items-center justify-between cursor-pointer list-none">
-              <span className="text-xl font-semibold text-slate-900">Overview &amp; Privacy</span>
-              <ChevronDown className="w-4 h-4 text-slate-500 transition-transform group-open:rotate-180" />
-            </summary>
-            <div className="mt-4 space-y-6">
-              <p className="text-slate-700 leading-relaxed">
-                Compare text differences instantly with our free online diff checker. This browser-based tool highlights
-                additions, deletions, and modifications between two text blocks, making it easy to spot changes in code,
-                documents, or any plain text files. Perfect for developers reviewing code changes, writers tracking
-                document edits, or anyone needing to compare text versions. The tool supports side-by-side and inline
-                comparison modes, character-level diff detection, and works with various file formats including .txt,
-                .json, .js, .css, .html, and .md files. All processing happens locally in your browser--your text never
-                leaves your device. No uploads, no servers, complete privacy. Use options like "ignore whitespace,"
-                "ignore line breaks," and "case-sensitive" to customize your comparison. Export results as text or HTML,
-                copy directly to your clipboard, or download a shareable report for reviews. Built for speed, the diff
-                checker stays responsive even with large files while keeping your data private. You can also toggle line
-                numbers, ignore whitespace, and switch formats to match your workflow when comparing text online.
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-4">
-                <button
-                  type="button"
-                  onClick={() => document.getElementById('diff-tool')?.scrollIntoView({ behavior: 'smooth' })}
-                  data-analytics-event="tool_used"
-                  data-analytics-tool="Diff Checker"
-                  data-analytics-action="compare_cta"
-                  className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                >
-                  <Diff className="w-4 h-4" />
-                  <span>Compare Texts Now</span>
-                </button>
-                <span className="text-sm text-slate-500">100% client-side, no uploads, privacy-first.</span>
-              </div>
-              <img
-                src="/images/diff-checker-preview.png"
-                alt="Diff checker tool showing side-by-side text comparison with highlighted differences"
-                width="1200"
-                height="630"
-                loading="lazy"
-                className="w-full rounded-xl border border-slate-200"
-              />
-            </div>
-          </details>
-
           <details className="group bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
             <summary className="flex items-center justify-between cursor-pointer list-none">
               <span className="text-xl font-semibold text-slate-900">How to Use &amp; Features</span>
@@ -1345,26 +1301,6 @@ export default function DiffCheckerPage() {
 
           <details className="group bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
             <summary className="flex items-center justify-between cursor-pointer list-none">
-              <span className="text-xl font-semibold text-slate-900">Related Developer Tools</span>
-              <ChevronDown className="w-4 h-4 text-slate-500 transition-transform group-open:rotate-180" />
-            </summary>
-            <div className="mt-4">
-              <ul className="space-y-2 text-slate-700">
-                <li>
-                  <a className="text-blue-600 hover:underline" href="/json-formatter">JSON Formatter</a> - Format and validate JSON
-                </li>
-                <li>
-                  <a className="text-blue-600 hover:underline" href="/regex-tester">Regex Tester</a> - Test regular expressions
-                </li>
-                <li>
-                  <a className="text-blue-600 hover:underline" href="/hash-generator">Hash Generator</a> - Generate MD5, SHA hashes
-                </li>
-              </ul>
-            </div>
-          </details>
-
-          <details className="group bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
-            <summary className="flex items-center justify-between cursor-pointer list-none">
               <span className="text-xl font-semibold text-slate-900">Frequently Asked Questions</span>
               <ChevronDown className="w-4 h-4 text-slate-500 transition-transform group-open:rotate-180" />
             </summary>
@@ -1389,6 +1325,7 @@ export default function DiffCheckerPage() {
           </details>
         </article>
       </main>
+      <RelatedTools current="diff-checker" />
 
       <Footer />
     </div>

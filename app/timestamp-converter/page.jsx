@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Code, Copy, Check, RefreshCw, Clock } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function TimestampConverter() {
   const [currentTime, setCurrentTime] = useState(null);
@@ -434,6 +435,7 @@ export default function TimestampConverter() {
           </div>
         </section>
       </main>
+      <RelatedTools current="timestamp-converter" />
 
       <Footer />
     </div>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Code, Copy, Check, Key, RefreshCw, Download, Trash2 } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function UUIDGenerator() {
   const [uuids, setUuids] = useState([]);
@@ -377,6 +378,7 @@ export default function UUIDGenerator() {
           </div>
         </section>
       </main>
+      <RelatedTools current="uuid-generator" />
 
       <Footer />
     </div>

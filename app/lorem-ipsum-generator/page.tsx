@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import LoremIpsumTool from '../../components/LoremIpsumTool'
 import Header from '../../components/Header'
+import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer'
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/lorem-ipsum-generator.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online | DevUtil',
     description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/lorem-ipsum-generator.png']
   },
   robots: {
     index: true,
@@ -53,7 +54,7 @@ const jsonLdSchema = {
   "name": "Lorem Ipsum Generator",
   "applicationCategory": "DesignApplication",
   "operatingSystem": "Any",
-  "image": "https://www.devutil.dev/og.png",
+  "image": "https://www.devutil.dev/images/lorem-ipsum-generator.png",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -398,6 +399,8 @@ export default function LoremIpsumGeneratorPage() {
           </div>
         </section>
       </main>
+      <RelatedTools current="lorem-ipsum-generator" />
+
       <Footer />
     </div>
   )

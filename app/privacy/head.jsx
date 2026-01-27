@@ -12,7 +12,7 @@ export default function Head() {
         property="og:description"
         content="DevUtil privacy policy: all tools run locally in your browser and your data stays on your device."
       />
-      <meta property="og:image" content="https://www.devutil.dev/og.png" />
+      <meta property="og:image" content="https://www.devutil.dev/images/devutil-home.png" />
       <meta property="og:url" content="https://www.devutil.dev/privacy" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -21,7 +21,7 @@ export default function Head() {
         name="twitter:description"
         content="DevUtil privacy policy: all tools run locally in your browser and your data stays on your device."
       />
-      <meta name="twitter:image" content="https://www.devutil.dev/og.png" />
+      <meta name="twitter:image" content="https://www.devutil.dev/images/devutil-home.png" />
     </>
   );
 }

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Code, Copy, Check, Hash, Upload } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function HashGenerator() {
   const [input, setInput] = useState('');
@@ -479,6 +480,7 @@ export default function HashGenerator() {
           </div>
         </section>
       </main>
+      <RelatedTools current="hash-generator" />
 
       <Footer />
     </div>

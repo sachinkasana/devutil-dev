@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/base64-encoder-decoder.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil',
     description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/base64-encoder-decoder.png']
   }
 };
 

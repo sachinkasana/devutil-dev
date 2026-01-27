@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/regex-tester.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Regex Tester Online - Test Regular Expressions Live | DevUtil',
     description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/regex-tester.png']
   }
 };
 

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Code, Copy, Check, Braces, AlertCircle, Shield } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function JWTDecoder() {
   const [token, setToken] = useState('');
@@ -418,6 +419,7 @@ export default function JWTDecoder() {
           </div>
         </section>
       </main>
+      <RelatedTools current="jwt-decoder" />
 
       <Footer />
     </div>

@@ -36,7 +36,7 @@ export default function Head() {
         property="og:description"
         content="Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload."
       />
-      <meta property="og:image" content="https://www.devutil.dev/og.png" />
+      <meta property="og:image" content="https://www.devutil.dev/images/base64-encoder-decoder.png" />
       <meta property="og:url" content="https://www.devutil.dev/base64-encoder" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -45,7 +45,7 @@ export default function Head() {
         name="twitter:description"
         content="Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload."
       />
-      <meta name="twitter:image" content="https://www.devutil.dev/og.png" />
+      <meta name="twitter:image" content="https://www.devutil.dev/images/base64-encoder-decoder.png" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

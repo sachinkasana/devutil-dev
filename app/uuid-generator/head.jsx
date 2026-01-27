@@ -36,7 +36,7 @@ export default function Head() {
         property="og:description"
         content="Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download."
       />
-      <meta property="og:image" content="https://www.devutil.dev/og.png" />
+      <meta property="og:image" content="https://www.devutil.dev/images/uuid-generator.png" />
       <meta property="og:url" content="https://www.devutil.dev/uuid-generator" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -45,7 +45,7 @@ export default function Head() {
         name="twitter:description"
         content="Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download."
       />
-      <meta name="twitter:image" content="https://www.devutil.dev/og.png" />
+      <meta name="twitter:image" content="https://www.devutil.dev/images/uuid-generator.png" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

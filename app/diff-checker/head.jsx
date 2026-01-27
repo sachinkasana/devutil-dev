@@ -24,7 +24,7 @@ export default function Head() {
       'Export to TXT/HTML',
       'Privacy-focused - no data upload'
     ],
-    screenshot: 'https://www.devutil.dev/images/diff-checker-screenshot.png'
+    screenshot: 'https://www.devutil.dev/images/diff-checker.png'
   };
 
   const breadcrumbLd = {
@@ -63,7 +63,7 @@ export default function Head() {
         property="og:description"
         content="Compare text differences instantly. Free online diff checker with side-by-side view. Privacy-focused, runs in your browser."
       />
-      <meta property="og:image" content="https://www.devutil.dev/images/diff-checker-og.png" />
+      <meta property="og:image" content="https://www.devutil.dev/images/diff-checker.png" />
       <meta property="og:url" content="https://www.devutil.dev/diff-checker" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -72,7 +72,7 @@ export default function Head() {
         name="twitter:description"
         content="Compare text differences instantly. Privacy-focused diff checker tool."
       />
-      <meta name="twitter:image" content="https://www.devutil.dev/images/diff-checker-twitter.png" />
+      <meta name="twitter:image" content="https://www.devutil.dev/images/diff-checker.png" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationLd) }}

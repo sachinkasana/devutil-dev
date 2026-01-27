@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Code, Copy, Check, Link2, Download } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function URLEncoder() {
   const [input, setInput] = useState('');
@@ -451,6 +452,7 @@ export default function URLEncoder() {
           </div>
         </section>
       </main>
+      <RelatedTools current="url-encoder" />
 
       <Footer />
     </div>

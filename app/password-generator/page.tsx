@@ -2,6 +2,7 @@
 import type { Metadata } from 'next'
 import PasswordGeneratorTool from '../../components/PasswordGeneratorTool'
 import Header from '../../components/Header'
+import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer'
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/password-generator.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free Password Generator - Create Strong Random Passwords Online | DevUtil',
     description: 'Generate strong, secure random passwords online. Customize length and character types. 100% client-side processing with no storage.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/password-generator.png']
   },
   robots: {
     index: true,
@@ -55,7 +56,7 @@ const jsonLdSchema = {
   "name": "Password Generator",
   "applicationCategory": "SecurityApplication",
   "operatingSystem": "Any",
-  "image": "https://www.devutil.dev/og.png",
+  "image": "https://www.devutil.dev/images/password-generator.png",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -420,6 +421,8 @@ export default function PasswordGeneratorPage() {
           </div>
         </section>
       </main>
+      <RelatedTools current="password-generator" />
+
       <Footer />
     </div>
   )

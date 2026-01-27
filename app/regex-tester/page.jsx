@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Code, Copy, Check, Search, BookOpen } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 export default function RegexTester() {
   const [pattern, setPattern] = useState('');
@@ -425,6 +426,7 @@ export default function RegexTester() {
           </div>
         </section>
       </main>
+      <RelatedTools current="regex-tester" />
 
       <Footer />
     </div>

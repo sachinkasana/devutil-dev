@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/jwt-decoder.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil',
     description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/jwt-decoder.png']
   }
 };
 

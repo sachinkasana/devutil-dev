@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/timestamp-converter.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil',
     description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/timestamp-converter.png']
   }
 };
 

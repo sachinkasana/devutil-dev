@@ -13,6 +13,7 @@ import { bracketMatching, foldGutter, foldKeymap, indentOnInput, syntaxHighlight
 import { json as jsonLanguage } from '@codemirror/lang-json';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 
 const sampleJson = `{
   "name": "DevUtil",
@@ -991,25 +992,8 @@ export default function JsonFormatterPage() {
           </div>
         </details>
 
-        {/* Related Tools */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <a href="/base64-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h3>
-              <p className="text-slate-600 text-sm">Encode or decode JSON payloads safely for transport.</p>
-            </a>
-            <a href="/url-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-2">URL Encoder</h3>
-              <p className="text-slate-600 text-sm">Escape JSON query parameters for API requests.</p>
-            </a>
-            <a href="/jwt-decoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-2">JWT Decoder</h3>
-              <p className="text-slate-600 text-sm">Inspect JWT header and payload JSON instantly.</p>
-            </a>
-          </div>
-        </section>
       </main>
+      <RelatedTools current="json-formatter" />
 
       <Footer />
     </div>

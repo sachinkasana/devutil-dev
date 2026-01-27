@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '../../components/Header';
+import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer';
 import QrCodeGeneratorTool from '../../components/QrCodeGeneratorTool';
 
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/qr-code-generator.png',
         width: 1200,
         height: 630,
         alt: 'DevUtil'
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi | DevUtil',
     description: 'Create QR codes for URLs, WiFi, vCards, and text. Customize size, colors, and error correction. 100% client-side.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/qr-code-generator.png']
   },
   robots: {
     index: true,
@@ -54,7 +55,7 @@ const jsonLdSchema = {
   name: 'QR Code Generator',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Any',
-  image: 'https://www.devutil.dev/og.png',
+  image: 'https://www.devutil.dev/images/qr-code-generator.png',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -367,6 +368,8 @@ export default function QrCodeGeneratorPage() {
           </div>
         </section>
       </main>
+      <RelatedTools current="qr-code-generator" />
+
       <Footer />
     </div>
   );

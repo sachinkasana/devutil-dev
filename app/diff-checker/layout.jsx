@@ -30,7 +30,7 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/images/diff-checker-og.png',
+        url: 'https://www.devutil.dev/images/diff-checker.png',
         width: 1200,
         height: 630,
         alt: 'Diff checker tool preview'
@@ -41,7 +41,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Diff Checker - Compare Text Online',
     description: 'Compare text differences instantly. Privacy-focused diff checker tool.',
-    images: ['https://www.devutil.dev/images/diff-checker-twitter.png']
+    images: ['https://www.devutil.dev/images/diff-checker.png']
   }
 };
 
@@ -70,7 +70,7 @@ const webApplicationLd = {
     'Export to TXT/HTML',
     'Privacy-focused - no data upload'
   ],
-  screenshot: 'https://www.devutil.dev/images/diff-checker-screenshot.png'
+  screenshot: 'https://www.devutil.dev/images/diff-checker.png'
 };
 
 const breadcrumbLd = {

@@ -29,10 +29,10 @@ export const metadata = {
     siteName: 'DevUtil',
     images: [
       {
-        url: 'https://www.devutil.dev/og.png',
+        url: 'https://www.devutil.dev/images/json-formatter.png',
         width: 1200,
         height: 630,
-        alt: 'DevUtil'
+        alt: 'JSON Formatter tool preview'
       }
     ]
   },
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil',
     description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
-    images: ['https://www.devutil.dev/og.png']
+    images: ['https://www.devutil.dev/images/json-formatter.png']
   }
 };
 
