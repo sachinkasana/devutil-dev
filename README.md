@@ -1,84 +1,130 @@
-# DevUtil
+# DevUtil — Free Developer Tools & Utilities
 
-DevUtil (https://devutil.dev) is a fast, privacy-first collection of developer utilities that run fully in the browser. No logins, no tracking, no server-side processing of user data.
+**[devutil.dev](https://www.devutil.dev)** is a fast, privacy-first collection of developer utilities that run **100% in the browser**. No logins, no tracking, no server-side processing.
 
-## Product vision
+> Built by [Sachin Kasana](https://github.com/sachinkasana) · MIT License · Free forever
 
-Build the most trustworthy and delightful toolbox for developers: instant results, zero data leakage, and a clean, focused UI that works on any device.
+---
 
-## Features
+## 🧰 Tools
 
-Current tools:
-- JSON Formatter (format, minify, repair, convert to XML/CSV/YAML)
-- Base64 Encoder/Decoder
-- UUID Generator
-- Hash Generator (MD5, SHA-1, SHA-256, SHA-512)
-- Regex Tester
-- URL Encoder/Decoder
-- JWT Decoder
-- Timestamp Converter
+| Tool | URL | Description |
+|------|-----|-------------|
+| JSON Formatter | [/json-formatter](https://www.devutil.dev/json-formatter) | Format, validate, beautify & minify JSON |
+| Base64 Encoder | [/base64-encoder](https://www.devutil.dev/base64-encoder) | Encode & decode Base64 strings |
+| UUID Generator | [/uuid-generator](https://www.devutil.dev/uuid-generator) | Generate random UUID v4 identifiers |
+| Diff Checker | [/diff-checker](https://www.devutil.dev/diff-checker) | Compare text differences with highlighting |
+| Hash Generator | [/hash-generator](https://www.devutil.dev/hash-generator) | MD5, SHA-1, SHA-256, SHA-512 hashing |
+| Password Generator | [/password-generator](https://www.devutil.dev/password-generator) | Generate strong random passwords |
+| Regex Tester | [/regex-tester](https://www.devutil.dev/regex-tester) | Test JavaScript regular expressions live |
+| URL Encoder | [/url-encoder](https://www.devutil.dev/url-encoder) | Encode & decode URL components |
+| JWT Decoder | [/jwt-decoder](https://www.devutil.dev/jwt-decoder) | Decode & inspect JSON Web Tokens |
+| Timestamp Converter | [/timestamp-converter](https://www.devutil.dev/timestamp-converter) | Convert Unix timestamps to dates |
+| QR Code Generator | [/qr-code-generator](https://www.devutil.dev/qr-code-generator) | Create QR codes for URLs, WiFi, vCards |
+| Color Picker | [/color-picker](https://www.devutil.dev/color-picker) | HEX, RGB, HSL color converter |
+| Lorem Ipsum Generator | [/lorem-ipsum-generator](https://www.devutil.dev/lorem-ipsum-generator) | Generate placeholder text |
 
-Product principles:
-- Privacy-first: all processing stays in the browser
-- Fast: no server roundtrips
-- Accessible: responsive UI with readable layouts
-- Reliable: deterministic outputs and clear error states
+---
 
-## Tech stack
+## ✨ Why DevUtil?
 
-- Next.js (App Router)
-- React
-- Tailwind CSS
-- lucide-react icons
+- **🔒 Privacy-first** — All processing is client-side. Your data never leaves your device.
+- **⚡ Instant** — No server roundtrips. Results appear as you type.
+- **📱 Responsive** — Works well on desktop and mobile.
+- **💸 Always free** — No subscriptions, no paywalls, no ads.
+- **🌐 No account required** — Open and use immediately.
 
-## Getting started
+---
 
-Requirements:
-- Node.js 18+
-- npm
+## 🛠 Tech Stack
 
-Install and run:
+- **[Next.js](https://nextjs.org/)** (App Router) — framework
+- **[React](https://react.dev/)** — UI
+- **[Tailwind CSS](https://tailwindcss.com/)** — styling
+- **[lucide-react](https://lucide.dev/)** — icons
+
+---
+
+## 🚀 Getting Started
+
+**Requirements:** Node.js 18+, npm
 
 ```bash
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
+
+# Build for production
+npm run build && npm run start
 ```
 
-Build and start:
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-```bash
-npm run build
-npm run start
+---
+
+## 📁 Project Structure
+
+```
+devutil-dev/
+├── app/
+│   ├── layout.jsx          # Root layout + global metadata
+│   ├── page.jsx            # Homepage
+│   ├── seo-config.js       # SEO metadata for all tools
+│   ├── sitemap.js          # Auto-generated sitemap.xml
+│   ├── robots.js           # Auto-generated robots.txt
+│   └── [tool-slug]/
+│       └── page.jsx        # Each tool page
+├── components/
+│   └── ToolPageWrapper.jsx # Shared SEO + FAQ wrapper
+├── public/
+│   └── llms.txt            # LLM-readable site index
+└── README.md
 ```
 
-## Project structure
+---
 
-- `app/` Next.js App Router pages
-- `app/*/page.jsx` Tool pages
-- `app/*/head.jsx` SEO metadata
-- `app/globals.css` Global styles
+## 🗺 Roadmap
 
-## Deployment
+### Near-term
+- [ ] Improve tool search and discoverability
+- [ ] Add file-based hashing for binary files
+- [ ] Regex replace + quick presets
+- [ ] URL normalizer and query editor
+- [ ] CSS minifier
+- [ ] Markdown previewer
 
-The site is designed to be deployed to any Next.js-compatible platform. Update `metadataBase` in `app/layout.jsx` if the canonical domain changes.
+### Long-term
+- [ ] Blog with developer tutorials
+- [ ] More conversion tools (YAML ↔ JSON, CSV ↔ JSON)
+- [ ] Keyboard shortcuts
 
-## Roadmap
+---
 
-Near-term:
-- Improve tool discoverability and search
-- Add file-based hashing for binary files
-- Add regex replace and quick presets
-- Add URL normalize and query editor
+## 🤝 Contributing
 
-Long-term:
-- Expand tool catalog based on feedback
-- Team and enterprise onboarding
-- Documentation and educational content
+Bug reports and feature requests are welcome via [GitHub Issues](https://github.com/sachinkasana/devutil-dev/issues).
 
-## Contributing
+For a new tool, open an issue with:
+1. Tool name and description
+2. Who it's for and why it's useful
+3. Key inputs/outputs
 
-If you want to contribute, open an issue with the tool idea or bug report. For major changes, propose a short design plan first.
+For bugs, include steps to reproduce.
 
-## License
+---
 
-MIT. See `LICENSE`.
+## 📄 License
+
+MIT — see [LICENSE](./LICENSE)
+
+---
+
+## ☕ Support
+
+If DevUtil saves you time, consider [buying Sachin a coffee](https://buymeacoffee.com/sachinkasana). It helps keep the tools free and maintained.
+
+---
+
+*DevUtil is an open-source project. All tools run client-side. No data is collected.*

@@ -37,6 +37,8 @@ export default function Head() {
         content="Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/url-encoder.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/url-encoder" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -46,6 +48,7 @@ export default function Head() {
         content="Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/url-encoder.png" />
+      <meta name="twitter:image:alt" content="URL Encoder preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

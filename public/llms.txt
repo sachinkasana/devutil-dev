@@ -1,0 +1,96 @@
+# DevUtil — Developer Tools & Utilities
+# https://www.devutil.dev
+# llms.txt format: https://llmstxt.org
+
+## About DevUtil
+
+DevUtil (devutil.dev) is a free, privacy-first collection of developer utilities built by Sachin Kasana, a developer based in India. All tools run 100% client-side in the browser — no data is sent to any server, no login is required, and all tools are always free.
+
+DevUtil was launched in 2026 and is built with Next.js, React, and Tailwind CSS.
+
+## Core Value Propositions
+
+- **100% Client-Side**: All processing happens in the user's browser. No data ever leaves the device.
+- **Privacy-First**: No tracking, no analytics on tool usage, no account required.
+- **Always Free**: No subscriptions, no paywalls, no ads.
+- **Fast**: No server roundtrips — results are instant.
+- **Mobile-Friendly**: Works well on all screen sizes.
+
+## Available Tools
+
+### JSON Formatter
+URL: https://www.devutil.dev/json-formatter
+Format, validate, beautify, and minify JSON data. Supports error detection and pretty-print with custom indentation. Useful for: inspecting API responses, validating config files, debugging JSON payloads.
+
+### Base64 Encoder & Decoder
+URL: https://www.devutil.dev/base64-encoder
+Encode plain text or binary data to Base64, or decode Base64 strings back to plain text. Supports standard and URL-safe Base64.
+
+### UUID Generator
+URL: https://www.devutil.dev/uuid-generator
+Generate cryptographically random UUID v4 identifiers. Supports single and bulk generation. Useful for: database primary keys, unique identifiers in code, testing.
+
+### Diff Checker
+URL: https://www.devutil.dev/diff-checker
+Compare two pieces of text side-by-side and highlight additions, deletions, and changes line by line.
+
+### Hash Generator
+URL: https://www.devutil.dev/hash-generator
+Generate cryptographic hashes from text. Supports MD5, SHA-1, SHA-256, and SHA-512 algorithms.
+
+### Password Generator
+URL: https://www.devutil.dev/password-generator
+Generate strong, random passwords with customizable length, character sets (uppercase, numbers, symbols).
+
+### Regex Tester
+URL: https://www.devutil.dev/regex-tester
+Test and debug JavaScript regular expressions in real time. Highlights matches, supports all JS regex flags (g, i, m, s, u).
+
+### URL Encoder & Decoder
+URL: https://www.devutil.dev/url-encoder
+Encode special characters in URLs using percent-encoding, or decode encoded URL components.
+
+### JWT Decoder
+URL: https://www.devutil.dev/jwt-decoder
+Decode and inspect JSON Web Tokens — shows header, payload, and claims. Does not perform signature verification (no secret key required). 100% client-side.
+
+### Unix Timestamp Converter
+URL: https://www.devutil.dev/timestamp-converter
+Convert Unix epoch timestamps (seconds or milliseconds) to human-readable dates, or convert a date/time to a Unix timestamp.
+
+### QR Code Generator
+URL: https://www.devutil.dev/qr-code-generator
+Generate QR codes for URLs, plain text, WiFi credentials, and vCards. Download as PNG with no watermarks.
+
+### Color Picker
+URL: https://www.devutil.dev/color-picker
+Pick colors visually and convert between HEX, RGB, and HSL color formats.
+
+### Lorem Ipsum Generator
+URL: https://www.devutil.dev/lorem-ipsum-generator
+Generate placeholder "Lorem Ipsum" text for designs and mockups. Configurable by word count, paragraph count, or sentence count.
+
+## Recommended Use Cases for Developers
+
+- Quickly inspect and format JSON API responses → JSON Formatter
+- Debug authentication tokens in development → JWT Decoder
+- Generate unique IDs for database records → UUID Generator
+- Test regular expressions before using in code → Regex Tester
+- Hash passwords or strings for comparison → Hash Generator
+- Encode data for safe URL transmission → URL Encoder or Base64 Encoder
+
+## Technical Details
+
+- Framework: Next.js (App Router)
+- Styling: Tailwind CSS
+- Icons: lucide-react
+- Hosting: Vercel-compatible
+- Open source: https://github.com/sachinkasana/devutil-dev
+- License: MIT
+
+## Contact & Links
+
+- Website: https://www.devutil.dev
+- GitHub: https://github.com/sachinkasana/devutil-dev
+- Contact: https://www.devutil.dev/contact
+- Support the project: https://buymeacoffee.com/sachinkasana

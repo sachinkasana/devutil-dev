@@ -40,7 +40,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Color Picker & Converter - HEX, RGB, HSL Online Tool | DevUtil',
     description: 'Pick colors visually and convert HEX to RGB or HSL. Generate palettes, copy color codes, and explore tints and shades.',
-    images: ['https://www.devutil.dev/images/color-picker.png']
+    images: ['https://www.devutil.dev/images/color-picker.png'],
+    imageAlt: 'Color Picker preview'
   },
   robots: {
     index: true,
@@ -67,7 +68,7 @@ const jsonLdSchema = {
     name: 'DevUtil',
     url: 'https://www.devutil.dev/'
   }
-};
+  };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -86,7 +87,7 @@ const breadcrumbSchema = {
       item: 'https://www.devutil.dev/color-picker'
     }
   ]
-};
+  };
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -133,7 +134,7 @@ const faqSchema = {
       }
     }
   ]
-};
+  };
 
 export default function ColorPickerPage() {
   return (
@@ -369,4 +370,4 @@ export default function ColorPickerPage() {
       <Footer />
     </div>
   );
-}
+  }

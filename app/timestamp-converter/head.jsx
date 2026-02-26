@@ -37,6 +37,8 @@ export default function Head() {
         content="Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/timestamp-converter.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/timestamp-converter" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -46,6 +48,7 @@ export default function Head() {
         content="Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/timestamp-converter.png" />
+      <meta name="twitter:image:alt" content="Timestamp Converter preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

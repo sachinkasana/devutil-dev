@@ -37,6 +37,8 @@ export default function Head() {
         content="Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/jwt-decoder.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/jwt-decoder" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -46,6 +48,7 @@ export default function Head() {
         content="Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/jwt-decoder.png" />
+      <meta name="twitter:image:alt" content="JWT Decoder preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

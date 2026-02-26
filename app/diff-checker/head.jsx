@@ -64,6 +64,8 @@ export default function Head() {
         content="Compare text differences instantly. Free online diff checker with side-by-side view. Privacy-focused, runs in your browser."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/diff-checker.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/diff-checker" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -73,6 +75,7 @@ export default function Head() {
         content="Compare text differences instantly. Privacy-focused diff checker tool."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/diff-checker.png" />
+      <meta name="twitter:image:alt" content="Diff Checker preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationLd) }}

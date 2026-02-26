@@ -42,13 +42,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free Password Generator - Create Strong Random Passwords Online | DevUtil',
     description: 'Generate strong, secure random passwords online. Customize length and character types. 100% client-side processing with no storage.',
-    images: ['https://www.devutil.dev/images/password-generator.png']
+    images: ['https://www.devutil.dev/images/password-generator.png'],
+    imageAlt: 'Password Generator preview'
   },
   robots: {
     index: true,
-    follow: true,
-  },
-}
+    follow: true
+  }
+};
 
 const jsonLdSchema = {
   "@context": "https://schema.org",
@@ -69,7 +70,7 @@ const jsonLdSchema = {
     "name": "DevUtil",
     "url": "https://www.devutil.dev/"
   }
-}
+  }
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -88,7 +89,7 @@ const breadcrumbSchema = {
       "item": "https://www.devutil.dev/password-generator"
     }
   ]
-}
+  }
 
 export default function PasswordGeneratorPage() {
   return (
@@ -426,4 +427,4 @@ export default function PasswordGeneratorPage() {
       <Footer />
     </div>
   )
-}
+  }

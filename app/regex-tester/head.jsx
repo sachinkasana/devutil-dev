@@ -37,6 +37,8 @@ export default function Head() {
         content="Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/regex-tester.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/regex-tester" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -46,6 +48,7 @@ export default function Head() {
         content="Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/regex-tester.png" />
+      <meta name="twitter:image:alt" content="Regex Tester preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

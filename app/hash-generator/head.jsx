@@ -37,6 +37,8 @@ export default function Head() {
         content="Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/hash-generator.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/hash-generator" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -46,6 +48,7 @@ export default function Head() {
         content="Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/hash-generator.png" />
+      <meta name="twitter:image:alt" content="Hash Generator preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

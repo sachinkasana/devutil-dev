@@ -41,7 +41,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi | DevUtil',
     description: 'Create QR codes for URLs, WiFi, vCards, and text. Customize size, colors, and error correction. 100% client-side.',
-    images: ['https://www.devutil.dev/images/qr-code-generator.png']
+    images: ['https://www.devutil.dev/images/qr-code-generator.png'],
+    imageAlt: 'QR Code Generator preview'
   },
   robots: {
     index: true,
@@ -68,7 +69,7 @@ const jsonLdSchema = {
     name: 'DevUtil',
     url: 'https://www.devutil.dev/'
   }
-};
+  };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -87,7 +88,7 @@ const breadcrumbSchema = {
       item: 'https://www.devutil.dev/qr-code-generator'
     }
   ]
-};
+  };
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -134,7 +135,7 @@ const faqSchema = {
       }
     }
   ]
-};
+  };
 
 export default function QrCodeGeneratorPage() {
   return (
@@ -373,4 +374,4 @@ export default function QrCodeGeneratorPage() {
       <Footer />
     </div>
   );
-}
+  }

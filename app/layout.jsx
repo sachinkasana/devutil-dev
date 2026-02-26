@@ -1,81 +1,129 @@
-import './globals.css';
-import Script from 'next/script';
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
-import Analytics from '../components/Analytics';
+// app/layout.jsx
+// Replace your existing layout.jsx with this file.
+// It sets global metadata, OG tags, and the BreadcrumbList schema.
+
+import { SITE } from "./seo-config";
+import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL('https://www.devutil.dev'),
+  metadataBase: new URL(SITE.url),
   title: {
-    default: 'DevUtil',
-    template: '%s | DevUtil'
+    default: "Free Developer Tools & Utilities Online — DevUtil",
+    template: "%s | DevUtil",
   },
-  description: 'Essential developer tools and utilities for developers.',
-  verification: {
-    google: 'h1FX8R7sRO-6jVd0dATODfLF_ablZtF6f5BnxP1zxOc'
-  },
-  openGraph: {
-    type: 'website',
-    siteName: 'DevUtil',
-    title: 'DevUtil',
-    description: 'Essential developer tools and utilities for developers.',
-    images: [
-      {
-        url: 'https://www.devutil.dev/images/devutil-home.png',
-        width: 1200,
-        height: 630,
-        alt: 'DevUtil'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'DevUtil',
-    description: 'Essential developer tools and utilities for developers.',
-    images: ['https://www.devutil.dev/images/devutil-home.png']
-  },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
-    ]
-  },
+  description: SITE.description,
+  keywords: [
+    "developer tools",
+    "free online tools",
+    "json formatter",
+    "base64 encoder",
+    "uuid generator",
+    "developer utilities",
+    "privacy first tools",
+    "client side tools",
+  ].join(", "),
+  authors: [{ name: "Sachin Kasana" }],
+  creator: "Sachin Kasana",
+  publisher: "DevUtil",
   robots: {
     index: true,
-    follow: true
-  }
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: SITE.url,
+  },
+  openGraph: {
+    type: "website",
+    locale: SITE.locale,
+    url: SITE.url,
+    siteName: SITE.name,
+    title: "Free Developer Tools & Utilities Online — DevUtil",
+    description: SITE.description,
+    images: [
+      {
+        url: "/og-image.png", // Add a 1200×630 OG image to your /public folder
+        width: 1200,
+        height: 630,
+        alt: "DevUtil — Free Developer Tools",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Developer Tools & Utilities Online — DevUtil",
+    description: SITE.description,
+    images: ["/og-image.png"],
+  },
+  verification: {
+    // Add your codes from Google Search Console and Bing Webmaster Tools:
+    // google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    // other: { "msvalidate.01": "YOUR_BING_VERIFICATION_CODE" },
+  },
+};
+
+// Site-wide WebSite schema — helps Google understand your brand
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE.url}/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// Organization schema — helps with brand Knowledge Panel
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  foundingDate: "2026",
+  founder: {
+    "@type": "Person",
+    name: "Sachin Kasana",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    url: `${SITE.url}/contact`,
+  },
+  sameAs: [
+    "https://github.com/sachinkasana/devutil-dev",
+    // Add Product Hunt, Twitter, etc. URLs here as you create them
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-60HX9JGQBJ"
-          strategy="afterInteractive"
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="7453b902-2ae1-47aa-bf70-4dc72f7af441"
-          strategy="afterInteractive"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-60HX9JGQBJ');
-          `}
-        </Script>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-slate-900 px-3 py-2 rounded shadow"
-        >
-          Skip to content
-        </a>
-        <Analytics />
-        <VercelAnalytics />
-        {children}
-      </body>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

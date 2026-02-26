@@ -107,6 +107,8 @@ export default function Head() {
         content="Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required."
       />
       <meta property="og:image" content="https://www.devutil.dev/images/json-formatter.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://www.devutil.dev/json-formatter" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -116,6 +118,7 @@ export default function Head() {
         content="Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required."
       />
       <meta name="twitter:image" content="https://www.devutil.dev/images/json-formatter.png" />
+      <meta name="twitter:image:alt" content="JSON Formatter preview" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

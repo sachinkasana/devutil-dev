@@ -40,13 +40,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online | DevUtil',
     description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
-    images: ['https://www.devutil.dev/images/lorem-ipsum-generator.png']
+    images: ['https://www.devutil.dev/images/lorem-ipsum-generator.png'],
+    imageAlt: 'Lorem Ipsum Generator preview'
   },
   robots: {
     index: true,
-    follow: true,
-  },
-}
+    follow: true
+  }
+};
 
 const jsonLdSchema = {
   "@context": "https://schema.org",
@@ -67,7 +68,7 @@ const jsonLdSchema = {
     "name": "DevUtil",
     "url": "https://www.devutil.dev/"
   }
-}
+  }
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -86,7 +87,7 @@ const breadcrumbSchema = {
       "item": "https://www.devutil.dev/lorem-ipsum-generator"
     }
   ]
-}
+  }
 
 export default function LoremIpsumGeneratorPage() {
   return (
@@ -404,4 +405,4 @@ export default function LoremIpsumGeneratorPage() {
       <Footer />
     </div>
   )
-}
+  }
