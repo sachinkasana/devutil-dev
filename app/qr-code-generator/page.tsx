@@ -41,8 +41,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi | DevUtil',
     description: 'Create QR codes for URLs, WiFi, vCards, and text. Customize size, colors, and error correction. 100% client-side.',
-    images: ['https://www.devutil.dev/images/qr-code-generator.png'],
-    imageAlt: 'QR Code Generator preview'
+    images: [
+      {
+        url: 'https://www.devutil.dev/images/qr-code-generator.png',
+        alt: 'QR Code Generator preview'
+      }
+    ]
   },
   robots: {
     index: true,

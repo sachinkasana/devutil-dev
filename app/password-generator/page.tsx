@@ -42,8 +42,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free Password Generator - Create Strong Random Passwords Online | DevUtil',
     description: 'Generate strong, secure random passwords online. Customize length and character types. 100% client-side processing with no storage.',
-    images: ['https://www.devutil.dev/images/password-generator.png'],
-    imageAlt: 'Password Generator preview'
+    images: [
+      {
+        url: 'https://www.devutil.dev/images/password-generator.png',
+        alt: 'Password Generator preview'
+      }
+    ]
   },
   robots: {
     index: true,

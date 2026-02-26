@@ -40,8 +40,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Color Picker & Converter - HEX, RGB, HSL Online Tool | DevUtil',
     description: 'Pick colors visually and convert HEX to RGB or HSL. Generate palettes, copy color codes, and explore tints and shades.',
-    images: ['https://www.devutil.dev/images/color-picker.png'],
-    imageAlt: 'Color Picker preview'
+    images: [
+      {
+        url: 'https://www.devutil.dev/images/color-picker.png',
+        alt: 'Color Picker preview'
+      }
+    ]
   },
   robots: {
     index: true,

@@ -40,8 +40,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online | DevUtil',
     description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
-    images: ['https://www.devutil.dev/images/lorem-ipsum-generator.png'],
-    imageAlt: 'Lorem Ipsum Generator preview'
+    images: [
+      {
+        url: 'https://www.devutil.dev/images/lorem-ipsum-generator.png',
+        alt: 'Lorem Ipsum Generator preview'
+      }
+    ]
   },
   robots: {
     index: true,
