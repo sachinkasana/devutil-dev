@@ -23,14 +23,16 @@ export default function Footer({ variant = 'compact', className = '' }) {
                 <li><a href="/json-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="json-formatter">JSON Formatter</a></li>
                 <li><a href="/sql-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="sql-formatter">SQL Formatter</a></li>
                 <li><a href="/yaml-json-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="yaml-json-converter">YAML ↔ JSON</a></li>
+                <li><a href="/json-csv-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="json-csv-converter">JSON ↔ CSV</a></li>
                 <li><a href="/cron-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="cron-generator">Cron Generator</a></li>
-                <li><a href="/xml-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="xml-formatter">XML Formatter</a></li>
-                <li><a href="/base64-encoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="base64-encoder">Base64 Encoder</a></li>
+                <li><a href="/markdown-preview" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="markdown-preview">Markdown Preview</a></li>
               </ul>
             </div>
             <div>
               <h5 className="text-white font-semibold mb-3">More Tools</h5>
               <ul className="space-y-2 text-sm">
+                <li><a href="/xml-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="xml-formatter">XML Formatter</a></li>
+                <li><a href="/number-base-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="number-base-converter">Number Base Converter</a></li>
                 <li><a href="/case-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="case-converter">Case Converter</a></li>
                 <li><a href="/html-entity-encoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="html-entity-encoder">HTML Entity Encoder</a></li>
                 <li><a href="/diff-checker" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="diff-checker">Diff Checker</a></li>
@@ -44,6 +46,8 @@ export default function Footer({ variant = 'compact', className = '' }) {
                 <li><a href="/qr-code-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="qr-code-generator">QR Code Generator</a></li>
                 <li><a href="/color-picker" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="color-picker">Color Picker</a></li>
                 <li><a href="/lorem-ipsum-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="lorem-ipsum-generator">Lorem Ipsum Generator</a></li>
+                <li><a href="/guides" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="guides">Guides</a></li>
+                <li><a href="/whats-new" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="whats-new">What&apos;s New</a></li>
               </ul>
             </div>
             <div>

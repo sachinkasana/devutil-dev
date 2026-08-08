@@ -115,22 +115,28 @@ export const TOOLS = {
   },
 
   "uuid-generator": {
-    title: "UUID Generator — Generate v4 UUIDs Instantly Online",
+    title: "UUID v4 & v7 Generator — Generate Unique IDs Online",
     shortTitle: "UUID Generator",
     description:
-      "Generate cryptographically random UUID v4 identifiers instantly. Copy a single UUID or bulk-generate hundreds at once. Free, no login, fully client-side.",
+      "Generate UUID v4 (random) and UUID v7 (time-ordered) or GUID values instantly. Bulk-generate up to 500 IDs. Free, no login, fully client-side.",
     keywords: [
       "uuid generator",
       "generate uuid",
       "random uuid",
       "uuid v4 online",
+      "uuid v7",
       "guid generator",
       "unique id generator",
+      "time ordered uuid",
     ],
     faq: [
       {
         q: "What is the difference between UUID v1 and UUID v4?",
         a: "UUID v1 is generated from the current timestamp and the device's MAC address — it is sequential and traceable. UUID v4 is generated from random or pseudo-random numbers, making it unpredictable and privacy-safe. v4 is recommended for most use cases.",
+      },
+      {
+        q: "What is UUID v7?",
+        a: "UUID v7 (RFC 9562) embeds a 48-bit Unix timestamp in milliseconds plus random bits. IDs roughly sort by creation time, which helps as database primary keys compared with random v4 UUIDs.",
       },
       {
         q: "What is the difference between a UUID and a GUID?",
@@ -530,31 +536,134 @@ export const TOOLS = {
       },
     ],
   },
+
+  "markdown-preview": {
+    title: "Markdown Preview — Live Markdown to HTML Online",
+    shortTitle: "Markdown Preview",
+    description:
+      "Preview Markdown as HTML instantly in your browser. Edit on the left, see rendered output on the right. Copy Markdown or HTML. 100% client-side.",
+    keywords: [
+      "markdown preview online",
+      "markdown to html",
+      "live markdown editor",
+      "markdown viewer",
+      "md preview",
+    ],
+    faq: [
+      {
+        q: "What is a Markdown previewer?",
+        a: "A Markdown previewer shows how Markdown text will look when rendered as HTML, so you can write and check formatting in real time.",
+      },
+      {
+        q: "Does this tool upload my Markdown?",
+        a: "No. Rendering happens entirely in your browser. Your Markdown never leaves your device.",
+      },
+      {
+        q: "Can I copy HTML output?",
+        a: "Yes. You can copy either the Markdown source or the generated HTML with one click.",
+      },
+    ],
+  },
+
+  "number-base-converter": {
+    title: "Number Base Converter — Binary, Octal, Decimal, Hex Online",
+    shortTitle: "Number Base Converter",
+    description:
+      "Convert numbers between binary, octal, decimal, and hexadecimal instantly. Free developer base converter — fully client-side.",
+    keywords: [
+      "number base converter",
+      "binary to decimal",
+      "hex to decimal converter",
+      "octal converter",
+      "hexadecimal converter online",
+    ],
+    faq: [
+      {
+        q: "What number bases are supported?",
+        a: "DevUtil supports binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16).",
+      },
+      {
+        q: "Is conversion done in my browser?",
+        a: "Yes. All conversions run locally in JavaScript with no server upload.",
+      },
+      {
+        q: "How do I convert hex to decimal?",
+        a: "Enter a hex value in the hexadecimal field (with or without 0x). The decimal field updates automatically.",
+      },
+    ],
+  },
+
+  "json-csv-converter": {
+    title: "JSON to CSV Converter — Bidirectional JSON ↔ CSV Online",
+    shortTitle: "JSON ↔ CSV Converter",
+    description:
+      "Convert JSON arrays to CSV and CSV back to JSON instantly. Free, private, client-side converter for APIs, spreadsheets, and data exports.",
+    keywords: [
+      "json to csv",
+      "csv to json",
+      "json csv converter",
+      "convert json to csv online",
+      "csv json converter",
+    ],
+    faq: [
+      {
+        q: "What JSON format works best for CSV conversion?",
+        a: "An array of flat objects works best, where each object becomes a row and object keys become column headers.",
+      },
+      {
+        q: "Can I convert CSV back to JSON?",
+        a: "Yes. Switch to CSV → JSON, paste CSV with a header row, and convert.",
+      },
+      {
+        q: "Is my data uploaded anywhere?",
+        a: "No. Conversion runs entirely in your browser.",
+      },
+    ],
+  },
+
+};
+
+
+export const GUIDES = {
+  "format-json-online": {
+    title: "How to Format JSON Online (Safely) — DevUtil Guide",
+    shortTitle: "How to Format JSON Online",
+    description:
+      "Learn how to format, validate, and minify JSON in your browser without uploading data. Includes common errors and a free JSON formatter.",
+    tool: "json-formatter",
+  },
+  "format-sql-online": {
+    title: "How to Format SQL Queries Online — DevUtil Guide",
+    shortTitle: "How to Format SQL Online",
+    description:
+      "Beautify messy SQL for reviews and debugging. Learn when to minify SQL and how to format queries privately in your browser.",
+    tool: "sql-formatter",
+  },
+  "cron-expression-examples": {
+    title: "Cron Expression Examples — Common Schedules Explained",
+    shortTitle: "Cron Expression Examples",
+    description:
+      "Practical cron examples for hourly, daily, weekly, and monthly jobs. Learn the 5-field format and build expressions visually.",
+    tool: "cron-generator",
+  },
+  "yaml-vs-json": {
+    title: "YAML vs JSON — When to Use Each (With Converter)",
+    shortTitle: "YAML vs JSON",
+    description:
+      "Compare YAML and JSON for configs, APIs, and Kubernetes. See differences and convert between formats in your browser.",
+    tool: "yaml-json-converter",
+  },
 };
 
 /** Prefer a dedicated OG image when present; otherwise fall back to home. */
 function toolOgImage(slug) {
-  const known = new Set([
-    "json-formatter",
-    "base64-encoder",
-    "diff-checker",
-    "uuid-generator",
-    "hash-generator",
-    "password-generator",
-    "regex-tester",
-    "url-encoder",
-    "jwt-decoder",
-    "timestamp-converter",
-    "qr-code-generator",
-    "color-picker",
-    "lorem-ipsum-generator",
-  ]);
-  const file = known.has(slug)
-    ? slug === "base64-encoder"
-      ? "base64-encoder-decoder.png"
-      : `${slug}.png`
-    : "devutil-home.png";
-  return `${SITE.url}/images/${file}`;
+  if (slug === "base64-encoder") {
+    return `${SITE.url}/images/base64-encoder-decoder.png`;
+  }
+  if (TOOLS[slug]) {
+    return `${SITE.url}/images/${slug}.png`;
+  }
+  return `${SITE.url}/images/devutil-home.png`;
 }
 
 /**

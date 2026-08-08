@@ -2,12 +2,13 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil'
+    absolute: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free | DevUtil'
   },
-  description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
+  description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
   keywords: [
     'uuid generator',
     'uuid v4',
+    'uuid v7',
     'guid generator',
     'unique id generator',
     'generate uuid',
@@ -16,14 +17,16 @@ export const metadata = {
     'random uuid',
     'uuid tool',
     'uuid v4 online',
-    'create uuid'
+    'uuid v7 generator',
+    'create uuid',
+    'time ordered uuid'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/uuid-generator'
   },
   openGraph: {
-    title: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil',
-    description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
+    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free | DevUtil',
+    description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
     url: 'https://www.devutil.dev/uuid-generator',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +41,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UUID Generator v4 - Generate Unique IDs Online Free | DevUtil',
-    description: 'Generate UUID v4 values instantly with a free online UUID generator. Fast, private, client-side tool for unique IDs you can copy or download.',
+    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free | DevUtil',
+    description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
     images: ['https://www.devutil.dev/images/uuid-generator.png']
   }
 };
@@ -47,11 +50,11 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'UUID Generator',
+  name: 'UUID v4 & v7 Generator',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/uuid-generator',
-  description: 'Free UUID v4 generator with fast client-side processing.',
+  description: 'Free UUID v4 and v7 (time-ordered) generator with fast client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

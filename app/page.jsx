@@ -148,8 +148,34 @@ const tools = [
     category: 'Encoders'
   },
   {
+    name: 'Markdown Preview',
+    description: 'Live Markdown editor with HTML preview',
+    icon: FileText,
+    href: '/markdown-preview',
+    color: 'bg-neutral-700',
+    popular: true,
+    category: 'Text'
+  },
+  {
+    name: 'Number Base Converter',
+    description: 'Convert binary, octal, decimal, and hex',
+    icon: Hash,
+    href: '/number-base-converter',
+    color: 'bg-blue-700',
+    category: 'Converters'
+  },
+  {
+    name: 'JSON ↔ CSV Converter',
+    description: 'Convert JSON arrays to CSV and back',
+    icon: FileJson,
+    href: '/json-csv-converter',
+    color: 'bg-green-700',
+    popular: true,
+    category: 'Converters'
+  },
+  {
     name: 'UUID Generator',
-    description: 'Generate unique identifiers (v4) instantly',
+    description: 'Generate UUID v4 & v7 identifiers instantly',
     icon: Key,
     href: '/uuid-generator',
     color: 'bg-purple-500',
@@ -236,8 +262,11 @@ const hubLinks = [
   { href: '/sql-formatter', label: 'SQL Formatter' },
   { href: '/xml-formatter', label: 'XML Formatter' },
   { href: '/yaml-json-converter', label: 'YAML ↔ JSON' },
+  { href: '/json-csv-converter', label: 'JSON ↔ CSV' },
   { href: '/cron-generator', label: 'Cron Generator' },
+  { href: '/markdown-preview', label: 'Markdown Preview' },
   { href: '/case-converter', label: 'Case Converter' },
+  { href: '/number-base-converter', label: 'Number Base Converter' },
   { href: '/html-entity-encoder', label: 'HTML Entity Encoder' },
   { href: '/base64-encoder', label: 'Base64 Encoder' },
   { href: '/diff-checker', label: 'Diff Checker' },
@@ -250,7 +279,8 @@ const hubLinks = [
   { href: '/password-generator', label: 'Password Generator' },
   { href: '/lorem-ipsum-generator', label: 'Lorem Ipsum Generator' },
   { href: '/qr-code-generator', label: 'QR Code Generator' },
-  { href: '/color-picker', label: 'Color Picker' }
+  { href: '/color-picker', label: 'Color Picker' },
+  { href: '/guides', label: 'Guides' }
 ];
 
 export default function HomePage() {
@@ -355,8 +385,17 @@ export default function HomePage() {
             </h2>
             <p>
               DevUtil is a fast toolkit for everyday developer tasks. Each tool runs in your browser, so data stays on
-              your device. Format JSON, SQL, and XML; convert YAML ↔ JSON; build cron schedules; transform text case;
-              encode HTML entities; generate UUIDs; and test regex patterns — without installing anything.
+              your device. Format JSON, SQL, and XML; convert YAML ↔ JSON or JSON ↔ CSV; preview Markdown; build cron
+              schedules; transform text case; encode HTML entities; generate UUID v4/v7; and test regex patterns —
+              without installing anything. New here? Start with the{' '}
+              <a className="text-blue-600 font-semibold hover:underline" href="/guides">
+                developer guides
+              </a>{' '}
+              or see{' '}
+              <a className="text-blue-600 font-semibold hover:underline" href="/whats-new">
+                what&apos;s new
+              </a>
+              .
             </p>
             <p>
               Use DevUtil as a lightweight hub for common workflows. Format a JSON response, then jump to the YAML

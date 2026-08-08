@@ -6,20 +6,68 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RelatedTools from '../../components/RelatedTools';
 
+const MAX_QUANTITY = 500;
+const QUICK_QUANTITIES = [1, 10, 50, 100, 500];
+
+function bytesToUuid(bytes) {
+  const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+function getRandomBytes(length) {
+  const bytes = new Uint8Array(length);
+  if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+    crypto.getRandomValues(bytes);
+  } else {
+    for (let i = 0; i < length; i++) {
+      bytes[i] = (Math.random() * 256) | 0;
+    }
+  }
+  return bytes;
+}
+
+/** UUID v4 (random) — RFC 9562 */
+function generateUUIDv4() {
+  const bytes = getRandomBytes(16);
+  bytes[6] = (bytes[6] & 0x0f) | 0x40; // version 4
+  bytes[8] = (bytes[8] & 0x3f) | 0x80; // RFC 9562 variant
+  return bytesToUuid(bytes);
+}
+
+/**
+ * UUID v7 (time-ordered) — RFC 9562
+ * - 48-bit Unix timestamp in milliseconds
+ * - version nibble 7
+ * - RFC 9562 variant bits
+ * - remaining bits from crypto.getRandomValues
+ */
+function generateUUIDv7() {
+  const bytes = getRandomBytes(16);
+  const now = Date.now();
+
+  // 48-bit big-endian Unix timestamp (ms)
+  bytes[0] = (now / 2 ** 40) & 0xff;
+  bytes[1] = (now / 2 ** 32) & 0xff;
+  bytes[2] = (now / 2 ** 24) & 0xff;
+  bytes[3] = (now / 2 ** 16) & 0xff;
+  bytes[4] = (now / 2 ** 8) & 0xff;
+  bytes[5] = now & 0xff;
+
+  bytes[6] = (bytes[6] & 0x0f) | 0x70; // version 7
+  bytes[8] = (bytes[8] & 0x3f) | 0x80; // RFC 9562 variant
+
+  return bytesToUuid(bytes);
+}
+
 export default function UUIDGenerator() {
   const [uuids, setUuids] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [version, setVersion] = useState('v4');
   const [copiedIndex, setCopiedIndex] = useState(null);
   const [uppercase, setUppercase] = useState(false);
   const [hyphens, setHyphens] = useState(true);
 
-  const generateUUID = () => {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-      const r = (Math.random() * 16) | 0;
-      const v = c === 'x' ? r : (r & 0x3) | 0x8;
-      return v.toString(16);
-    });
-  };
+  const generateUUID = () => (version === 'v7' ? generateUUIDv7() : generateUUIDv4());
 
   const formatUUID = (uuid) => {
     let formatted = uuid;
@@ -61,6 +109,10 @@ export default function UUIDGenerator() {
     setUuids([]);
   };
 
+  const setQuantityClamped = (value) => {
+    setQuantity(Math.max(1, Math.min(MAX_QUANTITY, parseInt(value, 10) || 1)));
+  };
+
   useEffect(() => {
     generateUUIDs();
   }, []);
@@ -76,9 +128,9 @@ export default function UUIDGenerator() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Key className="w-6 h-6 text-purple-600" />
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              UUID Generator v4
+              UUID v4 &amp; v7 Generator
               <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
-                Generate UUID v4 values instantly in your browser with fast, private processing.
+                Generate UUID v4, UUID v7 (time-ordered), or GUID values instantly in your browser.
               </span>
             </h1>
           </div>
@@ -86,19 +138,64 @@ export default function UUIDGenerator() {
 
         {/* Controls */}
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">
-                Number of UUIDs
+                UUID Version
+              </label>
+              <div className="flex rounded-lg border border-slate-300 overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => setVersion('v4')}
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium transition-colors ${
+                    version === 'v4'
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-white text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  v4 (random)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setVersion('v7')}
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium transition-colors border-l border-slate-300 ${
+                    version === 'v7'
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-white text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  v7 (time-ordered)
+                </button>
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Number of UUIDs (1–{MAX_QUANTITY})
               </label>
               <input
                 type="number"
                 min="1"
-                max="100"
+                max={MAX_QUANTITY}
                 value={quantity}
-                onChange={(e) => setQuantity(Math.max(1, Math.min(100, parseInt(e.target.value) || 1)))}
+                onChange={(e) => setQuantityClamped(e.target.value)}
                 className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
               />
+              <div className="flex flex-wrap gap-2 mt-2">
+                {QUICK_QUANTITIES.map((n) => (
+                  <button
+                    key={n}
+                    type="button"
+                    onClick={() => setQuantity(n)}
+                    className={`px-2.5 py-1 text-xs rounded-md border transition-colors ${
+                      quantity === n
+                        ? 'border-purple-600 bg-purple-50 text-purple-700'
+                        : 'border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
+                    }`}
+                  >
+                    {n}
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="space-y-3">
               <label className="flex items-center space-x-2 cursor-pointer">
@@ -224,6 +321,13 @@ export default function UUIDGenerator() {
             <code className="block bg-slate-100 p-3 rounded-lg font-mono text-sm text-slate-900 mb-4">
               xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx
             </code>
+            <h4 className="text-lg font-semibold text-slate-900 mb-2">UUID v7 Format</h4>
+            <p className="text-slate-600 mb-2">
+              Version 7 UUIDs are time-ordered (48-bit Unix timestamp in ms plus random bits), ideal as database keys:
+            </p>
+            <code className="block bg-slate-100 p-3 rounded-lg font-mono text-sm text-slate-900 mb-4">
+              xxxxxxxx-xxxx-7xxx-yxxx-xxxxxxxxxxxx
+            </code>
             <p className="text-slate-600 text-sm">
               The probability of generating duplicate UUIDs is negligibly small, making them ideal for distributed systems.
             </p>
@@ -234,7 +338,7 @@ export default function UUIDGenerator() {
             <ul className="space-y-3 text-slate-600">
               <li className="flex items-start">
                 <span className="text-purple-600 mr-2">✓</span>
-                <span><strong>Database Primary Keys:</strong> Unique identifiers for records</span>
+                <span><strong>Database Primary Keys:</strong> Unique identifiers for records (v7 sorts by time)</span>
               </li>
               <li className="flex items-start">
                 <span className="text-purple-600 mr-2">✓</span>
@@ -269,7 +373,7 @@ export default function UUIDGenerator() {
                 <RefreshCw className="w-6 h-6 text-purple-600" />
               </div>
               <h4 className="font-semibold text-slate-900">Bulk Generation</h4>
-              <p className="text-sm text-slate-600">Generate up to 100 UUIDs at once</p>
+              <p className="text-sm text-slate-600">Generate up to {MAX_QUANTITY} UUIDs at once</p>
             </div>
             <div className="text-center space-y-2">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
@@ -294,9 +398,9 @@ export default function UUIDGenerator() {
             <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
             <div className="text-slate-600 space-y-4">
               <p>
-                Generate UUID v4 values instantly with a free, online UUID generator that runs entirely in your
-                browser. Create one or hundreds of universally unique identifiers for databases, APIs, test fixtures,
-                and client-side keys without sending data to a server.
+                Generate UUID v4 and UUID v7 (time-ordered) values instantly with a free online UUID / GUID
+                generator that runs entirely in your browser. Create one or hundreds of universally unique
+                identifiers for databases, APIs, test fixtures, and client-side keys without sending data to a server.
               </p>
               <p>
                 UUIDs help developers avoid collisions when creating records across distributed systems. This tool
@@ -310,7 +414,7 @@ export default function UUIDGenerator() {
               </p>
             </div>
             <ul className="mt-4 space-y-2 text-slate-600">
-              <li>Generate UUID v4 in batches up to 100 at a time.</li>
+              <li>Generate UUID v4 or v7 in batches up to {MAX_QUANTITY} at a time.</li>
               <li>Switch between uppercase and lowercase output.</li>
               <li>Include or remove hyphens for compact IDs.</li>
               <li>Copy or download UUID lists instantly.</li>
@@ -322,7 +426,8 @@ export default function UUIDGenerator() {
               Generate IDs on demand and paste them directly into your schema, seed scripts, or API payloads.
             </p>
             <ol className="list-decimal list-inside text-slate-600 space-y-2">
-              <li>Choose how many UUIDs you want to generate.</li>
+              <li>Select UUID v4 (random) or v7 (time-ordered).</li>
+              <li>Choose how many UUIDs you want to generate (up to {MAX_QUANTITY}).</li>
               <li>Toggle uppercase or hyphen options if needed.</li>
               <li>Click Generate to refresh the list instantly.</li>
               <li>Copy or download the IDs for your project.</li>
@@ -334,7 +439,7 @@ export default function UUIDGenerator() {
               UUIDs are a safe default when you need uniqueness across systems or environments.
             </p>
             <ul className="list-disc list-inside text-slate-600 space-y-2">
-              <li>Creating primary keys for database records.</li>
+              <li>Creating primary keys for database records (prefer v7 when sort order by time matters).</li>
               <li>Generating unique IDs for API requests or jobs.</li>
               <li>Seeding test data and fixtures quickly.</li>
               <li>Creating client-side keys for UI components.</li>
@@ -344,12 +449,15 @@ export default function UUIDGenerator() {
             <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
             <div className="space-y-4 text-slate-600">
               <div>
-                <h4 className="font-semibold text-slate-900">Which UUID version is this?</h4>
-                <p>It generates UUID v4 values based on random data. This is the most common version for general use.</p>
+                <h4 className="font-semibold text-slate-900">Which UUID versions are supported?</h4>
+                <p>
+                  UUID v4 (random) and UUID v7 (time-ordered per RFC 9562). v4 is ideal for general uniqueness;
+                  v7 embeds a millisecond timestamp so IDs roughly sort by creation time.
+                </p>
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900">Are UUIDs guaranteed to be unique?</h4>
-                <p>They are statistically unique; collisions are extremely unlikely. For most applications, v4 is safe.</p>
+                <p>They are statistically unique; collisions are extremely unlikely. For most applications, v4 or v7 is safe.</p>
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900">Is any data stored or sent?</h4>

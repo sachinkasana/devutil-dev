@@ -94,6 +94,27 @@ Pick colors visually and convert between HEX, RGB, and HSL formats.
 URL: https://www.devutil.dev/lorem-ipsum-generator
 Generate placeholder Lorem Ipsum text for designs and mockups.
 
+
+### Markdown Preview
+URL: https://www.devutil.dev/markdown-preview
+Live Markdown editor with HTML preview. Copy Markdown or HTML. Client-side only.
+
+### Number Base Converter
+URL: https://www.devutil.dev/number-base-converter
+Convert between binary, octal, decimal, and hexadecimal.
+
+### JSON ↔ CSV Converter
+URL: https://www.devutil.dev/json-csv-converter
+Convert JSON arrays of objects to CSV and CSV back to JSON.
+
+### Guides
+URL: https://www.devutil.dev/guides
+Practical guides for JSON/SQL formatting, cron examples, and YAML vs JSON.
+
+### What's New
+URL: https://www.devutil.dev/whats-new
+Launch notes and latest tools for sharing.
+
 ## Recommended Use Cases for Developers
 
 - Inspect and format JSON API responses → JSON Formatter

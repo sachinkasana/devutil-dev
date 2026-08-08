@@ -64,9 +64,12 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   verification: {
-    // Add codes from Google Search Console / Bing Webmaster Tools when available:
-    // google: "YOUR_GOOGLE_VERIFICATION_CODE",
-    // other: { "msvalidate.01": "YOUR_BING_VERIFICATION_CODE" },
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } }
+      : {}),
   },
 };
 

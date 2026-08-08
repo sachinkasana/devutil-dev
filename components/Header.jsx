@@ -67,8 +67,9 @@ export default function Header({ subtitle = '', showGithub = false }) {
           <div className="flex items-center space-x-3 pt-1">
             <nav className="hidden sm:flex items-center space-x-4 text-sm text-slate-600">
               <a href="/" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="home">Home</a>
+              <a href="/guides" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="guides">Guides</a>
+              <a href="/whats-new" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="whats-new">What&apos;s New</a>
               <a href="/about" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="about">About</a>
-              <a href="/privacy" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="privacy">Privacy</a>
               <a href="/contact" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="contact">Contact</a>
             </nav>
             {showGithub && (
@@ -104,6 +105,8 @@ export default function Header({ subtitle = '', showGithub = false }) {
           <div ref={menuRef} className="sm:hidden mt-3 border-t border-slate-200 pt-3">
             <nav className="flex flex-col space-y-2 text-sm text-slate-700">
               <a href="/" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="home" onClick={() => setIsMenuOpen(false)}>Home</a>
+              <a href="/guides" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="guides" onClick={() => setIsMenuOpen(false)}>Guides</a>
+              <a href="/whats-new" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="whats-new" onClick={() => setIsMenuOpen(false)}>What&apos;s New</a>
               <a href="/about" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="about" onClick={() => setIsMenuOpen(false)}>About</a>
               <a href="/privacy" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="privacy" onClick={() => setIsMenuOpen(false)}>Privacy</a>
               <a href="/contact" className="hover:text-slate-900 transition-colors" data-analytics-event="nav_click" data-analytics-label="contact" onClick={() => setIsMenuOpen(false)}>Contact</a>

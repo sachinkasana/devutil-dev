@@ -33,9 +33,12 @@ const SLUG_TO_TOOL = {
   'sql-formatter': 'SQL Formatter',
   'xml-formatter': 'XML Formatter',
   'yaml-json-converter': 'YAML ↔ JSON Converter',
+  'json-csv-converter': 'JSON ↔ CSV Converter',
   'cron-generator': 'Cron Generator',
   'case-converter': 'Case Converter',
   'html-entity-encoder': 'HTML Entity Encoder',
+  'markdown-preview': 'Markdown Preview',
+  'number-base-converter': 'Number Base Converter',
   'base64-encoder': 'Base64 Encoder',
   'diff-checker': 'Diff Checker',
   'uuid-generator': 'UUID Generator',
@@ -47,7 +50,9 @@ const SLUG_TO_TOOL = {
   'timestamp-converter': 'Timestamp Converter',
   'qr-code-generator': 'QR Code Generator',
   'color-picker': 'Color Picker',
-  'lorem-ipsum-generator': 'Lorem Ipsum Generator'
+  'lorem-ipsum-generator': 'Lorem Ipsum Generator',
+  guides: 'Guides',
+  'whats-new': "What's New"
 };
 
 function toolFromPath(pathname = '') {

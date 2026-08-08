@@ -1,19 +1,26 @@
-// app/sitemap.js
-// Next.js App Router will automatically serve this at /sitemap.xml
-// No extra config needed — just place this file in /app/
-
-import { SITE, TOOLS } from "./seo-config";
+import { SITE, TOOLS, GUIDES } from "./seo-config";
 
 export default function sitemap() {
   const now = new Date().toISOString();
 
-  // Homepage
   const staticRoutes = [
     {
       url: SITE.url,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1.0,
+    },
+    {
+      url: `${SITE.url}/guides`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE.url}/whats-new`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.6,
     },
     {
       url: `${SITE.url}/about`,
@@ -35,7 +42,6 @@ export default function sitemap() {
     },
   ];
 
-  // All tool pages
   const toolRoutes = Object.keys(TOOLS).map((slug) => ({
     url: `${SITE.url}/${slug}`,
     lastModified: now,
@@ -43,5 +49,12 @@ export default function sitemap() {
     priority: 0.9,
   }));
 
-  return [...staticRoutes, ...toolRoutes];
+  const guideRoutes = Object.keys(GUIDES || {}).map((slug) => ({
+    url: `${SITE.url}/guides/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticRoutes, ...toolRoutes, ...guideRoutes];
 }
