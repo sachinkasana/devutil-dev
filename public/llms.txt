@@ -11,7 +11,7 @@ DevUtil was launched in 2026 and is built with Next.js, React, and Tailwind CSS.
 ## Core Value Propositions
 
 - **100% Client-Side**: All processing happens in the user's browser. No data ever leaves the device.
-- **Privacy-First**: No tracking, no analytics on tool usage, no account required.
+- **Privacy-First**: Tool inputs stay in your browser. Aggregate traffic analytics only (no tool content).
 - **Always Free**: No subscriptions, no paywalls, no ads.
 - **Fast**: No server roundtrips — results are instant.
 - **Mobile-Friendly**: Works well on all screen sizes.
@@ -20,31 +20,55 @@ DevUtil was launched in 2026 and is built with Next.js, React, and Tailwind CSS.
 
 ### JSON Formatter
 URL: https://www.devutil.dev/json-formatter
-Format, validate, beautify, and minify JSON data. Supports error detection and pretty-print with custom indentation. Useful for: inspecting API responses, validating config files, debugging JSON payloads.
+Format, validate, beautify, and minify JSON data. Supports error detection and pretty-print with custom indentation.
+
+### SQL Formatter & Beautifier
+URL: https://www.devutil.dev/sql-formatter
+Beautify and minify SQL queries with consistent indentation and keyword formatting.
+
+### XML Formatter
+URL: https://www.devutil.dev/xml-formatter
+Beautify, validate, and minify XML documents with configurable indentation.
+
+### YAML ↔ JSON Converter
+URL: https://www.devutil.dev/yaml-json-converter
+Convert YAML to JSON and JSON to YAML instantly. Useful for configs, CI, and Kubernetes manifests.
+
+### Cron Expression Generator
+URL: https://www.devutil.dev/cron-generator
+Build standard 5-field cron expressions with presets and human-readable explanations.
+
+### Case Converter
+URL: https://www.devutil.dev/case-converter
+Convert text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, and more.
+
+### HTML Entity Encoder & Decoder
+URL: https://www.devutil.dev/html-entity-encoder
+Encode special characters to HTML entities or decode entities back to plain text.
 
 ### Base64 Encoder & Decoder
 URL: https://www.devutil.dev/base64-encoder
-Encode plain text or binary data to Base64, or decode Base64 strings back to plain text. Supports standard and URL-safe Base64.
+Encode plain text to Base64 or decode Base64 strings. Supports standard and URL-safe Base64.
 
 ### UUID Generator
 URL: https://www.devutil.dev/uuid-generator
-Generate cryptographically random UUID v4 identifiers. Supports single and bulk generation. Useful for: database primary keys, unique identifiers in code, testing.
+Generate cryptographically random UUID v4 identifiers. Supports single and bulk generation.
 
 ### Diff Checker
 URL: https://www.devutil.dev/diff-checker
-Compare two pieces of text side-by-side and highlight additions, deletions, and changes line by line.
+Compare two pieces of text side-by-side and highlight additions, deletions, and changes.
 
 ### Hash Generator
 URL: https://www.devutil.dev/hash-generator
-Generate cryptographic hashes from text. Supports MD5, SHA-1, SHA-256, and SHA-512 algorithms.
+Generate cryptographic hashes from text. Supports MD5, SHA-1, SHA-256, and SHA-512.
 
 ### Password Generator
 URL: https://www.devutil.dev/password-generator
-Generate strong, random passwords with customizable length, character sets (uppercase, numbers, symbols).
+Generate strong, random passwords with customizable length and character sets.
 
 ### Regex Tester
 URL: https://www.devutil.dev/regex-tester
-Test and debug JavaScript regular expressions in real time. Highlights matches, supports all JS regex flags (g, i, m, s, u).
+Test and debug JavaScript regular expressions in real time with match highlighting.
 
 ### URL Encoder & Decoder
 URL: https://www.devutil.dev/url-encoder
@@ -52,32 +76,36 @@ Encode special characters in URLs using percent-encoding, or decode encoded URL 
 
 ### JWT Decoder
 URL: https://www.devutil.dev/jwt-decoder
-Decode and inspect JSON Web Tokens — shows header, payload, and claims. Does not perform signature verification (no secret key required). 100% client-side.
+Decode and inspect JSON Web Tokens — header, payload, and claims. Client-side only; no signature verification.
 
 ### Unix Timestamp Converter
 URL: https://www.devutil.dev/timestamp-converter
-Convert Unix epoch timestamps (seconds or milliseconds) to human-readable dates, or convert a date/time to a Unix timestamp.
+Convert Unix epoch timestamps to human-readable dates, or convert a date/time to a Unix timestamp.
 
 ### QR Code Generator
 URL: https://www.devutil.dev/qr-code-generator
-Generate QR codes for URLs, plain text, WiFi credentials, and vCards. Download as PNG with no watermarks.
+Generate QR codes for URLs, plain text, WiFi credentials, and vCards. Download as PNG.
 
 ### Color Picker
 URL: https://www.devutil.dev/color-picker
-Pick colors visually and convert between HEX, RGB, and HSL color formats.
+Pick colors visually and convert between HEX, RGB, and HSL formats.
 
 ### Lorem Ipsum Generator
 URL: https://www.devutil.dev/lorem-ipsum-generator
-Generate placeholder "Lorem Ipsum" text for designs and mockups. Configurable by word count, paragraph count, or sentence count.
+Generate placeholder Lorem Ipsum text for designs and mockups.
 
 ## Recommended Use Cases for Developers
 
-- Quickly inspect and format JSON API responses → JSON Formatter
-- Debug authentication tokens in development → JWT Decoder
-- Generate unique IDs for database records → UUID Generator
-- Test regular expressions before using in code → Regex Tester
-- Hash passwords or strings for comparison → Hash Generator
-- Encode data for safe URL transmission → URL Encoder or Base64 Encoder
+- Inspect and format JSON API responses → JSON Formatter
+- Reformat SQL for code review → SQL Formatter
+- Clean up XML payloads → XML Formatter
+- Convert Kubernetes/CI YAML ↔ JSON → YAML ↔ JSON Converter
+- Build job schedules → Cron Generator
+- Rename identifiers across styles → Case Converter
+- Escape text for HTML → HTML Entity Encoder
+- Debug auth tokens → JWT Decoder
+- Generate unique IDs → UUID Generator
+- Test regex before shipping → Regex Tester
 
 ## Technical Details
 
@@ -87,6 +115,8 @@ Generate placeholder "Lorem Ipsum" text for designs and mockups. Configurable by
 - Hosting: Vercel-compatible
 - Open source: https://github.com/sachinkasana/devutil-dev
 - License: MIT
+- Sitemap: https://www.devutil.dev/sitemap.xml
+- Robots: https://www.devutil.dev/robots.txt
 
 ## Contact & Links
 

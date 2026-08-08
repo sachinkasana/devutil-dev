@@ -8,6 +8,24 @@ const tools = [
     description: 'Format, validate, and beautify JSON data instantly'
   },
   {
+    key: 'sql-formatter',
+    name: 'SQL Formatter',
+    href: '/sql-formatter',
+    description: 'Beautify and minify SQL queries instantly'
+  },
+  {
+    key: 'xml-formatter',
+    name: 'XML Formatter',
+    href: '/xml-formatter',
+    description: 'Beautify, validate, and minify XML documents'
+  },
+  {
+    key: 'yaml-json-converter',
+    name: 'YAML ↔ JSON Converter',
+    href: '/yaml-json-converter',
+    description: 'Convert between YAML and JSON instantly'
+  },
+  {
     key: 'base64-encoder',
     name: 'Base64 Encoder',
     href: '/base64-encoder',
@@ -18,6 +36,24 @@ const tools = [
     name: 'Diff Checker',
     href: '/diff-checker',
     description: 'Compare text differences with highlighted changes'
+  },
+  {
+    key: 'cron-generator',
+    name: 'Cron Generator',
+    href: '/cron-generator',
+    description: 'Build and explain standard cron expressions'
+  },
+  {
+    key: 'case-converter',
+    name: 'Case Converter',
+    href: '/case-converter',
+    description: 'Convert text between camelCase, snake_case, and more'
+  },
+  {
+    key: 'html-entity-encoder',
+    name: 'HTML Entity Encoder',
+    href: '/html-entity-encoder',
+    description: 'Encode and decode HTML entities safely'
   },
   {
     key: 'uuid-generator',
@@ -82,25 +118,36 @@ const tools = [
 ];
 
 const relatedMap = {
-  'json-formatter': ['diff-checker', 'base64-encoder', 'url-encoder', 'jwt-decoder'],
-  'base64-encoder': ['json-formatter', 'url-encoder', 'hash-generator', 'qr-code-generator'],
-  'diff-checker': ['json-formatter', 'regex-tester', 'hash-generator', 'url-encoder'],
-  'uuid-generator': ['hash-generator', 'password-generator', 'timestamp-converter', 'jwt-decoder'],
+  'json-formatter': ['yaml-json-converter', 'xml-formatter', 'sql-formatter', 'diff-checker'],
+  'sql-formatter': ['json-formatter', 'xml-formatter', 'diff-checker', 'regex-tester'],
+  'xml-formatter': ['json-formatter', 'yaml-json-converter', 'html-entity-encoder', 'sql-formatter'],
+  'yaml-json-converter': ['json-formatter', 'xml-formatter', 'diff-checker', 'case-converter'],
+  'base64-encoder': ['json-formatter', 'url-encoder', 'html-entity-encoder', 'hash-generator'],
+  'diff-checker': ['json-formatter', 'case-converter', 'regex-tester', 'sql-formatter'],
+  'cron-generator': ['timestamp-converter', 'regex-tester', 'uuid-generator', 'case-converter'],
+  'case-converter': ['regex-tester', 'diff-checker', 'lorem-ipsum-generator', 'html-entity-encoder'],
+  'html-entity-encoder': ['url-encoder', 'xml-formatter', 'base64-encoder', 'case-converter'],
+  'uuid-generator': ['hash-generator', 'password-generator', 'timestamp-converter', 'cron-generator'],
   'hash-generator': ['uuid-generator', 'password-generator', 'base64-encoder', 'json-formatter'],
   'password-generator': ['hash-generator', 'uuid-generator', 'jwt-decoder', 'base64-encoder'],
-  'regex-tester': ['url-encoder', 'json-formatter', 'hash-generator', 'diff-checker'],
-  'url-encoder': ['json-formatter', 'base64-encoder', 'regex-tester', 'jwt-decoder'],
+  'regex-tester': ['case-converter', 'cron-generator', 'url-encoder', 'diff-checker'],
+  'url-encoder': ['html-entity-encoder', 'base64-encoder', 'json-formatter', 'regex-tester'],
   'jwt-decoder': ['base64-encoder', 'json-formatter', 'url-encoder', 'timestamp-converter'],
-  'timestamp-converter': ['uuid-generator', 'jwt-decoder', 'regex-tester', 'hash-generator'],
+  'timestamp-converter': ['cron-generator', 'uuid-generator', 'jwt-decoder', 'hash-generator'],
   'qr-code-generator': ['url-encoder', 'base64-encoder', 'color-picker', 'hash-generator'],
-  'color-picker': ['qr-code-generator', 'lorem-ipsum-generator', 'url-encoder', 'json-formatter'],
-  'lorem-ipsum-generator': ['color-picker', 'qr-code-generator', 'json-formatter', 'regex-tester']
+  'color-picker': ['qr-code-generator', 'lorem-ipsum-generator', 'case-converter', 'json-formatter'],
+  'lorem-ipsum-generator': ['case-converter', 'color-picker', 'qr-code-generator', 'diff-checker']
 };
 
 const toolIndex = new Map(tools.map((tool) => [tool.key, tool]));
 
 export default function RelatedTools({ current }) {
-  const relatedKeys = relatedMap[current] || tools.filter((tool) => tool.key !== current).slice(0, 4).map((tool) => tool.key);
+  const relatedKeys =
+    relatedMap[current] ||
+    tools
+      .filter((tool) => tool.key !== current)
+      .slice(0, 4)
+      .map((tool) => tool.key);
   const relatedTools = relatedKeys.map((key) => toolIndex.get(key)).filter(Boolean);
 
   return (
@@ -118,9 +165,7 @@ export default function RelatedTools({ current }) {
             href={tool.href}
             className="group border border-slate-200 rounded-xl p-4 bg-white hover:border-slate-300 hover:shadow-sm transition"
           >
-            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600">
-              {tool.name}
-            </h3>
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600">{tool.name}</h3>
             <p className="text-xs text-slate-600 mt-1">{tool.description}</p>
             <span className="mt-3 inline-flex items-center text-xs text-blue-600">
               Open Tool <ChevronRight className="w-3 h-3 ml-1" />

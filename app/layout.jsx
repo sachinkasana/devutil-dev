@@ -1,8 +1,5 @@
-// app/layout.jsx
-// Replace your existing layout.jsx with this file.
-// It sets global metadata, OG tags, and the BreadcrumbList schema.
-
 import { SITE } from "./seo-config";
+import AnalyticsRoot from "../components/AnalyticsRoot";
 import "./globals.css";
 
 export const metadata = {
@@ -16,8 +13,13 @@ export const metadata = {
     "developer tools",
     "free online tools",
     "json formatter",
+    "sql formatter",
+    "yaml to json",
+    "cron generator",
     "base64 encoder",
     "uuid generator",
+    "xml formatter",
+    "case converter",
     "developer utilities",
     "privacy first tools",
     "client side tools",
@@ -48,7 +50,7 @@ export const metadata = {
     description: SITE.description,
     images: [
       {
-        url: "/og-image.png", // Add a 1200×630 OG image to your /public folder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "DevUtil — Free Developer Tools",
@@ -62,30 +64,20 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   verification: {
-    // Add your codes from Google Search Console and Bing Webmaster Tools:
+    // Add codes from Google Search Console / Bing Webmaster Tools when available:
     // google: "YOUR_GOOGLE_VERIFICATION_CODE",
     // other: { "msvalidate.01": "YOUR_BING_VERIFICATION_CODE" },
   },
 };
 
-// Site-wide WebSite schema — helps Google understand your brand
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE.name,
   url: SITE.url,
   description: SITE.description,
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE.url}/?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
-// Organization schema — helps with brand Knowledge Panel
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -102,10 +94,7 @@ const organizationSchema = {
     contactType: "customer support",
     url: `${SITE.url}/contact`,
   },
-  sameAs: [
-    "https://github.com/sachinkasana/devutil-dev",
-    // Add Product Hunt, Twitter, etc. URLs here as you create them
-  ],
+  sameAs: ["https://github.com/sachinkasana/devutil-dev"],
 };
 
 export default function RootLayout({ children }) {
@@ -123,7 +112,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <AnalyticsRoot />
+      </body>
     </html>
   );
 }

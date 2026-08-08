@@ -56,6 +56,35 @@ export const TOOLS = {
     ],
   },
 
+  "sql-formatter": {
+    title: "SQL Formatter & Beautifier — Format SQL Queries Online",
+    shortTitle: "SQL Formatter",
+    description:
+      "Beautify, format, and minify SQL queries instantly. Improve readability with consistent indentation and keyword casing. 100% client-side SQL formatter.",
+    keywords: [
+      "sql formatter online",
+      "sql beautifier",
+      "format sql query",
+      "sql minifier",
+      "pretty sql",
+      "sql query beautify",
+    ],
+    faq: [
+      {
+        q: "What does an SQL formatter do?",
+        a: "An SQL formatter restructures SQL queries with predictable line breaks, indentation, and spacing so they are easier to read, debug, and review.",
+      },
+      {
+        q: "Can this tool minify SQL too?",
+        a: "Yes. You can switch between beautify and minify modes. Beautify makes SQL readable while minify removes extra whitespace for compact output.",
+      },
+      {
+        q: "Is my SQL data uploaded anywhere?",
+        a: "No. DevUtil formats SQL directly in your browser. No query text is sent to any server.",
+      },
+    ],
+  },
+
   "base64-encoder": {
     title: "Base64 Encoder & Decoder — Free Online Tool",
     shortTitle: "Base64 Encoder",
@@ -356,20 +385,191 @@ export const TOOLS = {
       },
     ],
   },
+
+  "yaml-json-converter": {
+    title: "YAML to JSON Converter — Bidirectional YAML ↔ JSON Online",
+    shortTitle: "YAML ↔ JSON Converter",
+    description:
+      "Convert YAML to JSON and JSON to YAML instantly in your browser. Free, private, client-side converter with indent options and clear error messages.",
+    keywords: [
+      "yaml to json",
+      "json to yaml",
+      "yaml json converter",
+      "convert yaml online",
+      "yaml to json converter",
+      "json yaml converter",
+    ],
+    faq: [
+      {
+        q: "What is YAML to JSON conversion used for?",
+        a: "Developers convert YAML to JSON when moving between config formats, APIs, Kubernetes manifests, CI pipelines, and application settings that expect different serialization formats.",
+      },
+      {
+        q: "Does this tool upload my data?",
+        a: "No. Conversion runs entirely in your browser. Your YAML and JSON never leave your device.",
+      },
+      {
+        q: "Can I convert JSON back to YAML?",
+        a: "Yes. Switch direction to JSON → YAML, paste JSON, and convert. Indentation is configurable.",
+      },
+    ],
+  },
+
+  "cron-generator": {
+    title: "Cron Expression Generator — Build & Explain Cron Online",
+    shortTitle: "Cron Generator",
+    description:
+      "Build standard 5-field cron expressions visually, use common presets, and get a human-readable explanation. Free online cron generator — fully client-side.",
+    keywords: [
+      "cron expression generator",
+      "cron generator online",
+      "crontab generator",
+      "cron schedule builder",
+      "cron expression explainer",
+      "crontab helper",
+    ],
+    faq: [
+      {
+        q: "What is a cron expression?",
+        a: "A cron expression is a schedule string used by Unix-like systems and many job runners. The common 5-field format is: minute hour day-of-month month day-of-week.",
+      },
+      {
+        q: "What timezone do cron jobs use?",
+        a: "Most system crons run in the server's local timezone unless configured otherwise. Always confirm the timezone of your scheduler (server, GitHub Actions, cloud jobs).",
+      },
+      {
+        q: "Is this a standard 5-field cron format?",
+        a: "Yes. DevUtil uses the classic 5-field cron format (minute, hour, day of month, month, day of week) without a seconds field.",
+      },
+    ],
+  },
+
+  "case-converter": {
+    title: "Case Converter — camelCase, snake_case, kebab-case Online",
+    shortTitle: "Case Converter",
+    description:
+      "Convert text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, and more instantly. Free developer case converter.",
+    keywords: [
+      "case converter",
+      "camelcase converter",
+      "snake case converter",
+      "kebab case converter",
+      "pascal case converter",
+      "text case converter online",
+    ],
+    faq: [
+      {
+        q: "What case formats are supported?",
+        a: "DevUtil supports camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, Sentence case, lower case, and UPPER CASE.",
+      },
+      {
+        q: "Will my text leave my browser?",
+        a: "No. Case conversion happens locally in JavaScript. Nothing is uploaded.",
+      },
+      {
+        q: "How does camelCase conversion work?",
+        a: "The converter splits on spaces, underscores, hyphens, and word boundaries, then joins words with the first word lowercased and subsequent words capitalized.",
+      },
+    ],
+  },
+
+  "xml-formatter": {
+    title: "XML Formatter & Beautifier — Format and Minify XML Online",
+    shortTitle: "XML Formatter",
+    description:
+      "Beautify, format, validate, and minify XML instantly in your browser. Improve readability with consistent indentation. 100% client-side XML formatter.",
+    keywords: [
+      "xml formatter online",
+      "xml beautifier",
+      "format xml",
+      "xml minifier",
+      "pretty print xml",
+      "xml validator",
+    ],
+    faq: [
+      {
+        q: "What does an XML formatter do?",
+        a: "An XML formatter restructures XML with consistent indentation and line breaks so documents are easier to read, debug, and review.",
+      },
+      {
+        q: "Can I minify XML too?",
+        a: "Yes. Switch to minify mode to remove unnecessary whitespace and produce compact XML.",
+      },
+      {
+        q: "Is my XML sent to a server?",
+        a: "No. Formatting and validation run entirely in your browser.",
+      },
+    ],
+  },
+
+  "html-entity-encoder": {
+    title: "HTML Entity Encoder & Decoder — Escape HTML Online",
+    shortTitle: "HTML Entity Encoder",
+    description:
+      "Encode special characters to HTML entities or decode entities back to text. Free online HTML escape tool — fully client-side.",
+    keywords: [
+      "html entity encoder",
+      "html entity decoder",
+      "html escape online",
+      "encode html entities",
+      "html unescape",
+      "html special characters",
+    ],
+    faq: [
+      {
+        q: "What are HTML entities?",
+        a: "HTML entities are encoded representations of characters that have special meaning in HTML, such as &lt; for < and &amp; for &.",
+      },
+      {
+        q: "When should I encode HTML entities?",
+        a: "Encode when displaying user-provided or untrusted text in HTML so browsers treat it as text instead of markup.",
+      },
+      {
+        q: "Is encoding the same as escaping for XSS?",
+        a: "HTML entity encoding is one important part of XSS prevention for HTML text contexts, but secure apps also need context-aware escaping, CSP, and safe templating practices.",
+      },
+    ],
+  },
 };
+
+/** Prefer a dedicated OG image when present; otherwise fall back to home. */
+function toolOgImage(slug) {
+  const known = new Set([
+    "json-formatter",
+    "base64-encoder",
+    "diff-checker",
+    "uuid-generator",
+    "hash-generator",
+    "password-generator",
+    "regex-tester",
+    "url-encoder",
+    "jwt-decoder",
+    "timestamp-converter",
+    "qr-code-generator",
+    "color-picker",
+    "lorem-ipsum-generator",
+  ]);
+  const file = known.has(slug)
+    ? slug === "base64-encoder"
+      ? "base64-encoder-decoder.png"
+      : `${slug}.png`
+    : "devutil-home.png";
+  return `${SITE.url}/images/${file}`;
+}
 
 /**
  * Returns the full Next.js metadata object for a tool page.
- * Usage in page.jsx:  export const metadata = toolMetadata("json-formatter");
+ * Usage: export const metadata = toolMetadata("json-formatter");
  */
 export function toolMetadata(slug) {
   const tool = TOOLS[slug];
   if (!tool) return {};
   const url = `${SITE.url}/${slug}`;
+  const image = toolOgImage(slug);
   return {
     title: tool.title,
     description: tool.description,
-    keywords: tool.keywords.join(", "),
+    keywords: tool.keywords,
     alternates: { canonical: url },
     openGraph: {
       title: tool.title,
@@ -378,44 +578,65 @@ export function toolMetadata(slug) {
       siteName: SITE.name,
       locale: SITE.locale,
       type: "website",
+      images: [{ url: image, width: 1200, height: 630, alt: tool.shortTitle }],
     },
     twitter: {
       card: "summary_large_image",
       title: tool.title,
       description: tool.description,
+      images: [image],
     },
+    robots: { index: true, follow: true },
   };
 }
 
 /**
- * Returns JSON-LD structured data for a tool page.
- * Renders as a <script type="application/ld+json"> in your page.
+ * Returns JSON-LD structured data for a tool page (SoftwareApplication + Breadcrumb + FAQ).
  */
 export function toolJsonLd(slug) {
   const tool = TOOLS[slug];
   if (!tool) return null;
   const url = `${SITE.url}/${slug}`;
+  const image = toolOgImage(slug);
 
   const schemas = [
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      name: `${tool.shortTitle} — ${SITE.name}`,
+      "@type": "SoftwareApplication",
+      name: tool.shortTitle,
       description: tool.description,
       url,
+      image,
       applicationCategory: "DeveloperApplication",
-      operatingSystem: "Web",
-      browserRequirements: "Requires JavaScript",
+      operatingSystem: "Any",
       offers: {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
       },
-      provider: {
+      publisher: {
         "@type": "Organization",
         name: SITE.name,
         url: SITE.url,
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: SITE.url,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: tool.shortTitle,
+          item: url,
+        },
+      ],
     },
   ];
 

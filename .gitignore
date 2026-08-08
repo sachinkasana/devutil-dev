@@ -1,6 +1,8 @@
 node_modules
 dist
 .env
+.env.local
+.env*.local
 .DS_Store
 .vscode
 .idea
@@ -10,3 +12,4 @@ coverage
 *.bak
 *.swp
 .next
+tsconfig.tsbuildinfo

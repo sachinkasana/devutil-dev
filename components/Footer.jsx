@@ -21,22 +21,29 @@ export default function Footer({ variant = 'compact', className = '' }) {
               <h5 className="text-white font-semibold mb-3">Popular Tools</h5>
               <ul className="space-y-2 text-sm">
                 <li><a href="/json-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="json-formatter">JSON Formatter</a></li>
+                <li><a href="/sql-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="sql-formatter">SQL Formatter</a></li>
+                <li><a href="/yaml-json-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="yaml-json-converter">YAML ↔ JSON</a></li>
+                <li><a href="/cron-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="cron-generator">Cron Generator</a></li>
+                <li><a href="/xml-formatter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="xml-formatter">XML Formatter</a></li>
                 <li><a href="/base64-encoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="base64-encoder">Base64 Encoder</a></li>
-                <li><a href="/uuid-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="uuid-generator">UUID Generator</a></li>
-                <li><a href="/hash-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="hash-generator">Hash Generator</a></li>
               </ul>
             </div>
             <div>
               <h5 className="text-white font-semibold mb-3">More Tools</h5>
               <ul className="space-y-2 text-sm">
+                <li><a href="/case-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="case-converter">Case Converter</a></li>
+                <li><a href="/html-entity-encoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="html-entity-encoder">HTML Entity Encoder</a></li>
+                <li><a href="/diff-checker" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="diff-checker">Diff Checker</a></li>
+                <li><a href="/uuid-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="uuid-generator">UUID Generator</a></li>
+                <li><a href="/hash-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="hash-generator">Hash Generator</a></li>
                 <li><a href="/regex-tester" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="regex-tester">Regex Tester</a></li>
                 <li><a href="/url-encoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="url-encoder">URL Encoder</a></li>
                 <li><a href="/jwt-decoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="jwt-decoder">JWT Decoder</a></li>
                 <li><a href="/timestamp-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="timestamp-converter">Timestamp Converter</a></li>
                 <li><a href="/password-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="password-generator">Password Generator</a></li>
-                <li><a href="/lorem-ipsum-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="lorem-ipsum-generator">Lorem Ipsum Generator</a></li>
                 <li><a href="/qr-code-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="qr-code-generator">QR Code Generator</a></li>
                 <li><a href="/color-picker" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="color-picker">Color Picker</a></li>
+                <li><a href="/lorem-ipsum-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="lorem-ipsum-generator">Lorem Ipsum Generator</a></li>
               </ul>
             </div>
             <div>
@@ -55,7 +62,16 @@ export default function Footer({ variant = 'compact', className = '' }) {
                     Buy me a coffee
                   </a>
                 </li>
-                <li><a href="https://github.com" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="github">GitHub</a></li>
+                <li>
+                  <a
+                    href="https://github.com/sachinkasana/devutil-dev"
+                    className="hover:text-white transition-colors"
+                    data-analytics-event="footer_nav"
+                    data-analytics-label="github"
+                  >
+                    GitHub
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -69,22 +85,22 @@ export default function Footer({ variant = 'compact', className = '' }) {
 
   return (
     <footer className={`bg-slate-900 text-slate-400 py-8 mt-16 ${className}`.trim()}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
-          <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
-            <a href="/" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="home">Home</a>
-            <a href="/about" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="about">About</a>
-            <a href="/privacy" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="privacy">Privacy</a>
-            <a href="/contact" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="contact">Contact</a>
-            <a
-              href="https://buymeacoffee.com/sachinkasana"
-              className="hover:text-white transition-colors"
-              data-analytics-event="support_click"
-              data-analytics-label="Buy me a coffee"
-            >
-              Buy me a coffee
-            </a>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-sm">© 2026 DevUtil.dev - All rights reserved.</p>
+        <div className="mt-4 flex items-center justify-center space-x-6 text-sm">
+          <a href="/" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="home">Home</a>
+          <a href="/about" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="about">About</a>
+          <a href="/privacy" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="privacy">Privacy</a>
+          <a href="/contact" className="hover:text-white transition-colors" data-analytics-event="footer_nav" data-analytics-label="contact">Contact</a>
+          <a
+            href="https://buymeacoffee.com/sachinkasana"
+            className="hover:text-white transition-colors"
+            data-analytics-event="support_click"
+            data-analytics-label="Buy me a coffee"
+          >
+            Buy me a coffee
+          </a>
+        </div>
         <p className="text-xs text-slate-500 mt-4">Made with ❤️ by Sachin in India.</p>
       </div>
     </footer>

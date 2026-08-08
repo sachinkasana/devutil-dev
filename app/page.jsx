@@ -1,17 +1,53 @@
 import React from 'react';
-import { Code, Hash, Key, FileJson, RefreshCw, Search, Braces, Lock, ShieldCheck, FileText, QrCode, Palette, FileDiff } from 'lucide-react';
+import {
+  Code,
+  Hash,
+  Key,
+  FileJson,
+  Database,
+  RefreshCw,
+  Search,
+  Braces,
+  Lock,
+  ShieldCheck,
+  FileText,
+  QrCode,
+  Palette,
+  FileDiff,
+  FileCode,
+  Clock,
+  CaseSensitive,
+  FileType,
+  Binary
+} from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
   title: 'Free Developer Tools & Utilities Online - DevUtil',
-  description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
+  description:
+    'Free privacy-first developer tools: JSON/SQL/XML formatters, YAML↔JSON, cron generator, case converter, Base64, UUID, hashes, regex, JWT, timestamps, QR codes, and more. 100% client-side.',
+  keywords: [
+    'developer tools',
+    'free online developer tools',
+    'json formatter',
+    'sql formatter',
+    'yaml to json',
+    'cron generator',
+    'xml formatter',
+    'case converter',
+    'base64 encoder',
+    'uuid generator',
+    'regex tester',
+    'jwt decoder'
+  ],
   alternates: {
     canonical: '/'
   },
   openGraph: {
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
+    description:
+      'Fast, free, privacy-first developer utilities. Format JSON/SQL/XML, convert YAML↔JSON, build cron schedules, and more — all in your browser.',
     url: '/',
     images: [
       {
@@ -25,7 +61,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free Developer Tools & Utilities Online - DevUtil',
-    description: 'Essential developer tools: JSON formatter, Base64, UUID, hashes, regex, URL encode, JWT decode, timestamps, QR codes, color picker, password generator, lorem ipsum, and diff checker.',
+    description:
+      'Fast, free, privacy-first developer utilities. Format, convert, encode, and generate — 100% client-side.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };
@@ -37,7 +74,35 @@ const tools = [
     icon: FileJson,
     href: '/json-formatter',
     color: 'bg-blue-500',
-    popular: true
+    popular: true,
+    category: 'Formatters'
+  },
+  {
+    name: 'SQL Formatter',
+    description: 'Beautify and minify SQL queries instantly',
+    icon: Database,
+    href: '/sql-formatter',
+    color: 'bg-violet-500',
+    popular: true,
+    category: 'Formatters'
+  },
+  {
+    name: 'XML Formatter',
+    description: 'Beautify, validate, and minify XML documents',
+    icon: FileCode,
+    href: '/xml-formatter',
+    color: 'bg-fuchsia-500',
+    popular: true,
+    category: 'Formatters'
+  },
+  {
+    name: 'YAML ↔ JSON Converter',
+    description: 'Convert between YAML and JSON instantly',
+    icon: FileType,
+    href: '/yaml-json-converter',
+    color: 'bg-lime-600',
+    popular: true,
+    category: 'Converters'
   },
   {
     name: 'Base64 Encoder',
@@ -45,7 +110,8 @@ const tools = [
     icon: Lock,
     href: '/base64-encoder',
     color: 'bg-green-500',
-    popular: true
+    popular: true,
+    category: 'Encoders'
   },
   {
     name: 'Diff Checker',
@@ -53,7 +119,33 @@ const tools = [
     icon: FileDiff,
     href: '/diff-checker',
     color: 'bg-sky-500',
-    popular: true
+    popular: true,
+    category: 'Text'
+  },
+  {
+    name: 'Cron Generator',
+    description: 'Build and explain standard cron expressions',
+    icon: Clock,
+    href: '/cron-generator',
+    color: 'bg-rose-500',
+    popular: true,
+    category: 'Generators'
+  },
+  {
+    name: 'Case Converter',
+    description: 'camelCase, snake_case, kebab-case, and more',
+    icon: CaseSensitive,
+    href: '/case-converter',
+    color: 'bg-yellow-600',
+    category: 'Text'
+  },
+  {
+    name: 'HTML Entity Encoder',
+    description: 'Encode and decode HTML entities safely',
+    icon: Binary,
+    href: '/html-entity-encoder',
+    color: 'bg-stone-600',
+    category: 'Encoders'
   },
   {
     name: 'UUID Generator',
@@ -61,49 +153,56 @@ const tools = [
     icon: Key,
     href: '/uuid-generator',
     color: 'bg-purple-500',
-    popular: true
+    popular: true,
+    category: 'Generators'
   },
   {
     name: 'Hash Generator',
     description: 'Generate MD5, SHA-1, SHA-256 hashes',
     icon: Hash,
     href: '/hash-generator',
-    color: 'bg-orange-500'
+    color: 'bg-orange-500',
+    category: 'Generators'
   },
   {
     name: 'Password Generator',
     description: 'Create strong, secure passwords instantly',
     icon: ShieldCheck,
     href: '/password-generator',
-    color: 'bg-emerald-500'
+    color: 'bg-emerald-500',
+    category: 'Generators'
   },
   {
     name: 'Regex Tester',
     description: 'Test and debug regular expressions live',
     icon: Search,
     href: '/regex-tester',
-    color: 'bg-red-500'
+    color: 'bg-red-500',
+    category: 'Text'
   },
   {
     name: 'URL Encoder',
     description: 'Encode and decode URL components',
     icon: Code,
     href: '/url-encoder',
-    color: 'bg-indigo-500'
+    color: 'bg-indigo-500',
+    category: 'Encoders'
   },
   {
     name: 'JWT Decoder',
-    description: 'Decode and verify JSON Web Tokens',
+    description: 'Decode and inspect JSON Web Tokens',
     icon: Braces,
     href: '/jwt-decoder',
-    color: 'bg-pink-500'
+    color: 'bg-pink-500',
+    category: 'Converters'
   },
   {
     name: 'Timestamp Converter',
     description: 'Convert Unix timestamps to human dates',
     icon: RefreshCw,
     href: '/timestamp-converter',
-    color: 'bg-teal-500'
+    color: 'bg-teal-500',
+    category: 'Converters'
   },
   {
     name: 'QR Code Generator',
@@ -111,22 +210,47 @@ const tools = [
     icon: QrCode,
     href: '/qr-code-generator',
     color: 'bg-amber-500',
-    popular: true
+    popular: true,
+    category: 'Generators'
   },
   {
     name: 'Color Picker',
     description: 'Pick colors and convert HEX, RGB, HSL',
     icon: Palette,
     href: '/color-picker',
-    color: 'bg-cyan-500'
+    color: 'bg-cyan-500',
+    category: 'Generators'
   },
   {
     name: 'Lorem Ipsum Generator',
     description: 'Generate placeholder text for designs',
     icon: FileText,
     href: '/lorem-ipsum-generator',
-    color: 'bg-slate-500'
+    color: 'bg-slate-500',
+    category: 'Text'
   }
+];
+
+const hubLinks = [
+  { href: '/json-formatter', label: 'JSON Formatter' },
+  { href: '/sql-formatter', label: 'SQL Formatter' },
+  { href: '/xml-formatter', label: 'XML Formatter' },
+  { href: '/yaml-json-converter', label: 'YAML ↔ JSON' },
+  { href: '/cron-generator', label: 'Cron Generator' },
+  { href: '/case-converter', label: 'Case Converter' },
+  { href: '/html-entity-encoder', label: 'HTML Entity Encoder' },
+  { href: '/base64-encoder', label: 'Base64 Encoder' },
+  { href: '/diff-checker', label: 'Diff Checker' },
+  { href: '/uuid-generator', label: 'UUID Generator' },
+  { href: '/hash-generator', label: 'Hash Generator' },
+  { href: '/regex-tester', label: 'Regex Tester' },
+  { href: '/url-encoder', label: 'URL Encoder' },
+  { href: '/jwt-decoder', label: 'JWT Decoder' },
+  { href: '/timestamp-converter', label: 'Timestamp Converter' },
+  { href: '/password-generator', label: 'Password Generator' },
+  { href: '/lorem-ipsum-generator', label: 'Lorem Ipsum Generator' },
+  { href: '/qr-code-generator', label: 'QR Code Generator' },
+  { href: '/color-picker', label: 'Color Picker' }
 ];
 
 export default function HomePage() {
@@ -135,7 +259,6 @@ export default function HomePage() {
       <Header subtitle="Essential Developer Tools" showGithub />
 
       <main id="main-content">
-        {/* Hero Section */}
         <section className="w-full px-3 sm:px-4 lg:px-6 py-10 text-center">
           <div className="space-y-4">
             <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900">
@@ -145,8 +268,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-              Fast, free, and privacy-focused tools for developers. All processing happens in your browser—no data
-              leaves your device.
+              Fast, free, and privacy-focused tools for developers. Format JSON, SQL, and XML; convert YAML;
+              build cron schedules; and more — all processing stays in your browser.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-500">
               <span className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1">
@@ -159,118 +282,107 @@ export default function HomePage() {
               </span>
               <span className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1">
                 <RefreshCw className="w-4 h-4" />
-                Always Free
+                Always Free · {tools.length} Tools
               </span>
             </div>
           </div>
         </section>
 
-      {/* Tools Grid */}
-      <section className="w-full px-3 sm:px-4 lg:px-6 pb-16">
-        <div className="mb-6 text-center">
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-            Explore the Toolbox
-          </h2>
-          <p className="mt-1 text-sm sm:text-base text-slate-600">
-            Pick a utility to get started in seconds.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tools.map((tool) => {
-            const Icon = tool.icon;
-            return (
-              <a
-                key={tool.name}
-                href={tool.href}
-                data-analytics-event="tool_open"
-                data-analytics-label={tool.name}
-                className="group relative bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-300"
-              >
-                {tool.popular && (
-                  <div className="absolute top-3 right-3">
-                    <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                      Popular
-                    </span>
+        <section className="w-full px-3 sm:px-4 lg:px-6 pb-16">
+          <div className="mb-6 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">Explore the Toolbox</h2>
+            <p className="mt-1 text-sm sm:text-base text-slate-600">
+              Formatters, converters, encoders, and generators — pick a utility and get started in seconds.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {tools.map((tool) => {
+              const Icon = tool.icon;
+              return (
+                <a
+                  key={tool.name}
+                  href={tool.href}
+                  data-analytics-event="tool_open"
+                  data-analytics-label={tool.name}
+                  className="group relative bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-300"
+                >
+                  {tool.popular && (
+                    <div className="absolute top-3 right-3">
+                      <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="space-y-4">
+                    <div
+                      className={`w-12 h-12 ${tool.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}
+                    >
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        {tool.name}
+                      </h3>
+                      <p className="text-sm text-slate-600 mt-1">{tool.description}</p>
+                    </div>
+                    <div className="flex items-center text-blue-600 text-sm font-medium">
+                      <span>Open Tool</span>
+                      <svg
+                        className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                )}
-                <div className="space-y-4">
-                  <div className={`w-12 h-12 ${tool.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                      {tool.name}
-                    </h3>
-                    <p className="text-sm text-slate-600 mt-1">
-                      {tool.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center text-blue-600 text-sm font-medium">
-                    <span>Open Tool</span>
-                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </section>
+                </a>
+              );
+            })}
+          </div>
+        </section>
 
-        {/* Hub Content */}
         <section className="bg-white border-t border-slate-200 py-16">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-600 space-y-5">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-900">
-              Free Developer Tools & Utilities Online
+              Free Developer Tools &amp; Utilities Online
             </h2>
             <p>
               DevUtil is a fast toolkit for everyday developer tasks. Each tool runs in your browser, so data stays on
-              your device. You can format JSON, encode Base64, generate UUIDs, and test regex patterns without
-              installing anything. You can also generate secure passwords or fast placeholder text for mockups. The
-              tools load fast and work well on mobile.
+              your device. Format JSON, SQL, and XML; convert YAML ↔ JSON; build cron schedules; transform text case;
+              encode HTML entities; generate UUIDs; and test regex patterns — without installing anything.
             </p>
             <p>
-              Use DevUtil as a lightweight hub for common workflows. Format a JSON response, then jump to the URL
-              encoder to clean up query strings. Decode a JWT and open the JSON formatter to inspect the payload. These
-              links keep your flow moving and reduce copy-paste errors.
+              Use DevUtil as a lightweight hub for common workflows. Format a JSON response, then jump to the YAML
+              converter for config files. Decode a JWT and open the JSON formatter to inspect the payload. Build a cron
+              expression, then compare config diffs. These links keep your flow moving and reduce copy-paste errors.
             </p>
             <p>
-              The toolkit focuses on simple, single-purpose utilities. Each page has clear actions, practical defaults,
-              and instant results. If you need a quick formatter, converter, or validator, pick a tool below and get
+              The toolkit focuses on simple, single-purpose utilities with clear actions, practical defaults, and instant
+              results. If you need a quick formatter, converter, encoder, or generator, pick a tool below and get
               started in seconds.
             </p>
-            <p className="text-center">
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/json-formatter">JSON Formatter</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/base64-encoder">Base64 Encoder</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/uuid-generator">UUID Generator</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/hash-generator">Hash Generator</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/regex-tester">Regex Tester</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/url-encoder">URL Encoder</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/jwt-decoder">JWT Decoder</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/timestamp-converter">Timestamp Converter</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/password-generator">Password Generator</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/lorem-ipsum-generator">Lorem Ipsum Generator</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/qr-code-generator">QR Code Generator</a>
-              {' · '}
-              <a className="text-blue-600 hover:text-blue-700 font-semibold" href="/color-picker">Color Picker</a>
+            <p className="text-center leading-8">
+              {hubLinks.map((link, index) => (
+                <React.Fragment key={link.href}>
+                  {index > 0 && ' · '}
+                  <a className="text-blue-600 hover:text-blue-700 font-semibold" href={link.href}>
+                    {link.label}
+                  </a>
+                </React.Fragment>
+              ))}
             </p>
           </div>
         </section>
 
-        {/* Features Section */}
         <section className="bg-white border-t border-slate-200 py-16">
-        <div className="w-full px-3 sm:px-4 lg:px-6">
+          <div className="w-full px-3 sm:px-4 lg:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-12">
               Why Choose DevUtil?
             </h2>

@@ -56,11 +56,6 @@ const webApplicationLd = {
     price: '0',
     priceCurrency: 'USD'
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '1250'
-  },
   description: 'Free online diff checker to compare text and code differences. Privacy-focused tool that runs entirely in your browser.',
   featureList: [
     'Side-by-side text comparison',
