@@ -1,15 +1,16 @@
 import Script from 'next/script';
 import { Suspense } from 'react';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
-import Analytics, {
+import {
   GA_ID,
   UMAMI_SCRIPT_URL,
   UMAMI_WEBSITE_ID
-} from './Analytics';
+} from '../lib/analytics-config';
+import Analytics from './Analytics';
 
 /**
  * Loads GA4 + Umami tags and mounts client-side SPA/event tracking.
- * Vercel Analytics adds Web Vitals when hosted on Vercel.
+ * IDs must come from a non-client module so Script tags get real strings.
  */
 export default function AnalyticsRoot() {
   return (
