@@ -64,9 +64,7 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   verification: {
-    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-      : {}),
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'h1FX8R7sRO-6jVd0dATODfLF_ablZtF6f5BnxP1zxOc',
     ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
       ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } }
       : {}),
