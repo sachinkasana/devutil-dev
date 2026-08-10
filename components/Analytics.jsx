@@ -2,9 +2,17 @@
 
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { track as vercelTrack } from '@vercel/analytics';
 import { GA_ID } from '../lib/analytics-config';
 
 export { GA_ID, UMAMI_SCRIPT_URL, UMAMI_WEBSITE_ID } from '../lib/analytics-config';
+
+/** Skip high-frequency UI noise in Vercel Events. */
+const VERCEL_SKIP = /_input$|_option|_indent$|_dialect$|_size$|_margin$|_error_correction$|_wifi_|_vcard_/;
+
+const COPY_EVENT = /copy/i;
+const USE_EVENT =
+  /^(tool_used|tool_open)$|_(generate|beautify|minify|validate|process|compare|encode|decode|format|convert|pick|preview|download|sample|clear|swap)/i;
 
 const TOOL_NAME_MAP = {
   json: 'JSON Formatter',
@@ -102,7 +110,18 @@ function buildEventParams(target, eventName, label) {
   return params;
 }
 
-/** Send a custom event to GA4 + Umami (when available). */
+function vercelProps(params, label) {
+  const props = {
+    tool: String(params.tool_name || 'unknown'),
+    action: String(params.action || 'unknown'),
+    path: String(params.page_path || '/')
+  };
+  const cleanLabel = label || params.event_label;
+  if (cleanLabel) props.label = String(cleanLabel).slice(0, 100);
+  return props;
+}
+
+/** Send a custom event to GA4 + Umami + Vercel Analytics (when available). */
 export function trackEvent(eventName, label, target) {
   if (typeof window === 'undefined' || !eventName) return;
 
@@ -119,6 +138,22 @@ export function trackEvent(eventName, label, target) {
       action: params.action,
       path: params.page_path
     });
+  }
+
+  // Vercel: keep Events readable with normalized goals + skip noisy inputs.
+  if (VERCEL_SKIP.test(eventName)) return;
+
+  const props = vercelProps(params, label);
+  try {
+    vercelTrack(eventName.slice(0, 40), props);
+    if (COPY_EVENT.test(eventName) && eventName !== 'copy_clicked') {
+      vercelTrack('copy_clicked', props);
+    }
+    if (USE_EVENT.test(eventName) && eventName !== 'tool_used') {
+      vercelTrack('tool_used', props);
+    }
+  } catch {
+    // Analytics must never break the UI.
   }
 }
 
