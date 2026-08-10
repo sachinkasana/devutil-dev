@@ -8,7 +8,7 @@ export const SITE = {
   name: "DevUtil",
   url: "https://www.devutil.dev",
   description:
-    "Free, privacy-first developer tools that run 100% in your browser. No login, no data sent to servers. Format JSON, encode Base64, generate UUIDs, and more.",
+    "Free developer tools that run in your browser — JSON/SQL formatters, Base64, UUID, regex, JWT, color picker, and more. No signup. Your data never leaves your device.",
   twitter: "@devutil_dev", // update if you have one
   locale: "en_US",
 };
@@ -353,17 +353,18 @@ export const TOOLS = {
   },
 
   "color-picker": {
-    title: "Color Picker — HEX, RGB, HSL Converter Online",
+    title: "Free Color Picker Online — HEX to RGB & HSL Converter",
     shortTitle: "Color Picker",
     description:
-      "Pick colors visually and instantly convert between HEX, RGB, and HSL formats. Copy color codes in one click. Free developer color tool.",
+      "Free online color picker and HEX to RGB / HSL converter. Pick a color, copy codes instantly, generate tints & shades. 100% client-side — no signup.",
     keywords: [
       "color picker online",
       "hex to rgb converter",
       "rgb to hex",
       "hsl color converter",
+      "free color picker",
+      "hex color picker",
       "color code converter",
-      "color picker tool",
     ],
     faq: [
       {

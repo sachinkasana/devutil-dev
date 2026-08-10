@@ -5,24 +5,26 @@ import Footer from '../../components/Footer';
 import ColorPickerTool from '../../components/ColorPickerTool';
 
 export const metadata: Metadata = {
-  title: 'Color Picker & Converter - HEX, RGB, HSL Online Tool | DevUtil',
-  description: 'Pick colors visually and convert HEX to RGB or HSL. Generate palettes, copy color codes, and explore tints and shades. Free color picker.',
+  title: 'Free Color Picker Online — HEX to RGB & HSL Converter | DevUtil',
+  description:
+    'Free online color picker and HEX to RGB / HSL converter. Pick colors, copy HEX/RGB/HSL instantly, explore tints and shades. No signup — runs in your browser.',
   keywords: [
-    'color picker',
+    'color picker online',
+    'free color picker',
     'hex to rgb',
     'rgb to hsl',
-    'color converter',
-    'color palette generator',
     'hex color picker',
-    'hsl color',
-    'rgb color'
+    'color converter',
+    'hsl color converter',
+    'rgb to hex'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/color-picker'
   },
   openGraph: {
-    title: 'Color Picker & Converter - HEX, RGB, HSL Online Tool | DevUtil',
-    description: 'Pick colors visually and convert HEX to RGB or HSL. Generate palettes, copy color codes, and explore tints and shades.',
+    title: 'Free Color Picker Online — HEX to RGB & HSL Converter | DevUtil',
+    description:
+      'Pick colors and convert HEX ↔ RGB ↔ HSL instantly. Free, private, client-side color picker for developers and designers.',
     url: 'https://www.devutil.dev/color-picker',
     siteName: 'DevUtil',
     locale: 'en_US',
@@ -32,14 +34,15 @@ export const metadata: Metadata = {
         url: 'https://www.devutil.dev/images/color-picker.png',
         width: 1200,
         height: 630,
-        alt: 'DevUtil'
+        alt: 'Free online color picker — HEX RGB HSL'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Color Picker & Converter - HEX, RGB, HSL Online Tool | DevUtil',
-    description: 'Pick colors visually and convert HEX to RGB or HSL. Generate palettes, copy color codes, and explore tints and shades.',
+    title: 'Free Color Picker Online — HEX to RGB & HSL Converter | DevUtil',
+    description:
+      'Pick colors and convert HEX ↔ RGB ↔ HSL instantly. Free client-side color picker — no signup.',
     images: [
       {
         url: 'https://www.devutil.dev/images/color-picker.png',
@@ -160,9 +163,9 @@ export default function ColorPickerPage() {
       <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-10">
         <div className="mb-6 text-center">
           <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-            Color Picker &amp; Converter
+            Free Color Picker Online — HEX to RGB &amp; HSL
             <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
-              Pick colors visually, convert HEX to RGB or HSL, and build palettes with quick copy.
+              Pick colors, convert codes instantly, and copy HEX / RGB / HSL — no signup.
             </span>
           </h1>
         </div>

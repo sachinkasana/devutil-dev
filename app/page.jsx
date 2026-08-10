@@ -24,9 +24,9 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Free Developer Tools & Utilities Online - DevUtil',
+  title: 'Free Online Developer Tools — JSON, SQL, Base64 & More | DevUtil',
   description:
-    'Free privacy-first developer tools: JSON/SQL/XML formatters, YAML↔JSON, cron generator, case converter, Base64, UUID, hashes, regex, JWT, timestamps, QR codes, and more. 100% client-side.',
+    '22 free developer tools in your browser: JSON/SQL/XML formatters, YAML↔JSON, Base64, UUID, regex, JWT, color picker. No signup — data never leaves your device.',
   keywords: [
     'developer tools',
     'free online developer tools',
@@ -39,15 +39,16 @@ export const metadata = {
     'base64 encoder',
     'uuid generator',
     'regex tester',
-    'jwt decoder'
+    'jwt decoder',
+    'color picker online'
   ],
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'Free Developer Tools & Utilities Online - DevUtil',
+    title: 'Free Online Developer Tools — Privacy-First | DevUtil',
     description:
-      'Fast, free, privacy-first developer utilities. Format JSON/SQL/XML, convert YAML↔JSON, build cron schedules, and more — all in your browser.',
+      'Format JSON/SQL, convert YAML, pick colors, generate UUIDs — 22 free tools that run in your browser. No signup.',
     url: '/',
     images: [
       {
@@ -60,9 +61,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Developer Tools & Utilities Online - DevUtil',
+    title: 'Free Online Developer Tools — Privacy-First | DevUtil',
     description:
-      'Fast, free, privacy-first developer utilities. Format, convert, encode, and generate — 100% client-side.',
+      '22 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };
