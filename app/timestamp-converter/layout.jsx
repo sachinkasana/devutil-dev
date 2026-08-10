@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil'
+    absolute: 'Unix Timestamp Converter Online — Epoch to Date Free | DevUtil'
   },
-  description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
+  description: 'Free Unix timestamp converter: epoch to date and date to epoch. Supports seconds and milliseconds. Instant, client-side — no signup.',
   keywords: [
     'timestamp converter',
     'unix timestamp',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/timestamp-converter'
   },
   openGraph: {
-    title: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil',
-    description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
+    title: 'Unix Timestamp Converter Online — Epoch to Date Free | DevUtil',
+    description: 'Convert Unix timestamps to dates (and back) instantly. Seconds or milliseconds. Free client-side converter — no signup.',
     url: 'https://www.devutil.dev/timestamp-converter',
     type: 'website',
     siteName: 'DevUtil',
@@ -32,14 +32,14 @@ export const metadata = {
         url: 'https://www.devutil.dev/images/timestamp-converter.png',
         width: 1200,
         height: 630,
-        alt: 'DevUtil'
+        alt: 'Unix timestamp converter'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Unix Timestamp Converter - Convert Timestamps to Dates | DevUtil',
-    description: 'Convert Unix timestamps to readable dates instantly. Free timestamp converter for seconds or milliseconds with client-side processing and quick copy.',
+    title: 'Unix Timestamp Converter Online — Epoch to Date Free | DevUtil',
+    description: 'Convert Unix timestamps to dates (and back) instantly. Seconds or milliseconds. Free client-side converter — no signup.',
     images: ['https://www.devutil.dev/images/timestamp-converter.png']
   }
 };

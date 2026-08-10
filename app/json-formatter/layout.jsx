@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil'
+    absolute: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON | DevUtil'
   },
-  description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
+  description: 'Free online JSON formatter and validator. Beautify, minify, and repair JSON instantly in your browser. No signup — your data never leaves your device.',
   keywords: [
     'json formatter',
     'json beautifier',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/json-formatter'
   },
   openGraph: {
-    title: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil',
-    description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
+    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON | DevUtil',
+    description: 'Beautify, minify, and validate JSON instantly. Free client-side JSON formatter — no signup, no data upload.',
     url: 'https://www.devutil.dev/json-formatter',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free JSON Formatter & Validator Online - Format, Minify, Beautify JSON | DevUtil',
-    description: 'Free online JSON formatter, validator, and beautifier. Format, minify, repair JSON instantly with 100% client-side processing. No data upload required.',
+    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON | DevUtil',
+    description: 'Beautify, minify, and validate JSON instantly. Free client-side JSON formatter — no signup, no data upload.',
     images: ['https://www.devutil.dev/images/json-formatter.png']
   }
 };

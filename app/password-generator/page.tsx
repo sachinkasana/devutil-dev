@@ -6,8 +6,8 @@ import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Free Password Generator - Create Strong Random Passwords Online | DevUtil',
-  description: 'Generate strong, secure random passwords online. Customize length, include symbols, numbers, uppercase letters. 100% client-side processing. No passwords stored. Privacy-focused password generator.',
+  title: 'Free Strong Password Generator Online — Secure & Random | DevUtil',
+  description: 'Generate strong random passwords online. Customize length, symbols, numbers, and uppercase. Created in your browser — never stored. Free, no signup.',
   keywords: [
     'password generator',
     'random password generator',
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'secure password generator',
     'generate password online',
     'password creator',
+    'free password generator',
     'random password',
     'strong password',
     'password maker'
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/password-generator',
   },
   openGraph: {
-    title: 'Free Password Generator - Create Strong Random Passwords Online | DevUtil',
-    description: 'Generate strong, secure random passwords online. Customize length and character types. 100% client-side processing with no storage.',
+    title: 'Free Strong Password Generator Online — Secure & Random | DevUtil',
+    description: 'Create strong random passwords in your browser. Customize length and character types — never stored or uploaded.',
     url: 'https://www.devutil.dev/password-generator',
     siteName: 'DevUtil',
     locale: 'en_US',
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Password Generator - Create Strong Random Passwords Online | DevUtil',
-    description: 'Generate strong, secure random passwords online. Customize length and character types. 100% client-side processing with no storage.',
+    title: 'Free Strong Password Generator Online — Secure & Random | DevUtil',
+    description: 'Create strong random passwords in your browser. Customize length and character types — never stored or uploaded.',
     images: [
       {
         url: 'https://www.devutil.dev/images/password-generator.png',
@@ -118,10 +119,9 @@ export default function PasswordGeneratorPage() {
         </nav>
 
         <h1 className="text-2xl sm:text-3xl font-bold mb-6">
-          Free Online Password Generator
+          Free Strong Password Generator Online
           <span className="ml-2 text-sm sm:text-base font-normal text-gray-700">
-            Generate strong, secure passwords instantly with customizable length and character types. All passwords are
-            created in your browser.
+            Create secure random passwords in your browser — never stored or uploaded.
           </span>
         </h1>
 

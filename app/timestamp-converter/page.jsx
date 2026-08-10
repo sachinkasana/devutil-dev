@@ -130,9 +130,9 @@ export default function TimestampConverter() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <RefreshCw className="w-6 h-6 text-teal-600" />
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Unix Timestamp Converter
+              Unix Timestamp Converter — Epoch to Date
               <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
-                Convert timestamps instantly with fast, private in-browser processing.
+                Convert epoch ↔ date instantly (seconds or ms) — free, private, in-browser.
               </span>
             </h1>
           </div>

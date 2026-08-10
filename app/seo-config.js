@@ -19,10 +19,10 @@ export const SITE = {
  */
 export const TOOLS = {
   "json-formatter": {
-    title: "JSON Formatter & Validator — Free Online Beautifier",
+    title: "Free JSON Formatter Online — Beautify, Validate & Minify",
     shortTitle: "JSON Formatter",
     description:
-      "Format, validate, minify, and beautify JSON instantly in your browser. Supports error detection and pretty-print with custom indentation. 100% client-side — your data never leaves your device.",
+      "Free online JSON formatter and validator. Beautify, minify, and fix JSON instantly in your browser. No signup — your data never leaves your device.",
     keywords: [
       "json formatter online",
       "json beautifier",
@@ -203,16 +203,17 @@ export const TOOLS = {
   },
 
   "password-generator": {
-    title: "Password Generator — Create Strong Secure Passwords",
+    title: "Free Strong Password Generator Online — Secure & Random",
     shortTitle: "Password Generator",
     description:
-      "Generate strong, random passwords instantly. Customize length, and include uppercase, numbers, and special characters. Generated entirely in your browser — never stored or transmitted.",
+      "Generate strong random passwords online. Customize length, symbols, numbers, and uppercase. Created in your browser — never stored or uploaded. Free, no signup.",
     keywords: [
       "strong password generator",
       "random password generator",
       "secure password generator",
       "password maker online",
       "generate password free",
+      "free password generator",
     ],
     faq: [
       {
@@ -304,16 +305,17 @@ export const TOOLS = {
   },
 
   "timestamp-converter": {
-    title: "Unix Timestamp Converter — Epoch to Date Online",
+    title: "Unix Timestamp Converter Online — Epoch to Date Free",
     shortTitle: "Timestamp Converter",
     description:
-      "Convert Unix timestamps to human-readable dates, or convert a date/time to a Unix epoch timestamp. Supports seconds and milliseconds. Free, instant, client-side.",
+      "Free Unix timestamp converter: epoch to date and date to epoch. Supports seconds and milliseconds. Instant, client-side — no signup.",
     keywords: [
       "unix timestamp converter",
       "epoch to date",
       "convert timestamp online",
       "unix epoch converter",
       "timestamp to date",
+      "epoch converter",
     ],
     faq: [
       {

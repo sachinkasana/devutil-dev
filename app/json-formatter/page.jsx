@@ -418,9 +418,9 @@ export default function JsonFormatterPage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <FileJson className="w-6 h-6 text-blue-600" />
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Free Online JSON Formatter &amp; Validator
+              Free JSON Formatter Online — Beautify &amp; Validate
               <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
-                Format, validate, and repair JSON instantly in your browser with fast, private processing.
+                Format, minify, and repair JSON instantly in your browser — no signup.
               </span>
             </h1>
           </div>
