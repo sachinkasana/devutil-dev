@@ -2,7 +2,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: "What's New on DevUtil — New Tools & SEO Updates",
+  title: "What's New — New Tools & SEO Updates",
   description:
     'See the latest DevUtil tools: JWT verify & sign, chmod calculator, SQL/XML formatters, YAML↔JSON, cron, Markdown, JSON↔CSV, UUID v7, and privacy-first analytics.',
   alternates: { canonical: 'https://www.devutil.dev/whats-new' }

@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import SqlFormatterTool from '../../components/SqlFormatterTool';
 
 export const metadata: Metadata = {
-  title: 'Free SQL Formatter & Beautifier Online - Format and Minify SQL | DevUtil',
+  title: 'Free SQL Formatter & Beautifier Online - Format and Minify SQL',
   description: 'Beautify, format, and minify SQL queries instantly. Improve readability with proper indentation and keyword casing. 100% client-side SQL formatter.',
   keywords: [
     'sql formatter',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/sql-formatter'
   },
   openGraph: {
-    title: 'Free SQL Formatter & Beautifier Online - Format and Minify SQL | DevUtil',
+    title: 'Free SQL Formatter & Beautifier Online - Format and Minify SQL',
     description: 'Beautify and minify SQL queries with clean indentation, clause breaks, and keyword styling.',
     url: 'https://www.devutil.dev/sql-formatter',
     siteName: 'DevUtil',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free SQL Formatter & Beautifier Online - Format and Minify SQL | DevUtil',
+    title: 'Free SQL Formatter & Beautifier Online - Format and Minify SQL',
     description: 'Beautify and minify SQL queries with clean indentation and keyword styling.',
     images: [
       {

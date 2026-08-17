@@ -22,7 +22,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/timestamp-converter'
   },
   openGraph: {
-    title: 'Unix Timestamp Converter Online — Epoch to Date Free | DevUtil',
+    title: 'Unix Timestamp Converter Online — Epoch to Date Free',
     description: 'Convert Unix timestamps to dates (and back) instantly. Seconds or milliseconds. Free client-side converter — no signup.',
     url: 'https://www.devutil.dev/timestamp-converter',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Unix Timestamp Converter Online — Epoch to Date Free | DevUtil',
+    title: 'Unix Timestamp Converter Online — Epoch to Date Free',
     description: 'Convert Unix timestamps to dates (and back) instantly. Seconds or milliseconds. Free client-side converter — no signup.',
     images: ['https://www.devutil.dev/images/timestamp-converter.png']
   }

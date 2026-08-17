@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import ColorPickerTool from '../../components/ColorPickerTool';
 
 export const metadata: Metadata = {
-  title: 'Free Color Picker Online — HEX to RGB & HSL Converter | DevUtil',
+  title: 'Free Color Picker Online — HEX to RGB & HSL Converter',
   description:
     'Free online color picker and HEX to RGB / HSL converter. Pick colors, copy HEX/RGB/HSL instantly, explore tints and shades. No signup — runs in your browser.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/color-picker'
   },
   openGraph: {
-    title: 'Free Color Picker Online — HEX to RGB & HSL Converter | DevUtil',
+    title: 'Free Color Picker Online — HEX to RGB & HSL Converter',
     description:
       'Pick colors and convert HEX ↔ RGB ↔ HSL instantly. Free, private, client-side color picker for developers and designers.',
     url: 'https://www.devutil.dev/color-picker',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Color Picker Online — HEX to RGB & HSL Converter | DevUtil',
+    title: 'Free Color Picker Online — HEX to RGB & HSL Converter',
     description:
       'Pick colors and convert HEX ↔ RGB ↔ HSL instantly. Free client-side color picker — no signup.',
     images: [

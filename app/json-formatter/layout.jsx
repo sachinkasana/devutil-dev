@@ -22,7 +22,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/json-formatter'
   },
   openGraph: {
-    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON | DevUtil',
+    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON',
     description: 'Beautify, minify, and validate JSON instantly. Free client-side JSON formatter — no signup, no data upload.',
     url: 'https://www.devutil.dev/json-formatter',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON | DevUtil',
+    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON',
     description: 'Beautify, minify, and validate JSON instantly. Free client-side JSON formatter — no signup, no data upload.',
     images: ['https://www.devutil.dev/images/json-formatter.png']
   }

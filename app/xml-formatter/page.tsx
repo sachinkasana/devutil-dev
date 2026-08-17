@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import XmlFormatterTool from '../../components/XmlFormatterTool';
 
 export const metadata: Metadata = {
-  title: 'Free XML Formatter & Beautifier Online - Format, Minify & Validate XML | DevUtil',
+  title: 'Free XML Formatter & Beautifier Online - Format, Minify & Validate XML',
   description:
     'Beautify, minify, and validate XML instantly in your browser. Choose 2 or 4 space indentation. Free, private XML formatter.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/xml-formatter'
   },
   openGraph: {
-    title: 'Free XML Formatter & Beautifier Online - Format, Minify & Validate XML | DevUtil',
+    title: 'Free XML Formatter & Beautifier Online - Format, Minify & Validate XML',
     description: 'Beautify, minify, and validate XML with clean indentation. Fully client-side.',
     url: 'https://www.devutil.dev/xml-formatter',
     siteName: 'DevUtil',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free XML Formatter & Beautifier Online - Format, Minify & Validate XML | DevUtil',
+    title: 'Free XML Formatter & Beautifier Online - Format, Minify & Validate XML',
     description: 'Beautify, minify, and validate XML instantly in your browser.',
     images: [
       {

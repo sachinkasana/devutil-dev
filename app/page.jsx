@@ -25,7 +25,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Free Online Developer Tools — JSON, JWT, chmod & More | DevUtil',
+  title: 'Free Online Developer Tools — JSON, JWT, chmod & More',
   description:
     '23 free developer tools in your browser: JSON/SQL/XML formatters, JWT verify & sign, chmod calculator, YAML↔JSON, Base64, UUID, regex, color picker. No signup — data never leaves your device.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata = {
     canonical: '/'
   },
   openGraph: {
-    title: 'Free Online Developer Tools — Privacy-First | DevUtil',
+    title: 'Free Online Developer Tools — Privacy-First',
     description:
       'Format JSON/SQL, decode JWT, calculate chmod, convert YAML — 23 free tools that run in your browser. No signup.',
     url: '/',
@@ -63,7 +63,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Online Developer Tools — Privacy-First | DevUtil',
+    title: 'Free Online Developer Tools — Privacy-First',
     description:
       '23 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
     images: ['https://www.devutil.dev/images/devutil-home.png']

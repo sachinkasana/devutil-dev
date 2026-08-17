@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import MarkdownPreviewTool from '../../components/MarkdownPreviewTool';
 
 export const metadata: Metadata = {
-  title: 'Free Markdown Preview Online - Live Markdown to HTML | DevUtil',
+  title: 'Free Markdown Preview Online - Live Markdown to HTML',
   description:
     'Preview Markdown as HTML instantly in your browser. Support for headings, lists, links, code blocks, and blockquotes with safe client-side rendering.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/markdown-preview'
   },
   openGraph: {
-    title: 'Free Markdown Preview Online - Live Markdown to HTML | DevUtil',
+    title: 'Free Markdown Preview Online - Live Markdown to HTML',
     description:
       'Preview Markdown as HTML instantly. Free, private, and fully client-side.',
     url: 'https://www.devutil.dev/markdown-preview',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Markdown Preview Online - Live Markdown to HTML | DevUtil',
+    title: 'Free Markdown Preview Online - Live Markdown to HTML',
     description: 'Preview Markdown as HTML instantly in your browser.',
     images: [
       {

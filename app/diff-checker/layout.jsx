@@ -23,7 +23,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/diff-checker'
   },
   openGraph: {
-    title: 'Free Diff Checker - Compare Text Online | DevUtil',
+    title: 'Free Diff Checker - Compare Text Online',
     description: 'Compare text differences instantly. Free online diff checker with side-by-side view. Privacy-focused, runs in your browser.',
     url: 'https://www.devutil.dev/diff-checker',
     type: 'website',

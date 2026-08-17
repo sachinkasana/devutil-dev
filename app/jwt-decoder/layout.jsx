@@ -20,7 +20,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/jwt-decoder'
   },
   openGraph: {
-    title: 'JWT Decoder & Verifier — Decode, Verify & Sign Online | DevUtil',
+    title: 'JWT Decoder & Verifier — Decode, Verify & Sign Online',
     description:
       'Decode JWTs, verify HMAC signatures, and sign tokens in your browser. Private and free.',
     url: 'https://www.devutil.dev/jwt-decoder',
@@ -37,7 +37,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JWT Decoder & Verifier Online | DevUtil',
+    title: 'JWT Decoder & Verifier Online',
     description: 'Decode, verify HS256, and sign JWTs client-side.',
     images: ['https://www.devutil.dev/images/jwt-decoder.png']
   }

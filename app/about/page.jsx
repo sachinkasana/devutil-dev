@@ -2,7 +2,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 export const metadata = {
-  title: 'About DevUtil — Privacy-First Developer Tools',
+  title: 'About — Privacy-First Developer Tools',
   description:
     'Learn about DevUtil: free, privacy-first developer utilities that run 100% in your browser. Built for speed, simplicity, and data safety.',
   alternates: { canonical: 'https://www.devutil.dev/about' },

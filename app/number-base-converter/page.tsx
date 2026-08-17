@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import NumberBaseConverterTool from '../../components/NumberBaseConverterTool';
 
 export const metadata: Metadata = {
-  title: 'Free Number Base Converter Online - Binary Octal Decimal Hex | DevUtil',
+  title: 'Free Number Base Converter Online - Binary Octal Decimal Hex',
   description:
     'Convert between binary, octal, decimal, and hexadecimal instantly in your browser. Update any field to sync the others with private client-side conversion.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/number-base-converter'
   },
   openGraph: {
-    title: 'Free Number Base Converter Online - Binary Octal Decimal Hex | DevUtil',
+    title: 'Free Number Base Converter Online - Binary Octal Decimal Hex',
     description:
       'Convert between binary, octal, decimal, and hex instantly. Free, private, and fully client-side.',
     url: 'https://www.devutil.dev/number-base-converter',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Number Base Converter Online - Binary Octal Decimal Hex | DevUtil',
+    title: 'Free Number Base Converter Online - Binary Octal Decimal Hex',
     description: 'Convert between binary, octal, decimal, and hex instantly in your browser.',
     images: [
       {

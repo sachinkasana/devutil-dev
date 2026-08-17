@@ -6,7 +6,7 @@ import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Free Strong Password Generator Online — Secure & Random | DevUtil',
+  title: 'Free Strong Password Generator Online — Secure & Random',
   description: 'Generate strong random passwords online. Customize length, symbols, numbers, and uppercase. Created in your browser — never stored. Free, no signup.',
   keywords: [
     'password generator',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/password-generator',
   },
   openGraph: {
-    title: 'Free Strong Password Generator Online — Secure & Random | DevUtil',
+    title: 'Free Strong Password Generator Online — Secure & Random',
     description: 'Create strong random passwords in your browser. Customize length and character types — never stored or uploaded.',
     url: 'https://www.devutil.dev/password-generator',
     siteName: 'DevUtil',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Strong Password Generator Online — Secure & Random | DevUtil',
+    title: 'Free Strong Password Generator Online — Secure & Random',
     description: 'Create strong random passwords in your browser. Customize length and character types — never stored or uploaded.',
     images: [
       {

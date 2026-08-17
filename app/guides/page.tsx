@@ -3,12 +3,12 @@ import Footer from '../../components/Footer';
 import { GUIDES, SITE, TOOLS } from '../seo-config';
 
 export const metadata = {
-  title: 'Developer Guides — JSON, SQL, Cron, YAML | DevUtil',
+  title: 'Developer Guides — JSON, SQL, Cron, YAML',
   description:
     'Practical guides for everyday developer tasks: format JSON and SQL, understand cron expressions, and choose between YAML and JSON — with free private tools.',
   alternates: { canonical: `${SITE.url}/guides` },
   openGraph: {
-    title: 'Developer Guides | DevUtil',
+    title: 'Developer Guides',
     description: 'Learn formatting, conversion, and scheduling workflows with free client-side tools.',
     url: `${SITE.url}/guides`,
     images: [{ url: `${SITE.url}/images/devutil-home.png`, width: 1200, height: 630, alt: 'DevUtil Guides' }]

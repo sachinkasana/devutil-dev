@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import CronGeneratorTool from '../../components/CronGeneratorTool';
 
 export const metadata: Metadata = {
-  title: 'Free Cron Expression Generator Online - Build & Explain Cron | DevUtil',
+  title: 'Free Cron Expression Generator Online - Build & Explain Cron',
   description:
     'Build standard 5-field cron expressions with a visual editor, presets, and human-readable explanations. Paste a cron string to decode it instantly.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/cron-generator'
   },
   openGraph: {
-    title: 'Free Cron Expression Generator Online - Build & Explain Cron | DevUtil',
+    title: 'Free Cron Expression Generator Online - Build & Explain Cron',
     description:
       'Create and explain standard 5-field cron expressions with presets and a visual builder.',
     url: 'https://www.devutil.dev/cron-generator',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Cron Expression Generator Online - Build & Explain Cron | DevUtil',
+    title: 'Free Cron Expression Generator Online - Build & Explain Cron',
     description: 'Build and explain standard 5-field cron expressions in your browser.',
     images: [
       {

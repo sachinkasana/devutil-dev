@@ -2,7 +2,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 export const metadata = {
-  title: 'Contact DevUtil — Support & Feedback',
+  title: 'Contact — Support & Feedback',
   description:
     'Contact DevUtil for support, feedback, or partnership inquiries. Reach us by email or social channels.',
   alternates: { canonical: 'https://www.devutil.dev/contact' }

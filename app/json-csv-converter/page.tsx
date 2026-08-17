@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import JsonCsvConverterTool from '../../components/JsonCsvConverterTool';
 
 export const metadata: Metadata = {
-  title: 'Free JSON to CSV Converter Online - Bidirectional JSON ↔ CSV | DevUtil',
+  title: 'Free JSON to CSV Converter Online - Bidirectional JSON ↔ CSV',
   description:
     'Convert JSON arrays to CSV and CSV back to JSON instantly in your browser. Handle quoted fields, copy output, and keep data private with client-side conversion.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/json-csv-converter'
   },
   openGraph: {
-    title: 'Free JSON to CSV Converter Online - Bidirectional JSON ↔ CSV | DevUtil',
+    title: 'Free JSON to CSV Converter Online - Bidirectional JSON ↔ CSV',
     description:
       'Convert JSON arrays to CSV and CSV back to JSON instantly. Free, private, and fully client-side.',
     url: 'https://www.devutil.dev/json-csv-converter',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free JSON to CSV Converter Online - Bidirectional JSON ↔ CSV | DevUtil',
+    title: 'Free JSON to CSV Converter Online - Bidirectional JSON ↔ CSV',
     description: 'Convert JSON arrays to CSV and CSV back to JSON instantly in your browser.',
     images: [
       {

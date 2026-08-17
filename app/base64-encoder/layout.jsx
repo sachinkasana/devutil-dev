@@ -22,7 +22,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/base64-encoder'
   },
   openGraph: {
-    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil',
+    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64',
     description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
     url: 'https://www.devutil.dev/base64-encoder',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil',
+    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64',
     description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
     images: ['https://www.devutil.dev/images/base64-encoder-decoder.png']
   }

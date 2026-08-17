@@ -22,7 +22,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/regex-tester'
   },
   openGraph: {
-    title: 'Regex Tester Online - Test Regular Expressions Live | DevUtil',
+    title: 'Regex Tester Online - Test Regular Expressions Live',
     description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
     url: 'https://www.devutil.dev/regex-tester',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Regex Tester Online - Test Regular Expressions Live | DevUtil',
+    title: 'Regex Tester Online - Test Regular Expressions Live',
     description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
     images: ['https://www.devutil.dev/images/regex-tester.png']
   }

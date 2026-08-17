@@ -3,7 +3,7 @@ import Footer from '../../../components/Footer';
 import RelatedTools from '../../../components/RelatedTools';
 
 export const metadata = {
-  title: 'How to Format SQL Queries Online — DevUtil Guide',
+  title: 'How to Format SQL Queries Online',
   description:
     'Beautify messy SQL for code review and debugging. Learn when to minify SQL and format queries privately in your browser.',
   alternates: { canonical: 'https://www.devutil.dev/guides/format-sql-online' }

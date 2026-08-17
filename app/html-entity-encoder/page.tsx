@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import HtmlEntityEncoderTool from '../../components/HtmlEntityEncoderTool';
 
 export const metadata: Metadata = {
-  title: 'Free HTML Entity Encoder & Decoder Online - Encode & Decode Entities | DevUtil',
+  title: 'Free HTML Entity Encoder & Decoder Online - Encode & Decode Entities',
   description:
     'Encode special characters to HTML entities (&lt;, &gt;, &amp;, &quot;) and decode them back instantly. Free, private, client-side HTML entity tool.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/html-entity-encoder'
   },
   openGraph: {
-    title: 'Free HTML Entity Encoder & Decoder Online - Encode & Decode Entities | DevUtil',
+    title: 'Free HTML Entity Encoder & Decoder Online - Encode & Decode Entities',
     description:
       'Encode and decode HTML entities instantly in your browser. Free and private.',
     url: 'https://www.devutil.dev/html-entity-encoder',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free HTML Entity Encoder & Decoder Online - Encode & Decode Entities | DevUtil',
+    title: 'Free HTML Entity Encoder & Decoder Online - Encode & Decode Entities',
     description: 'Encode and decode HTML entities instantly in your browser.',
     images: [
       {

@@ -2,7 +2,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 export const metadata = {
-  title: 'Privacy Policy — DevUtil',
+  title: 'Privacy Policy',
   description:
     'DevUtil privacy policy: all tools run in your browser. We do not collect, store, or transmit your tool inputs.',
   alternates: { canonical: 'https://www.devutil.dev/privacy' }

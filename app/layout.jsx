@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Free Online Developer Tools — JSON, SQL, Base64 & More | DevUtil",
+    default: "Free Online Developer Tools — JSON, JWT, chmod & More | DevUtil",
     template: "%s | DevUtil",
   },
   description: SITE.description,
@@ -20,6 +20,8 @@ export const metadata = {
     "uuid generator",
     "xml formatter",
     "case converter",
+    "jwt decoder",
+    "chmod calculator",
     "developer utilities",
     "privacy first tools",
     "client side tools",
@@ -46,7 +48,7 @@ export const metadata = {
     locale: SITE.locale,
     url: SITE.url,
     siteName: SITE.name,
-    title: "Free Online Developer Tools — JSON, SQL, Base64 & More | DevUtil",
+    title: "Free Online Developer Tools — JSON, JWT, chmod & More | DevUtil",
     description: SITE.description,
     images: [
       {
@@ -59,7 +61,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Online Developer Tools — JSON, SQL, Base64 & More | DevUtil",
+    title: "Free Online Developer Tools — JSON, JWT, chmod & More | DevUtil",
     description: SITE.description,
     images: ["/og-image.png"],
   },

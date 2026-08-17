@@ -3,7 +3,7 @@ import Footer from '../../../components/Footer';
 import RelatedTools from '../../../components/RelatedTools';
 
 export const metadata = {
-  title: 'How to Format JSON Online (Safely) — DevUtil Guide',
+  title: 'How to Format JSON Online (Safely)',
   description:
     'Learn how to format, validate, and minify JSON in your browser without uploading data. Fix common JSON errors with a free private formatter.',
   alternates: { canonical: 'https://www.devutil.dev/guides/format-json-online' }

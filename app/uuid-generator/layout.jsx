@@ -25,7 +25,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/uuid-generator'
   },
   openGraph: {
-    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free | DevUtil',
+    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free',
     description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
     url: 'https://www.devutil.dev/uuid-generator',
     type: 'website',
@@ -41,7 +41,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free | DevUtil',
+    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free',
     description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
     images: ['https://www.devutil.dev/images/uuid-generator.png']
   }

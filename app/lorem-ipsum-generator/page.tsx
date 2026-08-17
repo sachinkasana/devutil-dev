@@ -5,7 +5,7 @@ import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online | DevUtil',
+  title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online',
   description: 'Generate Lorem Ipsum placeholder text for your designs and mockups. Create paragraphs, words, or sentences instantly. Free online Lorem Ipsum generator for designers and developers.',
   keywords: [
     'lorem ipsum generator',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/lorem-ipsum-generator',
   },
   openGraph: {
-    title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online | DevUtil',
+    title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online',
     description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
     url: 'https://www.devutil.dev/lorem-ipsum-generator',
     siteName: 'DevUtil',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online | DevUtil',
+    title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online',
     description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
     images: [
       {

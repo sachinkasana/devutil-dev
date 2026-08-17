@@ -22,7 +22,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/hash-generator'
   },
   openGraph: {
-    title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool | DevUtil',
+    title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool',
     description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing.',
     url: 'https://www.devutil.dev/hash-generator',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool | DevUtil',
+    title: 'Free Hash Generator - MD5, SHA-1, SHA-256 Online Tool',
     description: 'Free hash generator for MD5, SHA-1, SHA-256, and SHA-512. Hash text instantly in your browser with no uploads, no signup, and fast client-side processing.',
     images: ['https://www.devutil.dev/images/hash-generator.png']
   }

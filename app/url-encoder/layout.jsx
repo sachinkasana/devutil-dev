@@ -22,7 +22,7 @@ export const metadata = {
     canonical: 'https://www.devutil.dev/url-encoder'
   },
   openGraph: {
-    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil',
+    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free',
     description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
     url: 'https://www.devutil.dev/url-encoder',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil',
+    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free',
     description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
     images: ['https://www.devutil.dev/images/url-encoder.png']
   }

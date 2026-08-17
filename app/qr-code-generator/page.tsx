@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import QrCodeGeneratorTool from '../../components/QrCodeGeneratorTool';
 
 export const metadata: Metadata = {
-  title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi | DevUtil',
+  title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi',
   description: 'Create QR codes for URLs, WiFi, vCards, and text. Customize size, colors, and error correction. 100% client-side QR code generator.',
   keywords: [
     'qr code generator',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/qr-code-generator'
   },
   openGraph: {
-    title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi | DevUtil',
+    title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi',
     description: 'Create QR codes for URLs, WiFi, vCards, and text. Customize size, colors, and error correction. 100% client-side.',
     url: 'https://www.devutil.dev/qr-code-generator',
     siteName: 'DevUtil',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi | DevUtil',
+    title: 'Free QR Code Generator Online - Create QR Codes for URLs & WiFi',
     description: 'Create QR codes for URLs, WiFi, vCards, and text. Customize size, colors, and error correction. 100% client-side.',
     images: [
       {

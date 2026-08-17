@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Page Not Found | DevUtil',
+  title: 'Page Not Found',
   description: 'The page you are looking for could not be found. Explore DevUtil tools instead.'
 };
 
