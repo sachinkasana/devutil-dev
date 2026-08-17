@@ -2,28 +2,27 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil'
+    absolute: 'JWT Decoder & Verifier — Decode, Verify HS256 & Sign Online | DevUtil'
   },
-  description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
+  description:
+    'Decode JWTs, verify HS256/384/512 signatures with a secret, and generate signed tokens. Free, client-side JWT tool — tokens never leave your browser.',
   keywords: [
     'jwt decoder',
+    'jwt verifier',
     'decode jwt',
-    'jwt parser',
+    'verify jwt hs256',
+    'jwt generator',
     'json web token decoder',
     'jwt claims',
-    'jwt payload',
-    'jwt header',
-    'token decoder',
-    'base64url jwt',
-    'jwt tool',
-    'inspect jwt'
+    'jwt payload'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/jwt-decoder'
   },
   openGraph: {
-    title: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil',
-    description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
+    title: 'JWT Decoder & Verifier — Decode, Verify & Sign Online | DevUtil',
+    description:
+      'Decode JWTs, verify HMAC signatures, and sign tokens in your browser. Private and free.',
     url: 'https://www.devutil.dev/jwt-decoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -32,14 +31,14 @@ export const metadata = {
         url: 'https://www.devutil.dev/images/jwt-decoder.png',
         width: 1200,
         height: 630,
-        alt: 'DevUtil'
+        alt: 'JWT Decoder'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JWT Decoder Online - Decode & Verify JSON Web Tokens | DevUtil',
-    description: 'Decode and verify JSON Web Tokens online. Inspect header and payload instantly with a free JWT decoder. Client-side, private, no uploads.',
+    title: 'JWT Decoder & Verifier Online | DevUtil',
+    description: 'Decode, verify HS256, and sign JWTs client-side.',
     images: ['https://www.devutil.dev/images/jwt-decoder.png']
   }
 };
@@ -47,11 +46,11 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'JWT Decoder',
+  name: 'JWT Decoder & Verifier',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web Browser',
   url: 'https://www.devutil.dev/jwt-decoder',
-  description: 'Free JWT decoder with fast client-side processing.',
+  description: 'Free JWT decoder, HMAC verifier, and signer with client-side processing.',
   offers: {
     '@type': 'Offer',
     price: '0',

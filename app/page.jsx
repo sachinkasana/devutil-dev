@@ -18,20 +18,23 @@ import {
   Clock,
   CaseSensitive,
   FileType,
-  Binary
+  Binary,
+  FolderCog
 } from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Free Online Developer Tools — JSON, SQL, Base64 & More | DevUtil',
+  title: 'Free Online Developer Tools — JSON, JWT, chmod & More | DevUtil',
   description:
-    '22 free developer tools in your browser: JSON/SQL/XML formatters, YAML↔JSON, Base64, UUID, regex, JWT, color picker. No signup — data never leaves your device.',
+    '23 free developer tools in your browser: JSON/SQL/XML formatters, JWT verify & sign, chmod calculator, YAML↔JSON, Base64, UUID, regex, color picker. No signup — data never leaves your device.',
   keywords: [
     'developer tools',
     'free online developer tools',
     'json formatter',
     'sql formatter',
+    'jwt decoder',
+    'chmod calculator',
     'yaml to json',
     'cron generator',
     'xml formatter',
@@ -39,7 +42,6 @@ export const metadata = {
     'base64 encoder',
     'uuid generator',
     'regex tester',
-    'jwt decoder',
     'color picker online'
   ],
   alternates: {
@@ -48,7 +50,7 @@ export const metadata = {
   openGraph: {
     title: 'Free Online Developer Tools — Privacy-First | DevUtil',
     description:
-      'Format JSON/SQL, convert YAML, pick colors, generate UUIDs — 22 free tools that run in your browser. No signup.',
+      'Format JSON/SQL, decode JWT, calculate chmod, convert YAML — 23 free tools that run in your browser. No signup.',
     url: '/',
     images: [
       {
@@ -63,7 +65,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Online Developer Tools — Privacy-First | DevUtil',
     description:
-      '22 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
+      '23 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };
@@ -217,10 +219,20 @@ const tools = [
   },
   {
     name: 'JWT Decoder',
-    description: 'Decode and inspect JSON Web Tokens',
+    description: 'Decode, verify HS256, and sign JWTs',
     icon: Braces,
     href: '/jwt-decoder',
     color: 'bg-pink-500',
+    popular: true,
+    category: 'Converters'
+  },
+  {
+    name: 'chmod Calculator',
+    description: 'Unix permissions — 755, 644, and more',
+    icon: FolderCog,
+    href: '/chmod-calculator',
+    color: 'bg-zinc-700',
+    popular: true,
     category: 'Converters'
   },
   {
@@ -276,6 +288,7 @@ const hubLinks = [
   { href: '/regex-tester', label: 'Regex Tester' },
   { href: '/url-encoder', label: 'URL Encoder' },
   { href: '/jwt-decoder', label: 'JWT Decoder' },
+  { href: '/chmod-calculator', label: 'chmod Calculator' },
   { href: '/timestamp-converter', label: 'Timestamp Converter' },
   { href: '/password-generator', label: 'Password Generator' },
   { href: '/lorem-ipsum-generator', label: 'Lorem Ipsum Generator' },

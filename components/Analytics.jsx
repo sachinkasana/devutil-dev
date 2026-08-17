@@ -12,7 +12,7 @@ const VERCEL_SKIP = /_input$|_option|_indent$|_dialect$|_size$|_margin$|_error_c
 
 const COPY_EVENT = /copy/i;
 const USE_EVENT =
-  /^(tool_used|tool_open)$|_(generate|beautify|minify|validate|process|compare|encode|decode|format|convert|pick|preview|download|sample|clear|swap)/i;
+  /^(tool_used|tool_open)$|_(generate|beautify|minify|validate|process|compare|encode|decode|format|convert|pick|preview|download|sample|clear|swap|verify|sign|preset)/i;
 
 const TOOL_NAME_MAP = {
   json: 'JSON Formatter',
@@ -27,6 +27,7 @@ const TOOL_NAME_MAP = {
   uuid: 'UUID Generator',
   regex: 'Regex Tester',
   jwt: 'JWT Decoder',
+  chmod: 'chmod Calculator',
   timestamp: 'Timestamp Converter',
   password: 'Password Generator',
   lorem: 'Lorem Ipsum Generator',
@@ -55,6 +56,7 @@ const SLUG_TO_TOOL = {
   'regex-tester': 'Regex Tester',
   'url-encoder': 'URL Encoder',
   'jwt-decoder': 'JWT Decoder',
+  'chmod-calculator': 'chmod Calculator',
   'timestamp-converter': 'Timestamp Converter',
   'qr-code-generator': 'QR Code Generator',
   'color-picker': 'Color Picker',

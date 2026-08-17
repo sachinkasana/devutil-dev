@@ -5,9 +5,9 @@ import Footer from '../../components/Footer';
 import CaseConverterTool from '../../components/CaseConverterTool';
 
 export const metadata: Metadata = {
-  title: 'Free Case Converter Online - camelCase, snake_case, kebab-case & More | DevUtil',
+  title: 'Free Case Converter Online — camelCase, snake_case, kebab-case',
   description:
-    'Convert text to camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, and more instantly. Free client-side case converter.',
+    'Convert text to camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and more. Free client-side case converter — no signup.',
   keywords: [
     'case converter',
     'camelCase converter',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/case-converter'
   },
   openGraph: {
-    title: 'Free Case Converter Online - camelCase, snake_case, kebab-case & More | DevUtil',
+    title: 'Free Case Converter Online — camelCase, snake_case, kebab-case',
     description:
       'Instantly convert text between camelCase, PascalCase, snake_case, kebab-case, and more.',
     url: 'https://www.devutil.dev/case-converter',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Case Converter Online - camelCase, snake_case, kebab-case & More | DevUtil',
+    title: 'Free Case Converter Online — camelCase, snake_case, kebab-case',
     description: 'Convert text between popular programming and writing case formats instantly.',
     images: [
       {

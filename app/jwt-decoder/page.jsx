@@ -1,426 +1,53 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Code, Copy, Check, Braces, AlertCircle, Shield } from 'lucide-react';
+import { Braces } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RelatedTools from '../../components/RelatedTools';
+import JwtDecoderTool from '../../components/JwtDecoderTool';
 
-export default function JWTDecoder() {
-  const [token, setToken] = useState('');
-  const [header, setHeader] = useState(null);
-  const [payload, setPayload] = useState(null);
-  const [signature, setSignature] = useState('');
-  const [error, setError] = useState('');
-  const [copied, setCopied] = useState('');
-
-  useEffect(() => {
-    decodeToken();
-  }, [token]);
-
-  const decodeToken = () => {
-    setError('');
-    setHeader(null);
-    setPayload(null);
-    setSignature('');
-
-    if (!token.trim()) return;
-
-    try {
-      const parts = token.split('.');
-
-      if (parts.length !== 3) {
-        setError('Invalid JWT format. JWT should have 3 parts separated by dots.');
-        return;
-      }
-
-      // Decode header
-      const decodedHeader = JSON.parse(atob(parts[0].replace(/-/g, '+').replace(/_/g, '/')));
-      setHeader(decodedHeader);
-
-      // Decode payload
-      const decodedPayload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
-      setPayload(decodedPayload);
-
-      // Set signature
-      setSignature(parts[2]);
-
-    } catch (e) {
-      setError(`Decoding error: ${e.message}`);
-    }
-  };
-
-  const copyToClipboard = async (text, type) => {
-    await navigator.clipboard.writeText(text);
-    setCopied(type);
-    setTimeout(() => setCopied(''), 2000);
-  };
-
-  const loadSample = () => {
-    // Sample JWT token (not a real token, just for demo)
-    const sampleToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE3Mzc2NjU2MDAsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
-    setToken(sampleToken);
-  };
-
-  const clearAll = () => {
-    setToken('');
-    setError('');
-  };
-
-  const formatTimestamp = (timestamp) => {
-    if (!timestamp) return null;
-    try {
-      const date = new Date(timestamp * 1000);
-      return date.toLocaleString();
-    } catch {
-      return null;
-    }
-  };
-
-  const isExpired = (exp) => {
-    if (!exp) return null;
-    return Date.now() / 1000 > exp;
-  };
-
-  const renderJSON = (obj) => {
-    return JSON.stringify(obj, null, 2);
-  };
-
+export default function JWTDecoderPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <Header subtitle="JWT Decoder" />
-
-      {/* Main Content */}
       <main id="main-content" className="w-full px-3 sm:px-4 lg:px-6 py-8">
-        {/* Title & Description */}
         <div className="mb-4 text-center">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Braces className="w-6 h-6 text-pink-600" />
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              JWT Decoder Online
-              <span className="ml-2 text-sm sm:text-base font-normal text-slate-600">
-                Decode JWTs instantly in your browser with private, client-side processing.
-              </span>
+              JWT Decoder, Verifier &amp; Generator
             </h1>
           </div>
-          <div className="mt-3 inline-flex items-center space-x-2 bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-2 text-sm text-yellow-800">
-            <Shield className="w-4 h-4" />
-            <span>This tool only decodes tokens. It does not verify signatures.</span>
-          </div>
+          <p className="mt-2 text-slate-600 max-w-3xl mx-auto">
+            Decode header and payload, verify HS256/384/512 signatures with a secret, or sign new
+            tokens — all in your browser. Tokens never leave your device.
+          </p>
         </div>
 
-        {/* Controls */}
-        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
-          <div className="flex flex-wrap items-center gap-4">
-            <button
-              onClick={loadSample}
-              data-analytics-event="jwt_sample"
-              className="flex items-center space-x-2 bg-pink-600 text-white px-6 py-2.5 rounded-lg hover:bg-pink-700 transition-colors font-medium"
-            >
-              <Code className="w-4 h-4" />
-              <span>Load Sample JWT</span>
-            </button>
-            <button
-              onClick={clearAll}
-              data-analytics-event="jwt_clear"
-              className="flex items-center space-x-2 border-2 border-slate-300 text-slate-700 px-6 py-2.5 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
-            >
-              <span>Clear All</span>
-            </button>
-          </div>
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <JwtDecoderTool />
         </div>
 
-        {/* Token Input */}
-        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-lg font-semibold text-slate-900">JWT Token</h3>
-            <span className="text-sm text-slate-500">{token.length} characters</span>
-          </div>
-          <textarea
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="Paste your JWT token here..."
-            className="w-full h-32 sm:h-40 p-4 border border-slate-300 rounded-xl font-mono text-sm focus:ring-2 focus:ring-pink-500 focus:border-pink-500 resize-none"
-          />
-        </div>
-
-        {/* Error Display */}
-        {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 flex items-start space-x-3" role="alert" aria-live="polite">
-            <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-            <div>
-              <h4 className="font-semibold text-red-900">Error</h4>
-              <p className="text-red-700 text-sm">{error}</p>
-            </div>
-          </div>
-        )}
-
-        {/* Decoded Sections */}
-        {(header || payload) && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            {/* Header */}
-            {header && (
-              <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <h3 className="text-lg font-semibold text-slate-900">Header</h3>
-                  </div>
-                  <button
-                    onClick={() => copyToClipboard(renderJSON(header), 'header')}
-                    data-analytics-event="jwt_copy"
-                    data-analytics-label="header"
-                    className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
-                  >
-                    {copied === 'header' ? (
-                      <>
-                        <Check className="w-4 h-4" />
-                        <span>Copied!</span>
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-4 h-4" />
-                        <span>Copy</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-                <pre className="bg-slate-50 rounded-lg p-4 overflow-x-auto">
-                  <code className="text-sm text-slate-900">{renderJSON(header)}</code>
-                </pre>
-                <div className="mt-4 space-y-2">
-                  {header.alg && (
-                    <div className="flex items-center space-x-2 text-sm">
-                      <span className="text-slate-600">Algorithm:</span>
-                      <code className="bg-blue-100 px-2 py-1 rounded text-blue-900 font-medium">
-                        {header.alg}
-                      </code>
-                    </div>
-                  )}
-                  {header.typ && (
-                    <div className="flex items-center space-x-2 text-sm">
-                      <span className="text-slate-600">Type:</span>
-                      <code className="bg-purple-100 px-2 py-1 rounded text-purple-900 font-medium">
-                        {header.typ}
-                      </code>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Payload */}
-            {payload && (
-              <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <h3 className="text-lg font-semibold text-slate-900">Payload</h3>
-                  </div>
-                  <button
-                    onClick={() => copyToClipboard(renderJSON(payload), 'payload')}
-                    data-analytics-event="jwt_copy"
-                    data-analytics-label="payload"
-                    className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
-                  >
-                    {copied === 'payload' ? (
-                      <>
-                        <Check className="w-4 h-4" />
-                        <span>Copied!</span>
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-4 h-4" />
-                        <span>Copy</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-                <pre className="bg-slate-50 rounded-lg p-4 overflow-x-auto">
-                  <code className="text-sm text-slate-900">{renderJSON(payload)}</code>
-                </pre>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Claims Information */}
-        {payload && (
-          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
-            <h3 className="text-lg font-semibold text-slate-900 mb-4">Standard Claims</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {payload.iat && (
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-sm text-slate-600 mb-1">Issued At (iat)</div>
-                  <div className="font-mono text-sm text-slate-900">{formatTimestamp(payload.iat) || payload.iat}</div>
-                </div>
-              )}
-              {payload.exp && (
-                <div className={`rounded-lg p-4 ${isExpired(payload.exp) ? 'bg-red-50 border border-red-200' : 'bg-green-50 border border-green-200'}`}>
-                  <div className="text-sm text-slate-600 mb-1">Expires (exp)</div>
-                  <div className="font-mono text-sm text-slate-900">{formatTimestamp(payload.exp) || payload.exp}</div>
-                  {isExpired(payload.exp) !== null && (
-                    <div className={`text-xs mt-2 font-medium ${isExpired(payload.exp) ? 'text-red-700' : 'text-green-700'}`}>
-                      {isExpired(payload.exp) ? '⚠️ Token Expired' : '✓ Token Valid'}
-                    </div>
-                  )}
-                </div>
-              )}
-              {payload.nbf && (
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-sm text-slate-600 mb-1">Not Before (nbf)</div>
-                  <div className="font-mono text-sm text-slate-900">{formatTimestamp(payload.nbf) || payload.nbf}</div>
-                </div>
-              )}
-              {payload.sub && (
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-sm text-slate-600 mb-1">Subject (sub)</div>
-                  <div className="font-mono text-sm text-slate-900 break-all">{payload.sub}</div>
-                </div>
-              )}
-              {payload.iss && (
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-sm text-slate-600 mb-1">Issuer (iss)</div>
-                  <div className="font-mono text-sm text-slate-900 break-all">{payload.iss}</div>
-                </div>
-              )}
-              {payload.aud && (
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-sm text-slate-600 mb-1">Audience (aud)</div>
-                  <div className="font-mono text-sm text-slate-900 break-all">
-                    {Array.isArray(payload.aud) ? payload.aud.join(', ') : payload.aud}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Signature */}
-        {signature && (
-          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <h3 className="text-lg font-semibold text-slate-900">Signature</h3>
-              </div>
-              <button
-                onClick={() => copyToClipboard(signature, 'signature')}
-                data-analytics-event="jwt_copy"
-                data-analytics-label="signature"
-                className="flex items-center space-x-1 text-sm text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                {copied === 'signature' ? (
-                  <>
-                    <Check className="w-4 h-4" />
-                    <span>Copied!</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4" />
-                    <span>Copy</span>
-                  </>
-                )}
-              </button>
-            </div>
-            <div className="bg-slate-50 rounded-lg p-4">
-              <code className="text-sm text-slate-900 break-all font-mono">{signature}</code>
-            </div>
-          </div>
-        )}
-
-        {/* Supporting Content */}
-        <section className="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8 space-y-8">
+        <section className="mt-12 bg-white border border-slate-200 rounded-2xl p-8 space-y-6 text-slate-600">
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">Overview</h3>
-            <div className="text-slate-600 space-y-4">
-              <p>
-                Decode JSON Web Tokens instantly with a free, online JWT decoder that runs entirely in your browser.
-                Inspect the header and payload, read claims, and understand token structure without sending data to a
-                server.
-              </p>
-              <p>
-                Developers use JWTs for authentication and authorization, and decoding them quickly is essential when
-                debugging login flows or API access. This tool keeps everything client-side for privacy, so sensitive
-                tokens never leave your device and results appear instantly with no registration.
-              </p>
-              <p>
-                Use it to sanity-check claims, compare token contents across environments, or understand which
-                algorithm and key ID a service is using. It is a fast way to validate token shape before you move on to
-                server-side signature verification.
-              </p>
-            </div>
-            <ul className="mt-4 space-y-2 text-slate-600">
-              <li>Decode header and payload with readable JSON output.</li>
-              <li>View base64url segments and signature structure.</li>
-              <li>Copy decoded JSON or raw segments instantly.</li>
-              <li>Runs fully in-browser for private inspection.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">How to Use</h3>
-            <p className="text-slate-600 mb-3">
-              Decoding lets you quickly understand token contents before verifying signatures in your backend.
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Decode vs verify</h2>
+            <p>
+              Decoding only Base64URL-decodes the JWT parts so you can read claims. Verification checks
+              the HMAC signature with your shared secret using the Web Crypto API. Asymmetric algorithms
+              (RS256, ES256) are not supported in this version.
             </p>
-            <ol className="list-decimal list-inside text-slate-600 space-y-2">
-              <li>Paste a JWT into the input field.</li>
-              <li>Review the decoded header and payload sections.</li>
-              <li>Copy JSON or individual segments as needed.</li>
-              <li>Verify signatures separately in your backend.</li>
-            </ol>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">Common Use Cases</h3>
-            <p className="text-slate-600 mb-3">
-              JWT inspection helps validate claims and troubleshoot auth issues without extra tooling.
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Is it safe?</h2>
+            <p>
+              Processing stays client-side. Still avoid pasting production secrets or long-lived tokens on
+              shared machines. Prefer short-lived test tokens when debugging.
             </p>
-            <ul className="list-disc list-inside text-slate-600 space-y-2">
-              <li>Debugging authentication and authorization flows.</li>
-              <li>Inspecting claims like exp, iat, and aud.</li>
-              <li>Validating token structure during API testing.</li>
-              <li>Reviewing issued tokens in staging environments.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">FAQ</h3>
-            <div className="space-y-4 text-slate-600">
-              <div>
-                <h4 className="font-semibold text-slate-900">Does this verify JWT signatures?</h4>
-                <p>No. It only decodes tokens. Always verify signatures on the server to ensure authenticity.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-slate-900">Is my token sent anywhere?</h4>
-                <p>No. Decoding happens locally in your browser. The token never leaves your device.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-slate-900">Why do I see base64url?</h4>
-                <p>JWT segments are base64url-encoded for safe transport in headers. That makes them URL-safe.</p>
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* Related Tools */}
-        <section className="mt-12">
-          <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">Related Tools</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <a href="/json-formatter" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h4 className="font-semibold text-slate-900 mb-2">JSON Formatter</h4>
-              <p className="text-slate-600 text-sm">Beautify decoded JWT payloads for readability.</p>
-            </a>
-            <a href="/base64-encoder" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h4 className="font-semibold text-slate-900 mb-2">Base64 Encoder</h4>
-              <p className="text-slate-600 text-sm">Encode or decode JWT segments manually.</p>
-            </a>
-            <a href="/hash-generator" className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-sm">
-              <h4 className="font-semibold text-slate-900 mb-2">Hash Generator</h4>
-              <p className="text-slate-600 text-sm">Generate digests when verifying token inputs.</p>
-            </a>
-          </div>
-        </section>
+        <RelatedTools current="jwt-decoder" />
       </main>
-      <RelatedTools current="jwt-decoder" />
-
       <Footer />
     </div>
   );

@@ -5,9 +5,9 @@ import Footer from '../../components/Footer';
 import YamlJsonConverterTool from '../../components/YamlJsonConverterTool';
 
 export const metadata: Metadata = {
-  title: 'Free YAML to JSON Converter Online - Bidirectional YAML ↔ JSON | DevUtil',
+  title: 'Free YAML to JSON Converter Online — Bidirectional & Private',
   description:
-    'Convert YAML to JSON and JSON to YAML instantly in your browser. Choose indent size, copy output, and keep data private with client-side conversion.',
+    'Convert YAML to JSON and JSON to YAML instantly in your browser. Free YAML↔JSON converter — no signup, data never leaves your device.',
   keywords: [
     'yaml to json',
     'json to yaml',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.devutil.dev/yaml-json-converter'
   },
   openGraph: {
-    title: 'Free YAML to JSON Converter Online - Bidirectional YAML ↔ JSON | DevUtil',
+    title: 'Free YAML to JSON Converter Online — Bidirectional & Private',
     description:
       'Convert YAML to JSON and JSON to YAML instantly. Free, private, and fully client-side.',
     url: 'https://www.devutil.dev/yaml-json-converter',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free YAML to JSON Converter Online - Bidirectional YAML ↔ JSON | DevUtil',
+    title: 'Free YAML to JSON Converter Online — Bidirectional & Private',
     description: 'Convert YAML to JSON and JSON to YAML instantly in your browser.',
     images: [
       {

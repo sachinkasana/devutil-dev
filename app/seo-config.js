@@ -8,7 +8,7 @@ export const SITE = {
   name: "DevUtil",
   url: "https://www.devutil.dev",
   description:
-    "Free developer tools that run in your browser — JSON/SQL formatters, Base64, UUID, regex, JWT, color picker, and more. No signup. Your data never leaves your device.",
+    "Free developer tools that run in your browser — JSON/SQL formatters, JWT verify & sign, chmod calculator, Base64, UUID, regex, color picker, and more. No signup. Your data never leaves your device.",
   twitter: "@devutil_dev", // update if you have one
   locale: "en_US",
 };
@@ -277,29 +277,59 @@ export const TOOLS = {
   },
 
   "jwt-decoder": {
-    title: "JWT Decoder — Decode & Inspect JSON Web Tokens Online",
+    title: "JWT Decoder & Verifier — Decode, Verify HS256 & Sign Online",
     shortTitle: "JWT Decoder",
     description:
-      "Paste any JWT and instantly decode its header, payload, and signature. Inspect claims, expiry, and issuer without verification. 100% client-side — tokens never leave your browser.",
+      "Free JWT decoder, HMAC verifier, and token generator. Inspect claims, verify HS256/384/512 signatures, and sign JWTs in your browser — tokens never leave your device.",
     keywords: [
       "jwt decoder online",
+      "jwt verifier",
       "decode jwt token",
-      "jwt parser",
-      "inspect jwt",
+      "verify jwt hs256",
+      "jwt generator",
       "json web token decoder",
     ],
     faq: [
       {
         q: "Is it safe to decode a JWT in an online tool?",
-        a: "With DevUtil, yes — decoding happens entirely in your browser. Your token is never sent to any server. That said, avoid decoding JWTs containing sensitive production data on any shared or public device.",
+        a: "With DevUtil, yes — decoding and HMAC verification happen entirely in your browser. Your token and secret are never sent to any server. Still avoid production secrets on shared devices.",
       },
       {
         q: "Can DevUtil verify a JWT signature?",
-        a: "DevUtil decodes and displays the JWT contents but does not verify the signature cryptographically (that requires your secret key or public key, which you should never share). Use your backend or a trusted library for signature verification.",
+        a: "Yes for HMAC algorithms (HS256, HS384, HS512) when you provide the shared secret. Asymmetric algorithms like RS256/ES256 are not supported in this version.",
       },
       {
         q: "What are the three parts of a JWT?",
         a: "A JWT consists of three Base64URL-encoded parts separated by dots: the Header (algorithm and token type), the Payload (claims/data), and the Signature (used to verify authenticity).",
+      },
+    ],
+  },
+
+  "chmod-calculator": {
+    title: "Free chmod Calculator Online — Unix File Permissions (755, 644)",
+    shortTitle: "chmod Calculator",
+    description:
+      "Free chmod calculator for Unix/Linux permissions. Toggle read/write/execute, get octal modes like 755 or 644, symbolic notation, and a ready chmod command. 100% client-side.",
+    keywords: [
+      "chmod calculator",
+      "unix permissions calculator",
+      "chmod 755",
+      "chmod 644",
+      "file permissions calculator",
+      "linux chmod",
+    ],
+    faq: [
+      {
+        q: "What does chmod 755 mean?",
+        a: "Owner gets read/write/execute; group and others get read/execute. Common for directories and executable scripts.",
+      },
+      {
+        q: "What does chmod 644 mean?",
+        a: "Owner can read and write; group and others can only read. Typical for regular files.",
+      },
+      {
+        q: "Does this tool upload anything?",
+        a: "No. Permission math runs entirely in your browser.",
       },
     ],
   },
@@ -396,10 +426,10 @@ export const TOOLS = {
   },
 
   "yaml-json-converter": {
-    title: "YAML to JSON Converter — Bidirectional YAML ↔ JSON Online",
+    title: "Free YAML to JSON Converter Online — Bidirectional & Private",
     shortTitle: "YAML ↔ JSON Converter",
     description:
-      "Convert YAML to JSON and JSON to YAML instantly in your browser. Free, private, client-side converter with indent options and clear error messages.",
+      "Convert YAML to JSON and JSON to YAML instantly in your browser. Free YAML↔JSON converter — no signup, data never leaves your device.",
     keywords: [
       "yaml to json",
       "json to yaml",
@@ -454,10 +484,10 @@ export const TOOLS = {
   },
 
   "case-converter": {
-    title: "Case Converter — camelCase, snake_case, kebab-case Online",
+    title: "Free Case Converter Online — camelCase, snake_case, kebab-case",
     shortTitle: "Case Converter",
     description:
-      "Convert text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, and more instantly. Free developer case converter.",
+      "Convert text to camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and more. Free client-side case converter — no signup.",
     keywords: [
       "case converter",
       "camelcase converter",

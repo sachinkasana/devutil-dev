@@ -74,9 +74,13 @@ Test and debug JavaScript regular expressions in real time with match highlighti
 URL: https://www.devutil.dev/url-encoder
 Encode special characters in URLs using percent-encoding, or decode encoded URL components.
 
-### JWT Decoder
+### JWT Decoder & Verifier
 URL: https://www.devutil.dev/jwt-decoder
-Decode and inspect JSON Web Tokens — header, payload, and claims. Client-side only; no signature verification.
+Decode JWT header/payload, verify HS256/384/512 signatures with a secret, and sign new tokens — all client-side.
+
+### chmod Calculator
+URL: https://www.devutil.dev/chmod-calculator
+Convert Unix file permissions between checkboxes, octal modes (755, 644), symbolic notation, and chmod commands.
 
 ### Unix Timestamp Converter
 URL: https://www.devutil.dev/timestamp-converter
@@ -124,7 +128,8 @@ Launch notes and latest tools for sharing.
 - Build job schedules → Cron Generator
 - Rename identifiers across styles → Case Converter
 - Escape text for HTML → HTML Entity Encoder
-- Debug auth tokens → JWT Decoder
+- Debug auth tokens → JWT Decoder & Verifier
+- Calculate file permissions → chmod Calculator
 - Generate unique IDs → UUID Generator
 - Test regex before shipping → Regex Tester
 

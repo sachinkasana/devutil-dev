@@ -4,11 +4,18 @@ import Footer from '../../components/Footer';
 export const metadata = {
   title: "What's New on DevUtil — New Tools & SEO Updates",
   description:
-    'See the latest DevUtil tools: SQL/XML formatters, YAML↔JSON, cron generator, Markdown preview, JSON↔CSV, UUID v7, guides, and privacy-first analytics.',
+    'See the latest DevUtil tools: JWT verify & sign, chmod calculator, SQL/XML formatters, YAML↔JSON, cron, Markdown, JSON↔CSV, UUID v7, and privacy-first analytics.',
   alternates: { canonical: 'https://www.devutil.dev/whats-new' }
 };
 
 const updates = [
+  {
+    title: 'JWT verify/sign + chmod calculator',
+    items: [
+      'JWT tool now verifies HS256/384/512 and can sign/generate tokens client-side',
+      'New chmod Calculator for Unix permissions (755, 644, presets, symbolic + command)'
+    ]
+  },
   {
     title: 'New high-demand tools',
     items: [
