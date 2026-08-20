@@ -42,6 +42,9 @@ export default function Footer({ variant = 'compact', className = '' }) {
                 <li><a href="/url-encoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="url-encoder">URL Encoder</a></li>
                 <li><a href="/jwt-decoder" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="jwt-decoder">JWT Decoder</a></li>
                 <li><a href="/chmod-calculator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="chmod-calculator">chmod Calculator</a></li>
+                <li><a href="/http-status-codes" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="http-status-codes">HTTP Status Codes</a></li>
+                <li><a href="/env-file-validator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="env-file-validator">ENV File Validator</a></li>
+                <li><a href="/semver-calculator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="semver-calculator">Semver Calculator</a></li>
                 <li><a href="/timestamp-converter" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="timestamp-converter">Timestamp Converter</a></li>
                 <li><a href="/password-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="password-generator">Password Generator</a></li>
                 <li><a href="/qr-code-generator" className="hover:text-white transition-colors" data-analytics-event="footer_tool" data-analytics-label="qr-code-generator">QR Code Generator</a></li>

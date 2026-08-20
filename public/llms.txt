@@ -82,6 +82,18 @@ Decode JWT header/payload, verify HS256/384/512 signatures with a secret, and si
 URL: https://www.devutil.dev/chmod-calculator
 Convert Unix file permissions between checkboxes, octal modes (755, 644), symbolic notation, and chmod commands.
 
+### HTTP Status Codes Reference
+URL: https://www.devutil.dev/http-status-codes
+Searchable HTTP status code reference (200, 301, 404, 429, 500, 502, and more) with use cases and examples.
+
+### ENV File Parser & Validator
+URL: https://www.devutil.dev/env-file-validator
+Validate .env / dotenv files, detect duplicate keys, and export as JSON — client-side only.
+
+### Semver Calculator
+URL: https://www.devutil.dev/semver-calculator
+Check whether a version satisfies a semantic version range (^, ~, comparators, hyphen, ||).
+
 ### Unix Timestamp Converter
 URL: https://www.devutil.dev/timestamp-converter
 Convert Unix epoch timestamps to human-readable dates, or convert a date/time to a Unix timestamp.
@@ -130,6 +142,9 @@ Launch notes and latest tools for sharing.
 - Escape text for HTML → HTML Entity Encoder
 - Debug auth tokens → JWT Decoder & Verifier
 - Calculate file permissions → chmod Calculator
+- Look up HTTP errors → HTTP Status Codes
+- Lint .env files → ENV File Validator
+- Check npm ranges → Semver Calculator
 - Generate unique IDs → UUID Generator
 - Test regex before shipping → Regex Tester
 

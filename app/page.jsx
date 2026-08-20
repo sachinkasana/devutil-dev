@@ -19,26 +19,29 @@ import {
   CaseSensitive,
   FileType,
   Binary,
-  FolderCog
+  FolderCog,
+  Globe2,
+  FileKey2,
+  GitBranch
 } from 'lucide-react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Free Online Developer Tools — JSON, JWT, chmod & More',
+  title: 'Free Online Developer Tools — JSON, JWT, HTTP Status & More',
   description:
-    '23 free developer tools in your browser: JSON/SQL/XML formatters, JWT verify & sign, chmod calculator, YAML↔JSON, Base64, UUID, regex, color picker. No signup — data never leaves your device.',
+    '26 free developer tools in your browser: JSON/SQL formatters, HTTP status codes, env validator, semver calculator, JWT verify & sign, chmod calculator, and more. No signup — data never leaves your device.',
   keywords: [
     'developer tools',
     'free online developer tools',
     'json formatter',
-    'sql formatter',
+    'http status codes',
+    'env file validator',
+    'semver calculator',
     'jwt decoder',
     'chmod calculator',
     'yaml to json',
     'cron generator',
-    'xml formatter',
-    'case converter',
     'base64 encoder',
     'uuid generator',
     'regex tester',
@@ -50,7 +53,7 @@ export const metadata = {
   openGraph: {
     title: 'Free Online Developer Tools — Privacy-First',
     description:
-      'Format JSON/SQL, decode JWT, calculate chmod, convert YAML — 23 free tools that run in your browser. No signup.',
+      'Format JSON/SQL, look up HTTP status codes, validate .env files, check semver ranges — 26 free browser tools. No signup.',
     url: '/',
     images: [
       {
@@ -65,7 +68,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Online Developer Tools — Privacy-First',
     description:
-      '23 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
+      '26 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };
@@ -236,6 +239,33 @@ const tools = [
     category: 'Converters'
   },
   {
+    name: 'HTTP Status Codes',
+    description: 'Searchable 200, 404, 429, 502 reference',
+    icon: Globe2,
+    href: '/http-status-codes',
+    color: 'bg-sky-700',
+    popular: true,
+    category: 'Reference'
+  },
+  {
+    name: 'ENV File Validator',
+    description: 'Validate .env, find dupes, export JSON',
+    icon: FileKey2,
+    href: '/env-file-validator',
+    color: 'bg-lime-700',
+    popular: true,
+    category: 'Validators'
+  },
+  {
+    name: 'Semver Calculator',
+    description: 'Check if a version matches ^ / ~ ranges',
+    icon: GitBranch,
+    href: '/semver-calculator',
+    color: 'bg-orange-700',
+    popular: true,
+    category: 'Converters'
+  },
+  {
     name: 'Timestamp Converter',
     description: 'Convert Unix timestamps to human dates',
     icon: RefreshCw,
@@ -289,6 +319,9 @@ const hubLinks = [
   { href: '/url-encoder', label: 'URL Encoder' },
   { href: '/jwt-decoder', label: 'JWT Decoder' },
   { href: '/chmod-calculator', label: 'chmod Calculator' },
+  { href: '/http-status-codes', label: 'HTTP Status Codes' },
+  { href: '/env-file-validator', label: 'ENV File Validator' },
+  { href: '/semver-calculator', label: 'Semver Calculator' },
   { href: '/timestamp-converter', label: 'Timestamp Converter' },
   { href: '/password-generator', label: 'Password Generator' },
   { href: '/lorem-ipsum-generator', label: 'Lorem Ipsum Generator' },

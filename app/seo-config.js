@@ -8,7 +8,7 @@ export const SITE = {
   name: "DevUtil",
   url: "https://www.devutil.dev",
   description:
-    "Free developer tools that run in your browser — JSON/SQL formatters, JWT verify & sign, chmod calculator, Base64, UUID, regex, color picker, and more. No signup. Your data never leaves your device.",
+    "Free developer tools that run in your browser — JSON/SQL formatters, HTTP status codes, env validator, semver calculator, JWT verify & sign, chmod calculator, Base64, UUID, regex, and more. No signup. Your data never leaves your device.",
   twitter: "@devutil_dev", // update if you have one
   locale: "en_US",
 };
@@ -330,6 +330,78 @@ export const TOOLS = {
       {
         q: "Does this tool upload anything?",
         a: "No. Permission math runs entirely in your browser.",
+      },
+    ],
+  },
+
+  "http-status-codes": {
+    title: "HTTP Status Codes Reference — What is 429, 502, 404?",
+    shortTitle: "HTTP Status Codes",
+    description:
+      "Free searchable HTTP status code reference. Look up 200, 301, 404, 429, 500, 502, and more with plain-English meaning, use cases, and examples. Client-side only.",
+    keywords: [
+      "http status codes",
+      "what is 429 status code",
+      "http 502 meaning",
+      "status code reference",
+      "http error codes",
+    ],
+    faq: [
+      {
+        q: "What is HTTP 429?",
+        a: "429 Too Many Requests means you hit a rate limit. Check Retry-After and back off before retrying.",
+      },
+      {
+        q: "What is HTTP 502?",
+        a: "502 Bad Gateway means a proxy received an invalid response from an upstream server.",
+      },
+    ],
+  },
+
+  "env-file-validator": {
+    title: "ENV File Parser & Validator — Check .env Online",
+    shortTitle: "ENV File Validator",
+    description:
+      "Paste a .env file to validate format, detect duplicate keys, and export as JSON. Free client-side dotenv checker — secrets never leave your browser.",
+    keywords: [
+      "env file validator",
+      "dotenv parser",
+      ".env validator",
+      "env to json",
+      "duplicate env keys",
+    ],
+    faq: [
+      {
+        q: "Is it safe to paste .env files here?",
+        a: "Processing stays in your browser. Still avoid pasting production secrets on shared devices.",
+      },
+      {
+        q: "What does duplicate key mean?",
+        a: "The same KEY appears more than once. Most loaders use the last value; duplicates are usually accidental.",
+      },
+    ],
+  },
+
+  "semver-calculator": {
+    title: "Semver Calculator — Check if Version Matches Range",
+    shortTitle: "Semver Calculator",
+    description:
+      "Test whether a version satisfies a semver range like ^1.2.0, ~2.0.0, or >=1 <2. Free calculator for npm and package maintainers. 100% client-side.",
+    keywords: [
+      "semver calculator",
+      "semver range checker",
+      "npm version range",
+      "caret tilde semver",
+      "semantic versioning tool",
+    ],
+    faq: [
+      {
+        q: "What does ^1.2.0 mean?",
+        a: "Compatible with 1.2.0: allows updates that do not change the left-most non-zero digit (typically same major).",
+      },
+      {
+        q: "What does ~1.2.0 mean?",
+        a: "Approximately equivalent to 1.2.0: allows patch-level changes for that minor version.",
       },
     ],
   },

@@ -4,11 +4,19 @@ import Footer from '../../components/Footer';
 export const metadata = {
   title: "What's New — New Tools & SEO Updates",
   description:
-    'See the latest DevUtil tools: JWT verify & sign, chmod calculator, SQL/XML formatters, YAML↔JSON, cron, Markdown, JSON↔CSV, UUID v7, and privacy-first analytics.',
+    'See the latest DevUtil tools: HTTP status codes, ENV validator, semver calculator, JWT verify & sign, chmod calculator, and more.',
   alternates: { canonical: 'https://www.devutil.dev/whats-new' }
 };
 
 const updates = [
+  {
+    title: 'HTTP status codes, ENV validator, semver',
+    items: [
+      'HTTP Status Codes — searchable reference for 200/404/429/502 and more',
+      'ENV File Validator — lint .env files, catch duplicate keys, export JSON (client-side)',
+      'Semver Calculator — test ^ / ~ / comparator ranges against a version'
+    ]
+  },
   {
     title: 'JWT verify/sign + chmod calculator',
     items: [
