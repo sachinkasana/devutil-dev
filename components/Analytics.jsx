@@ -12,7 +12,7 @@ const VERCEL_SKIP = /_input$|_option|_indent$|_dialect$|_size$|_margin$|_error_c
 
 const COPY_EVENT = /copy/i;
 const USE_EVENT =
-  /^(tool_used|tool_open)$|_(generate|beautify|minify|validate|process|compare|encode|decode|format|convert|pick|preview|download|sample|clear|swap|verify|sign|preset)/i;
+  /^(tool_used|tool_open|share_click)$|_(generate|beautify|minify|validate|process|compare|encode|decode|format|convert|pick|preview|download|sample|clear|swap|verify|sign|preset)/i;
 
 const TOOL_NAME_MAP = {
   json: 'JSON Formatter',

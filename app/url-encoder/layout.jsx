@@ -2,9 +2,9 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'URL Encoder Decoder - Encode & Decode URLs Online Free | DevUtil'
+    absolute: 'URL Encoder & Decoder Online — Free, Instant, No Upload | DevUtil'
   },
-  description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
+  description: 'Encode or decode URLs instantly in your browser. Percent-encode query strings, fix broken links, and debug redirects. Free — your data never leaves your device.',
   keywords: [
     'url encoder',
     'url decoder',
@@ -16,14 +16,15 @@ export const metadata = {
     'url decode online',
     'uri encoder',
     'encodeuri',
-    'encodeuricomponent'
+    'encodeuricomponent',
+    'url encode free'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/url-encoder'
   },
   openGraph: {
-    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free',
-    description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
+    title: 'URL Encoder & Decoder Online — Free, Instant, No Upload',
+    description: 'Encode or decode URLs instantly in your browser. Percent-encode query strings, debug redirects. Free — data never uploaded.',
     url: 'https://www.devutil.dev/url-encoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +39,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'URL Encoder Decoder - Encode & Decode URLs Online Free',
-    description: 'Free URL encoder and decoder. Encode or decode URLs and query strings instantly in your browser. Safe, fast, and 100% client-side.',
+    title: 'URL Encoder & Decoder Online — Free, Instant, No Upload',
+    description: 'Encode or decode URLs instantly in your browser. Percent-encode query strings, debug redirects. Free — data never uploaded.',
     images: ['https://www.devutil.dev/images/url-encoder.png']
   }
 };

@@ -14,6 +14,7 @@ import { json as jsonLanguage } from '@codemirror/lang-json';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RelatedTools from '../../components/RelatedTools';
+import ShareButtons from '../../components/ShareButtons';
 
 const sampleJson = `{
   "name": "DevUtil",
@@ -423,6 +424,12 @@ export default function JsonFormatterPage() {
                 Format, minify, and repair JSON instantly in your browser — no signup.
               </span>
             </h1>
+          </div>
+          <div className="mt-3 flex justify-center">
+            <ShareButtons
+              title="Free JSON Formatter Online — Beautify & Validate"
+              description="Format, minify, and repair JSON instantly in your browser. Free, no signup."
+            />
           </div>
         </div>
 

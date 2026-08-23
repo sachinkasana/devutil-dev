@@ -3,10 +3,11 @@ import LoremIpsumTool from '../../components/LoremIpsumTool'
 import Header from '../../components/Header'
 import RelatedTools from '../../components/RelatedTools';
 import Footer from '../../components/Footer'
+import ShareButtons from '../../components/ShareButtons'
 
 export const metadata: Metadata = {
-  title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online',
-  description: 'Generate Lorem Ipsum placeholder text for your designs and mockups. Create paragraphs, words, or sentences instantly. Free online Lorem Ipsum generator for designers and developers.',
+  title: 'Lorem Ipsum Generator — Free Dummy Text for Mockups',
+  description: 'Generate Lorem Ipsum placeholder text instantly. Choose paragraphs, sentences, or words for designs and mockups. Free, no ads, no signup required.',
   keywords: [
     'lorem ipsum generator',
     'placeholder text generator',
@@ -15,14 +16,16 @@ export const metadata: Metadata = {
     'placeholder text',
     'fake text generator',
     'lipsum generator',
-    'lorem ipsum dolor sit amet'
+    'lorem ipsum dolor sit amet',
+    'free lorem ipsum',
+    'generate dummy text'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/lorem-ipsum-generator',
   },
   openGraph: {
-    title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online',
-    description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
+    title: 'Lorem Ipsum Generator — Free Dummy Text for Mockups',
+    description: 'Generate Lorem Ipsum placeholder text instantly. Paragraphs, sentences, or words for designs. Free, no ads.',
     url: 'https://www.devutil.dev/lorem-ipsum-generator',
     siteName: 'DevUtil',
     locale: 'en_US',
@@ -38,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Lorem Ipsum Generator - Placeholder Text Generator Online',
-    description: 'Generate Lorem Ipsum placeholder text instantly for designs and mockups. Create paragraphs, words, or sentences. Free and fast.',
+    title: 'Lorem Ipsum Generator — Free Dummy Text for Mockups',
+    description: 'Generate Lorem Ipsum placeholder text instantly. Paragraphs, sentences, or words for designs. Free, no ads.',
     images: [
       {
         url: 'https://www.devutil.dev/images/lorem-ipsum-generator.png',
@@ -115,12 +118,18 @@ export default function LoremIpsumGeneratorPage() {
           </ol>
         </nav>
 
-        <h1 className="text-2xl sm:text-3xl font-bold mb-6">
-          Free Lorem Ipsum Generator
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4">
+          Lorem Ipsum Generator — Free Dummy Text
           <span className="ml-2 text-sm sm:text-base font-normal text-gray-700">
-            Generate placeholder text instantly. Choose paragraphs, words, or sentences for designs and prototypes.
+            Generate placeholder text instantly. Choose paragraphs, sentences, or words for mockups and designs.
           </span>
         </h1>
+        <div className="mb-6 flex justify-start">
+          <ShareButtons
+            title="Lorem Ipsum Generator — Free Dummy Text"
+            description="Generate placeholder text instantly. Paragraphs, sentences, or words for designs and mockups."
+          />
+        </div>
 
         {/* LOREM IPSUM TOOL COMPONENT */}
         <LoremIpsumTool />

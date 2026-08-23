@@ -253,16 +253,18 @@ export const TOOLS = {
   },
 
   "url-encoder": {
-    title: "URL Encoder & Decoder — Percent Encoding Online",
+    title: "URL Encoder & Decoder Online — Free, Instant, No Upload",
     shortTitle: "URL Encoder",
     description:
-      "Encode special characters in URLs using percent-encoding, or decode encoded URL components back to plain text. Free, instant, and fully client-side.",
+      "Encode or decode URLs instantly in your browser. Percent-encode query strings, fix broken links, and debug redirects. Free — your data never leaves your device.",
     keywords: [
       "url encoder online",
       "url decoder",
       "percent encoding",
       "encode url",
       "url encode decode",
+      "encodeURIComponent online",
+      "decode url free",
     ],
     faq: [
       {
@@ -457,10 +459,10 @@ export const TOOLS = {
   },
 
   "color-picker": {
-    title: "Free Color Picker Online — HEX to RGB & HSL Converter",
+    title: "Color Picker — HEX to RGB to HSL Converter Online (Free)",
     shortTitle: "Color Picker",
     description:
-      "Free online color picker and HEX to RGB / HSL converter. Pick a color, copy codes instantly, generate tints & shades. 100% client-side — no signup.",
+      "Pick colors and convert HEX ↔ RGB ↔ HSL instantly. Copy color codes, generate palettes, explore tints & shades. Free, private, runs in your browser.",
     keywords: [
       "color picker online",
       "hex to rgb converter",
@@ -469,6 +471,8 @@ export const TOOLS = {
       "free color picker",
       "hex color picker",
       "color code converter",
+      "hex to rgb",
+      "rgb to hsl",
     ],
     faq: [
       {
@@ -479,15 +483,17 @@ export const TOOLS = {
   },
 
   "lorem-ipsum-generator": {
-    title: "Lorem Ipsum Generator — Placeholder Text Online",
+    title: "Lorem Ipsum Generator — Free Dummy Text for Mockups",
     shortTitle: "Lorem Ipsum Generator",
     description:
-      "Generate Lorem Ipsum placeholder text for designs and mockups. Choose word count, paragraph count, or sentence count. Instant, free, no ads.",
+      "Generate Lorem Ipsum placeholder text instantly. Choose paragraphs, sentences, or words for designs and mockups. Free, no ads, no signup required.",
     keywords: [
       "lorem ipsum generator",
       "placeholder text generator",
       "dummy text generator",
       "lorem ipsum online",
+      "free lorem ipsum",
+      "generate dummy text",
     ],
     faq: [
       {

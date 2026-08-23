@@ -5,6 +5,7 @@ import { Code, Copy, Check, Lock, Upload, Download } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RelatedTools from '../../components/RelatedTools';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function Base64EncoderDecoder() {
   const [input, setInput] = useState('');
@@ -116,6 +117,12 @@ export default function Base64EncoderDecoder() {
                 Encode or decode Base64 instantly with fast, private in-browser processing.
               </span>
             </h1>
+          </div>
+          <div className="mt-3 flex justify-center">
+            <ShareButtons
+              title="Base64 Encoder & Decoder — Free Online Tool"
+              description="Encode or decode Base64 instantly in your browser. Free, no signup required."
+            />
           </div>
         </div>
 

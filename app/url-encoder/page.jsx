@@ -5,6 +5,7 @@ import { Code, Copy, Check, Link2, Download } from 'lucide-react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RelatedTools from '../../components/RelatedTools';
+import ShareButtons from '../../components/ShareButtons';
 
 export default function URLEncoder() {
   const [input, setInput] = useState('');
@@ -129,6 +130,12 @@ export default function URLEncoder() {
                 Encode or decode URLs instantly with fast, private in-browser processing.
               </span>
             </h1>
+          </div>
+          <div className="mt-3 flex justify-center">
+            <ShareButtons
+              title="URL Encoder & Decoder — Free Online Tool"
+              description="Encode or decode URLs instantly in your browser. Free, no signup."
+            />
           </div>
         </div>
 
