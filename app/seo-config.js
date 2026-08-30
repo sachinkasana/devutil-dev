@@ -8,7 +8,7 @@ export const SITE = {
   name: "DevUtil",
   url: "https://www.devutil.dev",
   description:
-    "26 free developer utilities — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. Runs in your browser, zero data upload.",
+    "26 free developer utility tools that run entirely in your browser — JSON formatter, SQL formatter, JWT decoder, Base64 encoder, UUID generator, chmod calculator, regex tester & more. No signup. Your data never leaves your device.",
   twitter: "@devutil_dev", // update if you have one
   locale: "en_US",
 };
@@ -19,18 +19,20 @@ export const SITE = {
  */
 export const TOOLS = {
   "json-formatter": {
-    title: "Free JSON Formatter Online — Beautify, Validate & Minify",
+    title: "JSON Formatter Online — Free Beautify, Validate & Minify JSON",
     shortTitle: "JSON Formatter",
     description:
-      "Free online JSON formatter and validator. Beautify, minify, and fix JSON instantly in your browser. No signup — your data never leaves your device.",
+      "Free JSON formatter, validator and beautifier. Paste raw or minified JSON and instantly format it with clean indentation. Supports minify, error detection & copy. 100% client-side — your data never leaves your browser.",
     keywords: [
       "json formatter online",
+      "format json online",
       "json beautifier",
-      "json validator",
-      "format json",
+      "json validator online",
       "json pretty print",
-      "json minify",
-      "json viewer",
+      "json minifier",
+      "json viewer online",
+      "beautify json",
+      "json formatter free",
     ],
     faq: [
       {
@@ -86,17 +88,19 @@ export const TOOLS = {
   },
 
   "base64-encoder": {
-    title: "Base64 Encoder & Decoder — Free Online Tool",
+    title: "Base64 Encoder & Decoder Online — Free, Instant, Private",
     shortTitle: "Base64 Encoder",
     description:
-      "Encode text to Base64 or decode Base64 strings back to plain text instantly. Supports standard and URL-safe Base64. 100% client-side processing.",
+      "Encode text or decode Base64 strings instantly in your browser. Supports standard and URL-safe Base64. No data uploaded — 100% client-side Base64 encoder and decoder. Free, no signup.",
     keywords: [
       "base64 encoder online",
-      "base64 decoder",
-      "encode base64",
+      "base64 decoder online",
+      "encode base64 online",
       "decode base64 string",
-      "base64 converter",
-      "base64 online",
+      "base64 converter free",
+      "url safe base64",
+      "base64 encode decode",
+      "base64 online free",
     ],
     faq: [
       {
@@ -115,19 +119,19 @@ export const TOOLS = {
   },
 
   "uuid-generator": {
-    title: "UUID v4 & v7 Generator — Generate Unique IDs Online",
+    title: "UUID Generator Online — Free UUID v4 & v7 Generator",
     shortTitle: "UUID Generator",
     description:
-      "Generate UUID v4 (random) and UUID v7 (time-ordered) or GUID values instantly. Bulk-generate up to 500 IDs. Free, no login, fully client-side.",
+      "Generate UUID v4 (random) and UUID v7 (time-ordered) identifiers instantly. Bulk generate up to 500 UUIDs in one click. Free, no login, 100% client-side UUID generator.",
     keywords: [
-      "uuid generator",
-      "generate uuid",
-      "random uuid",
-      "uuid v4 online",
-      "uuid v7",
-      "guid generator",
-      "unique id generator",
-      "time ordered uuid",
+      "uuid generator online",
+      "generate uuid online",
+      "uuid v4 generator",
+      "uuid v7 generator",
+      "random uuid generator",
+      "guid generator online",
+      "bulk uuid generator",
+      "free uuid generator",
     ],
     faq: [
       {
@@ -228,17 +232,19 @@ export const TOOLS = {
   },
 
   "regex-tester": {
-    title: "Regex Tester — Test & Debug Regular Expressions Online",
+    title: "Regex Tester Online — Test & Debug Regular Expressions Free",
     shortTitle: "Regex Tester",
     description:
-      "Test, debug, and build regular expressions in real time with match highlighting. Supports JavaScript regex syntax with flags. Free, no signup required.",
+      "Test and debug regular expressions in real time with live match highlighting. Supports all JavaScript regex flags — g, i, m, s, u. Free online regex tester — no data uploaded.",
     keywords: [
       "regex tester online",
-      "test regex",
       "regular expression tester",
-      "regex validator",
-      "regex debugger",
-      "javascript regex",
+      "test regex online",
+      "regex debugger online",
+      "javascript regex tester",
+      "regex validator online",
+      "regex match tester",
+      "online regex checker",
     ],
     faq: [
       {
@@ -279,17 +285,19 @@ export const TOOLS = {
   },
 
   "jwt-decoder": {
-    title: "JWT Decoder & Verifier — Decode, Verify HS256 & Sign Online",
+    title: "JWT Decoder Online — Decode, Verify & Sign JSON Web Tokens Free",
     shortTitle: "JWT Decoder",
     description:
-      "Free JWT decoder, HMAC verifier, and token generator. Inspect claims, verify HS256/384/512 signatures, and sign JWTs in your browser — tokens never leave your device.",
+      "Free JWT decoder and verifier. Paste any JWT to decode header and payload, verify HS256/384/512 signatures, and sign new tokens — all in your browser. Token never leaves your device.",
     keywords: [
       "jwt decoder online",
+      "decode jwt token online",
       "jwt verifier",
-      "decode jwt token",
-      "verify jwt hs256",
-      "jwt generator",
       "json web token decoder",
+      "verify jwt hs256",
+      "jwt token decoder free",
+      "jwt generator online",
+      "decode jwt free",
     ],
     faq: [
       {
@@ -459,21 +467,21 @@ export const TOOLS = {
   },
 
   "color-picker": {
-    title: "RGB Color Picker — HEX to RGB to HSL Converter Free Online",
+    title: "RGB Color Picker — Free HEX to RGB to HSL Converter Online",
     shortTitle: "RGB Color Picker",
     description:
-      "Free RGB color picker with HEX ↔ RGB ↔ HSL conversion. Copy color codes, generate palettes, explore tints & shades. Runs in your browser — no signup.",
+      "Free RGB color picker and converter. Pick any color and instantly convert HEX ↔ RGB ↔ HSL. Copy color codes, generate tints & shades. Runs in your browser — no data uploaded.",
     keywords: [
       "rgb color picker",
-      "color picker online",
+      "rgb color picker online",
       "hex to rgb converter",
       "rgb to hex",
       "hsl color converter",
       "free color picker",
       "hex color picker",
       "color code converter",
-      "hex to rgb",
       "rgb to hsl",
+      "online color picker",
     ],
     faq: [
       {

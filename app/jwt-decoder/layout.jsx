@@ -2,27 +2,27 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'JWT Decoder & Verifier — Decode, Verify HS256 & Sign Online | DevUtil'
+    absolute: 'JWT Decoder Online — Decode, Verify & Sign JSON Web Tokens Free | DevUtil'
   },
   description:
-    'Decode JWTs, verify HS256/384/512 signatures with a secret, and generate signed tokens. Free, client-side JWT tool — tokens never leave your browser.',
+    'Free JWT decoder and verifier. Paste any JWT to decode header and payload, verify HS256/384/512 signatures, and sign new tokens — all in your browser. Token never leaves your device.',
   keywords: [
-    'jwt decoder',
+    'jwt decoder online',
+    'decode jwt token online',
     'jwt verifier',
-    'decode jwt',
-    'verify jwt hs256',
-    'jwt generator',
     'json web token decoder',
-    'jwt claims',
-    'jwt payload'
+    'verify jwt hs256',
+    'jwt token decoder free',
+    'jwt generator online',
+    'decode jwt free'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/jwt-decoder'
   },
   openGraph: {
-    title: 'JWT Decoder & Verifier — Decode, Verify & Sign Online',
+    title: 'JWT Decoder Online — Decode, Verify & Sign JSON Web Tokens Free',
     description:
-      'Decode JWTs, verify HMAC signatures, and sign tokens in your browser. Private and free.',
+      'Free JWT decoder and verifier. Decode header and payload, verify HS256/384/512, and sign tokens in your browser.',
     url: 'https://www.devutil.dev/jwt-decoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -37,8 +37,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JWT Decoder & Verifier Online',
-    description: 'Decode, verify HS256, and sign JWTs client-side.',
+    title: 'JWT Decoder Online — Decode, Verify & Sign JSON Web Tokens Free',
+    description: 'Free JWT decoder and verifier. Decode, verify HS256, and sign tokens in your browser.',
     images: ['https://www.devutil.dev/images/jwt-decoder.png']
   }
 };

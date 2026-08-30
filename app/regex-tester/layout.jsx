@@ -2,28 +2,25 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Regex Tester Online - Test Regular Expressions Live | DevUtil'
+    absolute: 'Regex Tester Online — Test & Debug Regular Expressions Free | DevUtil'
   },
-  description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
+  description: 'Test and debug regular expressions in real time with live match highlighting. Supports all JavaScript regex flags — g, i, m, s, u. Free online regex tester — no data uploaded.',
   keywords: [
-    'regex tester',
-    'regex test',
+    'regex tester online',
     'regular expression tester',
-    'regex debug',
-    'regex matcher',
-    'regex online',
-    'regex tool',
-    'regex validator',
-    'pattern tester',
-    'regex playground',
-    'regex builder'
+    'test regex online',
+    'regex debugger online',
+    'javascript regex tester',
+    'regex validator online',
+    'regex match tester',
+    'online regex checker'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/regex-tester'
   },
   openGraph: {
-    title: 'Regex Tester Online - Test Regular Expressions Live',
-    description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
+    title: 'Regex Tester Online — Test & Debug Regular Expressions Free',
+    description: 'Test and debug regular expressions in real time with live match highlighting. Free online regex tester — no data uploaded.',
     url: 'https://www.devutil.dev/regex-tester',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +35,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Regex Tester Online - Test Regular Expressions Live',
-    description: 'Test regular expressions live with a free regex tester. See matches, groups, and highlights instantly. Client-side, private, and fast in your browser.',
+    title: 'Regex Tester Online — Test & Debug Regular Expressions Free',
+    description: 'Test and debug regular expressions in real time with live match highlighting. Free online regex tester — no data uploaded.',
     images: ['https://www.devutil.dev/images/regex-tester.png']
   }
 };

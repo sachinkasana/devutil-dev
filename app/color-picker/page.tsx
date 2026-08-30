@@ -6,28 +6,28 @@ import ColorPickerTool from '../../components/ColorPickerTool';
 import ShareButtons from '../../components/ShareButtons';
 
 export const metadata: Metadata = {
-  title: 'RGB Color Picker — HEX to RGB to HSL Converter Free Online',
+  title: 'RGB Color Picker — Free HEX to RGB to HSL Converter Online',
   description:
-    'Free RGB color picker with HEX ↔ RGB ↔ HSL conversion. Copy color codes, generate palettes, explore tints & shades. Runs in your browser — no signup.',
+    'Free RGB color picker and converter. Pick any color and instantly convert HEX ↔ RGB ↔ HSL. Copy color codes, generate tints & shades. Runs in your browser — no data uploaded.',
   keywords: [
     'rgb color picker',
-    'color picker online',
-    'free color picker',
-    'hex to rgb',
-    'rgb to hsl',
-    'hex color picker',
-    'color converter',
-    'hsl color converter',
+    'rgb color picker online',
+    'hex to rgb converter',
     'rgb to hex',
-    'color code converter'
+    'hsl color converter',
+    'free color picker',
+    'hex color picker',
+    'color code converter',
+    'rgb to hsl',
+    'online color picker'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/color-picker'
   },
   openGraph: {
-    title: 'RGB Color Picker — HEX to RGB to HSL Converter Free Online',
+    title: 'RGB Color Picker — Free HEX to RGB to HSL Converter Online',
     description:
-      'Free RGB color picker with HEX ↔ RGB ↔ HSL conversion. Copy codes, generate palettes. Runs in your browser.',
+      'Free RGB color picker and converter. Pick any color and instantly convert HEX ↔ RGB ↔ HSL. Runs in your browser — no data uploaded.',
     url: 'https://www.devutil.dev/color-picker',
     siteName: 'DevUtil',
     locale: 'en_US',
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RGB Color Picker — HEX to RGB to HSL Converter Free Online',
+    title: 'RGB Color Picker — Free HEX to RGB to HSL Converter Online',
     description:
-      'Free RGB color picker with HEX ↔ RGB ↔ HSL conversion. Copy codes, generate palettes. Runs in your browser.',
+      'Free RGB color picker and converter. Pick any color and instantly convert HEX ↔ RGB ↔ HSL. Runs in your browser — no data uploaded.',
     images: [
       {
         url: 'https://www.devutil.dev/images/color-picker.png',
@@ -173,7 +173,7 @@ export default function ColorPickerPage() {
           </h1>
           <div className="mt-3 flex justify-center">
             <ShareButtons
-              title="RGB Color Picker — HEX to RGB to HSL Converter Free Online"
+              title="RGB Color Picker — Free HEX to RGB to HSL Converter Online"
               description="Free RGB color picker with HEX ↔ RGB ↔ HSL conversion. Runs in your browser."
             />
           </div>

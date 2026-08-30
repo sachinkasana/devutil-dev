@@ -30,7 +30,7 @@ import Header from '../components/Header';
 export const metadata = {
   title: 'Free Developer Utility Tools Online — 26 Browser-Based Tools',
   description:
-    '26 free developer utilities — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. Runs in your browser, zero data upload.',
+    '26 free developer utility tools that run entirely in your browser — JSON formatter, SQL formatter, JWT decoder, Base64 encoder, UUID generator, chmod calculator, regex tester & more. No signup. Your data never leaves your device.',
   keywords: [
     'free developer utility tools',
     'developer utility tools',
@@ -56,7 +56,7 @@ export const metadata = {
   openGraph: {
     title: 'Free Developer Utility Tools Online — 26 Browser-Based Tools',
     description:
-      '26 free developer utilities — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. Runs in your browser, zero data upload.',
+      '26 free developer utility tools that run entirely in your browser — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. No signup. Your data never leaves your device.',
     url: '/',
     images: [
       {
@@ -71,7 +71,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Developer Utility Tools Online — 26 Browser-Based Tools',
     description:
-      '26 free developer utilities — JSON, JWT, Base64, UUID, chmod & more. Runs in your browser, zero data upload.',
+      '26 free developer utility tools that run in your browser — JSON, JWT, Base64, UUID, chmod & more. No signup. Data never leaves your device.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };

@@ -2,31 +2,25 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free | DevUtil'
+    absolute: 'UUID Generator Online — Free UUID v4 & v7 Generator | DevUtil'
   },
-  description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
+  description: 'Generate UUID v4 (random) and UUID v7 (time-ordered) identifiers instantly. Bulk generate up to 500 UUIDs in one click. Free, no login, 100% client-side UUID generator.',
   keywords: [
-    'uuid generator',
-    'uuid v4',
-    'uuid v7',
-    'guid generator',
-    'unique id generator',
-    'generate uuid',
-    'uuid online',
-    'uuid list',
-    'random uuid',
-    'uuid tool',
-    'uuid v4 online',
+    'uuid generator online',
+    'generate uuid online',
+    'uuid v4 generator',
     'uuid v7 generator',
-    'create uuid',
-    'time ordered uuid'
+    'random uuid generator',
+    'guid generator online',
+    'bulk uuid generator',
+    'free uuid generator'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/uuid-generator'
   },
   openGraph: {
-    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free',
-    description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
+    title: 'UUID Generator Online — Free UUID v4 & v7 Generator',
+    description: 'Generate UUID v4 (random) and UUID v7 (time-ordered) instantly. Bulk generate up to 500 UUIDs. Free, client-side.',
     url: 'https://www.devutil.dev/uuid-generator',
     type: 'website',
     siteName: 'DevUtil',
@@ -41,8 +35,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UUID v4 & v7 Generator - Generate Unique IDs Online Free',
-    description: 'Generate UUID v4 and UUID v7 (time-ordered) or GUID values instantly. Free online UUID generator — bulk create up to 500 IDs, fully client-side.',
+    title: 'UUID Generator Online — Free UUID v4 & v7 Generator',
+    description: 'Generate UUID v4 (random) and UUID v7 (time-ordered) instantly. Bulk generate up to 500 UUIDs. Free, client-side.',
     images: ['https://www.devutil.dev/images/uuid-generator.png']
   }
 };

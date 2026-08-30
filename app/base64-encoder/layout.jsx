@@ -2,28 +2,25 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64 | DevUtil'
+    absolute: 'Base64 Encoder & Decoder Online — Free, Instant, Private | DevUtil'
   },
-  description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
+  description: 'Encode text or decode Base64 strings instantly in your browser. Supports standard and URL-safe Base64. No data uploaded — 100% client-side Base64 encoder and decoder. Free, no signup.',
   keywords: [
-    'base64 encoder',
-    'base64 decoder',
-    'base64 encode',
-    'base64 decode',
-    'base64 converter',
-    'online base64',
-    'data uri encoder',
-    'base64 tool',
-    'encode text',
-    'decode text',
-    'base64 file'
+    'base64 encoder online',
+    'base64 decoder online',
+    'encode base64 online',
+    'decode base64 string',
+    'base64 converter free',
+    'url safe base64',
+    'base64 encode decode',
+    'base64 online free'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/base64-encoder'
   },
   openGraph: {
-    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64',
-    description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
+    title: 'Base64 Encoder & Decoder Online — Free, Instant, Private',
+    description: 'Encode text or decode Base64 strings instantly in your browser. Standard and URL-safe. No data uploaded.',
     url: 'https://www.devutil.dev/base64-encoder',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +35,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Base64 Encoder Decoder Online - Encode & Decode Base64',
-    description: 'Free online Base64 encoder and decoder. Encode or decode text, JSON, or files instantly in your browser. 100% client-side, no signup or data upload.',
+    title: 'Base64 Encoder & Decoder Online — Free, Instant, Private',
+    description: 'Encode text or decode Base64 strings instantly in your browser. Standard and URL-safe. No data uploaded.',
     images: ['https://www.devutil.dev/images/base64-encoder-decoder.png']
   }
 };

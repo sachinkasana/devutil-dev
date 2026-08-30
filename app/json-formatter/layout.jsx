@@ -2,28 +2,26 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    absolute: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON | DevUtil'
+    absolute: 'JSON Formatter Online — Free Beautify, Validate & Minify JSON | DevUtil'
   },
-  description: 'Free online JSON formatter and validator. Beautify, minify, and repair JSON instantly in your browser. No signup — your data never leaves your device.',
+  description: 'Free JSON formatter, validator and beautifier. Paste raw or minified JSON and instantly format it with clean indentation. Supports minify, error detection & copy. 100% client-side — your data never leaves your browser.',
   keywords: [
-    'json formatter',
-    'json beautifier',
-    'json validator',
-    'pretty print json',
-    'json minifier',
+    'json formatter online',
     'format json online',
-    'fix json',
-    'json repair',
-    'json editor',
-    'json lint',
-    'json parser'
+    'json beautifier',
+    'json validator online',
+    'json pretty print',
+    'json minifier',
+    'json viewer online',
+    'beautify json',
+    'json formatter free'
   ],
   alternates: {
     canonical: 'https://www.devutil.dev/json-formatter'
   },
   openGraph: {
-    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON',
-    description: 'Beautify, minify, and validate JSON instantly. Free client-side JSON formatter — no signup, no data upload.',
+    title: 'JSON Formatter Online — Free Beautify, Validate & Minify JSON',
+    description: 'Free JSON formatter, validator and beautifier. Paste raw or minified JSON and instantly format it. 100% client-side — your data never leaves your browser.',
     url: 'https://www.devutil.dev/json-formatter',
     type: 'website',
     siteName: 'DevUtil',
@@ -38,8 +36,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free JSON Formatter Online — Beautify, Validate & Minify JSON',
-    description: 'Beautify, minify, and validate JSON instantly. Free client-side JSON formatter — no signup, no data upload.',
+    title: 'JSON Formatter Online — Free Beautify, Validate & Minify JSON',
+    description: 'Free JSON formatter, validator and beautifier. Paste raw or minified JSON and instantly format it. 100% client-side.',
     images: ['https://www.devutil.dev/images/json-formatter.png']
   }
 };
