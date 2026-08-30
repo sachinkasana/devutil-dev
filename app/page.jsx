@@ -28,12 +28,15 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Free Online Developer Tools — JSON, JWT, HTTP Status & More',
+  title: 'Free Developer Utility Tools Online — 26 Browser-Based Tools',
   description:
-    '26 free developer tools in your browser: JSON/SQL formatters, HTTP status codes, env validator, semver calculator, JWT verify & sign, chmod calculator, and more. No signup — data never leaves your device.',
+    '26 free developer utilities — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. Runs in your browser, zero data upload.',
   keywords: [
-    'developer tools',
+    'free developer utility tools',
+    'developer utility tools',
+    'developer utilities',
     'free online developer tools',
+    'developer tools',
     'json formatter',
     'http status codes',
     'env file validator',
@@ -45,30 +48,30 @@ export const metadata = {
     'base64 encoder',
     'uuid generator',
     'regex tester',
-    'color picker online'
+    'rgb color picker'
   ],
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'Free Online Developer Tools — Privacy-First',
+    title: 'Free Developer Utility Tools Online — 26 Browser-Based Tools',
     description:
-      'Format JSON/SQL, look up HTTP status codes, validate .env files, check semver ranges — 26 free browser tools. No signup.',
+      '26 free developer utilities — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. Runs in your browser, zero data upload.',
     url: '/',
     images: [
       {
         url: 'https://www.devutil.dev/images/devutil-home.png',
         width: 1200,
         height: 630,
-        alt: 'DevUtil home page'
+        alt: 'DevUtil — free developer utility tools'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Online Developer Tools — Privacy-First',
+    title: 'Free Developer Utility Tools Online — 26 Browser-Based Tools',
     description:
-      '26 free browser tools for developers. Format, convert, encode, generate — no signup, no data upload.',
+      '26 free developer utilities — JSON, JWT, Base64, UUID, chmod & more. Runs in your browser, zero data upload.',
     images: ['https://www.devutil.dev/images/devutil-home.png']
   }
 };
@@ -345,8 +348,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-              Fast, free, and privacy-focused tools for developers. Format JSON, SQL, and XML; convert YAML;
-              build cron schedules; and more — all processing stays in your browser.
+              26 free developer utility tools that run in your browser. Format JSON, decode JWTs, convert
+              Base64, generate UUIDs, calculate chmod — zero signup, zero data upload.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-500">
               <span className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1">

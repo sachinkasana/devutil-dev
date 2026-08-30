@@ -5,11 +5,15 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Free Online Developer Tools — JSON, JWT, HTTP Status & More | DevUtil",
+    default: "Free Developer Utility Tools Online — 26 Browser-Based Tools | DevUtil",
     template: "%s | DevUtil",
   },
   description: SITE.description,
   keywords: [
+    "free developer utility tools",
+    "developer utility tools",
+    "developer utilities",
+    "free online developer tools",
     "developer tools",
     "free online tools",
     "json formatter",
@@ -25,7 +29,6 @@ export const metadata = {
     "http status codes",
     "env file validator",
     "semver calculator",
-    "developer utilities",
     "privacy first tools",
     "client side tools",
   ].join(", "),
@@ -51,20 +54,20 @@ export const metadata = {
     locale: SITE.locale,
     url: SITE.url,
     siteName: SITE.name,
-    title: "Free Online Developer Tools — JSON, JWT, HTTP Status & More | DevUtil",
+    title: "Free Developer Utility Tools Online — 26 Browser-Based Tools | DevUtil",
     description: SITE.description,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DevUtil — Free Developer Tools",
+        alt: "DevUtil — Free Developer Utility Tools",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Online Developer Tools — JSON, JWT, HTTP Status & More | DevUtil",
+    title: "Free Developer Utility Tools Online — 26 Browser-Based Tools | DevUtil",
     description: SITE.description,
     images: ["/og-image.png"],
   },

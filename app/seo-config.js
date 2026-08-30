@@ -8,7 +8,7 @@ export const SITE = {
   name: "DevUtil",
   url: "https://www.devutil.dev",
   description:
-    "Free developer tools that run in your browser — JSON/SQL formatters, HTTP status codes, env validator, semver calculator, JWT verify & sign, chmod calculator, Base64, UUID, regex, and more. No signup. Your data never leaves your device.",
+    "26 free developer utilities — JSON formatter, JWT decoder, Base64, UUID generator, chmod calculator & more. Runs in your browser, zero data upload.",
   twitter: "@devutil_dev", // update if you have one
   locale: "en_US",
 };
@@ -459,11 +459,12 @@ export const TOOLS = {
   },
 
   "color-picker": {
-    title: "Color Picker — HEX to RGB to HSL Converter Online (Free)",
-    shortTitle: "Color Picker",
+    title: "RGB Color Picker — HEX to RGB to HSL Converter Free Online",
+    shortTitle: "RGB Color Picker",
     description:
-      "Pick colors and convert HEX ↔ RGB ↔ HSL instantly. Copy color codes, generate palettes, explore tints & shades. Free, private, runs in your browser.",
+      "Free RGB color picker with HEX ↔ RGB ↔ HSL conversion. Copy color codes, generate palettes, explore tints & shades. Runs in your browser — no signup.",
     keywords: [
+      "rgb color picker",
       "color picker online",
       "hex to rgb converter",
       "rgb to hex",
